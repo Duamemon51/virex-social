@@ -1,0 +1,296 @@
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Poppins', sans-serif;
+            background:#f5f7ff;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        .custom-navbar{
+            background:#fff;
+            padding:18px 0;
+            position:sticky;
+            top:0;
+            z-index:999;
+            box-shadow:0 2px 20px rgba(0,0,0,0.06);
+        }
+
+        /* Logo */
+
+        .navbar-brand{
+            font-size:40px;
+            font-weight:700;
+        }
+
+        .navbar-brand .logo-one{
+            color:#f4b400;
+        }
+
+        .navbar-brand .logo-two{
+            color:#59d1d7;
+        }
+
+        /* Nav Links */
+
+        .navbar-nav .nav-link{
+            color:#2d2d2d;
+            font-size:17px;
+            font-weight:500;
+            margin:0 12px;
+            position:relative;
+            transition:0.3s;
+        }
+
+        .navbar-nav .nav-link:hover{
+            color:#6c3cff;
+        }
+
+        .navbar-nav .nav-link::after{
+            content:'';
+            position:absolute;
+            left:0;
+            bottom:-6px;
+            width:0%;
+            height:3px;
+            background:#6c3cff;
+            border-radius:10px;
+            transition:0.4s;
+        }
+
+        .navbar-nav .nav-link:hover::after{
+            width:100%;
+        }
+
+        /* Remove Bootstrap Default Arrow */
+
+        .dropdown-toggle::after{
+            display:none;
+        }
+
+        /* Custom Dropdown Icon */
+
+        .dropdown-icon{
+            font-size:12px;
+            transition:0.3s;
+            margin-top:2px;
+        }
+
+        .dropdown.show .dropdown-icon{
+            transform:rotate(180deg);
+        }
+
+        /* Button */
+
+        .contact-btn{
+            background:#000;
+            color:#fff;
+            padding:14px 30px;
+            border-radius:50px;
+            text-decoration:none;
+            font-weight:600;
+            transition:0.4s;
+            border:2px solid transparent;
+        }
+
+        .contact-btn:hover{
+            background:#6c3cff;
+            color:#fff;
+            transform:translateY(-2px);
+            box-shadow:0 10px 25px rgba(108,60,255,0.3);
+        }
+
+        /* ================= MEGA MENU ================= */
+
+        .mega-menu{
+            width:950px;
+            padding:35px 40px;
+            border:none;
+            border-radius:22px;
+            background:rgba(255,255,255,0.78);
+            backdrop-filter:blur(15px);
+            box-shadow:0 15px 40px rgba(0,0,0,0.12);
+
+            left:50% !important;
+            transform:translateX(-50%);
+            top:75px !important;
+        }
+
+        .mega-menu h5{
+            color:#6c3cff;
+            margin-bottom:20px;
+            font-size:18px;
+            font-weight:600;
+        }
+
+        .mega-menu a{
+            display:block;
+            text-decoration:none;
+            color:#444;
+            margin-bottom:16px;
+            transition:0.3s;
+            font-size:16px;
+            font-weight:500;
+        }
+
+        .mega-menu a:hover{
+            color:#6c3cff;
+            transform:translateX(6px);
+        }
+
+        /* ================= HERO ================= */
+
+        .hero{
+            height:90vh;
+            background:linear-gradient(135deg,#4318ff,#6f2cff,#8a2be2);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            color:#fff;
+            position:relative;
+            overflow:hidden;
+        }
+
+        .hero::before{
+            content:'';
+            position:absolute;
+            width:500px;
+            height:500px;
+            background:rgba(255,255,255,0.08);
+            border-radius:50%;
+            top:-120px;
+            left:-120px;
+        }
+
+        .hero::after{
+            content:'';
+            position:absolute;
+            width:400px;
+            height:400px;
+            background:rgba(255,255,255,0.08);
+            border-radius:50%;
+            bottom:-150px;
+            right:-100px;
+        }
+
+        .hero-content{
+            position:relative;
+            z-index:2;
+        }
+
+        .hero h1{
+            font-size:65px;
+            font-weight:700;
+            margin-bottom:20px;
+        }
+
+        .hero p{
+            font-size:22px;
+            opacity:0.9;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width:991px){
+
+            .mega-menu{
+                width:100%;
+                transform:none;
+                left:0 !important;
+                padding:20px;
+            }
+
+            .navbar-nav{
+                margin-top:20px;
+            }
+
+            .contact-btn{
+                display:inline-block;
+                margin-top:15px;
+            }
+
+            .hero h1{
+                font-size:40px;
+            }
+
+            .navbar-brand{
+                font-size:32px;
+            }
+        }
+/* ================= FOOTER ================= */
+
+.custom-footer{
+    background:#0f0f1a;
+    color:#fff;
+    padding:70px 0 20px 0;
+    margin-top:80px;
+}
+
+/* Logo */
+.footer-logo{
+    font-size:30px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.logo-one{ color:#f4b400; }
+.logo-two{ color:#59d1d7; }
+
+.footer-text{
+    color:#bbb;
+    line-height:1.6;
+}
+
+/* Links */
+
+.footer-links{
+    list-style:none;
+    padding:0;
+}
+
+.footer-links li{
+    margin-bottom:10px;
+}
+
+.footer-links a{
+    text-decoration:none;
+    color:#bbb;
+    transition:0.3s;
+}
+
+.footer-links a:hover{
+    color:#6c3cff;
+    padding-left:5px;
+}
+
+/* Social Icons */
+
+.social-icons a{
+    display:inline-block;
+    color:#fff;
+    font-size:18px;
+    margin-right:12px;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    color:#6c3cff;
+    transform:translateY(-3px);
+}
+
+/* Bottom */
+
+.footer-bottom{
+    text-align:center;
+    margin-top:40px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,0.1);
+    color:#aaa;
+    font-size:14px;
+}
