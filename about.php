@@ -629,66 +629,6 @@
 </section>
 
 <!-- ═══════════════════════════════════
-     SERVICES OVERVIEW
-═══════════════════════════════════ -->
-<section class="about-services">
-    <div class="container">
-        <div class="services-header">
-            <div class="section-label">Our Services</div>
-            <h2 class="section-title">Everything You Need to<br>Dominate Online</h2>
-            <p class="section-desc">From SEO to social media, we provide end-to-end digital marketing solutions that drive real, measurable results.</p>
-        </div>
-        <div class="services-grid">
-            <?php
-            $svcs = [
-                [
-                    'title' => 'Meta Ads',
-                    'desc'  => 'Boost your online presence with our Meta Ads services. From social media marketing to email campaigns, we drive targeted traffic and maximize your ROI.',
-                    'icon'  => '<svg viewBox="0 0 24 24" fill="none" stroke="#6254e7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>',
-                ],
-                [
-                    'title' => 'Website Development',
-                    'desc'  => 'Custom, responsive websites that look great and work seamlessly. We handle development, maintenance, and speed optimization to keep your site ranking higher.',
-                    'icon'  => '<svg viewBox="0 0 24 24" fill="none" stroke="#6254e7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>',
-                ],
-                [
-                    'title' => 'SEO Services',
-                    'desc'  => 'Boost your Google ranking with our SEO services. We create keyword-optimized, engaging content that drives traffic and enhances site performance.',
-                    'icon'  => '<svg viewBox="0 0 24 24" fill="none" stroke="#6254e7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>',
-                ],
-                [
-                    'title' => 'Snapchat Management',
-                    'desc'  => 'We transform your Snapchat Stories into a high-earning asset. Custom content creation to strategic posting — we manage every detail to grow your audience.',
-                    'icon'  => '<svg viewBox="0 0 24 24" fill="none" stroke="#6254e7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',
-                ],
-                [
-                    'title' => 'Video Editing',
-                    'desc'  => 'Videos get attention — and we make sure yours stand out. From reels to promos, our editing team tells your story with style and creative power.',
-                    'icon'  => '<svg viewBox="0 0 24 24" fill="none" stroke="#6254e7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>',
-                ],
-                [
-                    'title' => 'UI/UX Designing',
-                    'desc'  => 'We create intuitive, user-friendly designs with our expert UI/UX and graphic design services, bringing your vision to life with stunning visuals.',
-                    'icon'  => '<svg viewBox="0 0 24 24" fill="none" stroke="#6254e7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>',
-                ],
-            ];
-            foreach($svcs as $s): ?>
-            <div class="service-card">
-                <div class="service-icon"><?= $s['icon'] ?></div>
-                <h3 class="service-title"><?= $s['title'] ?></h3>
-                <p class="service-desc"><?= $s['desc'] ?></p>
-            </div>
-            <?php endforeach; ?>
-        </div>
-        <div style="text-align:center;margin-top:48px;">
-            <a href="services/" class="btn-outline">View More Services
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- ═══════════════════════════════════
      SKILLS
 ═══════════════════════════════════ -->
 <section class="about-skills">
@@ -721,55 +661,6 @@
                 </div>
                 <?php endforeach; ?>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- ═══════════════════════════════════
-     TEAM
-═══════════════════════════════════ -->
-<section class="about-team">
-    <div class="container">
-        <div class="team-header">
-            <div class="section-label">Our Team</div>
-            <h2 class="section-title">The Professionals Behind the Work</h2>
-            <p class="section-desc">Our team blends innovation, skill, and passion to deliver results that matter. Every member brings unique expertise to the table.</p>
-        </div>
-        <div class="team-grid">
-            <?php
-            $team = [
-                ['Sandra Wilson', 'Chief Operating Officer',   'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=80'],
-                ['Dan Brake',     'Senior Digital Strategist', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80'],
-                ['Angela Long',   'Managing Director',         'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&auto=format&fit=crop&q=80'],
-                ['Victor Liu',    'General Manager',           'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop&q=80'],
-            ];
-            foreach($team as $m): ?>
-            <div class="team-card">
-                <img src="<?= $m[2] ?>" alt="<?= $m[0] ?>" class="team-card-img">
-                <div class="team-card-body">
-                    <div class="team-card-name"><?= $m[0] ?></div>
-                    <div class="team-card-role"><?= $m[1] ?></div>
-                    <div class="team-socials">
-                        <a href="#" class="tsocial" aria-label="LinkedIn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="#7a7a7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                        </a>
-                        <a href="#" class="tsocial" aria-label="Facebook">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="#7a7a7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-                        </a>
-                        <a href="#" class="tsocial" aria-label="Twitter">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="#7a7a7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <?php endforeach; ?>
-        </div>
-        <div class="team-cta-box">
-            <h4>Want to Join Our Team?</h4>
-            <p>We're always looking for talented, passionate people to join our growing team. Check out our open positions.</p>
-            <a href="careers/" class="btn-primary">View Open Positions
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
         </div>
     </div>
 </section>

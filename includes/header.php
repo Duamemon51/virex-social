@@ -329,7 +329,6 @@
                     </div>
                 </li>
 
-                <li><a class="nav-link <?= ($current === 'careers.php') ? 'active' : '' ?>" href="careers.php">Careers</a></li>
                 <li><a class="nav-link <?= ($current === 'blog.php') ? 'active' : '' ?>" href="blog.php">Blog</a></li>
                 <li><a class="nav-link <?= ($current === 'faqs.php') ? 'active' : '' ?>" href="faqs.php">FAQs</a></li>
                 <li><a href="contact-us.php" class="nav-link nav-cta">Get In Touch</a></li>
