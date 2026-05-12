@@ -16,7 +16,7 @@
         --surface:  #ffffff;
         --surface2: #f0ecff;
         --text:     #4b4570;
-        --text-strong: #1a0f3c;
+        --text-strong: #000000;
         --muted:    #9ca3af;
         --border:   rgba(124,58,237,0.12);
 
@@ -46,7 +46,22 @@
     .section-label .sl-dot span:nth-child(2) { animation-delay:0.2s; }
     .section-label .sl-dot span:nth-child(3) { animation-delay:0.4s; }
     @keyframes dotBlink { 0%,100%{opacity:0.3} 50%{opacity:1} }
-    .section-title { font-family:'Clash Display',sans-serif; font-size:clamp(28px,4.2vw,50px); line-height:1.12; margin-bottom:18px; letter-spacing:-0.5px; color:var(--text-strong); }
+   .section-title {
+  font-family: 'Clash Display', sans-serif;
+  font-size: clamp(28px, 4.2vw, 50px);
+  line-height: 1.12;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+  color: BLACK;
+}
+  .section-title1 {
+  font-family: 'Clash Display', sans-serif;
+  font-size: clamp(28px, 4.2vw, 50px);
+  line-height: 1.12;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+  color: white;
+}
     .section-desc { font-size:17px; line-height:1.85; color:#6b7280; max-width:520px; margin-bottom:60px; }
 
     @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.4)} }
@@ -82,8 +97,8 @@
         padding: 8px 20px; border-radius:50px; margin-bottom:28px;
     }
     .page-hero-badge .badge-dot { width:7px;height:7px;border-radius:50%;background:#f97316;animation:pulse 1.5s infinite; }
-    .page-hero h1 { font-family:'Clash Display',sans-serif; font-size: clamp(26px, 4vw, 52px); line-height: 1.1; letter-spacing:-1px; color: #fff; margin-bottom: 22px; }
-    .page-hero p.ph-desc { color: rgba(255,255,255,0.72); font-size: 17px; line-height: 1.85; max-width: 620px; margin: 0 auto 40px; }
+    .page-hero h1 { font-family:'Clash Display',sans-serif;     font-size: clamp(26px, 4vw, 45px); line-height: 1.1; letter-spacing:-1px; color: #fff; margin-bottom: 22px; }
+    .page-hero p.ph-desc { color: rgba(255,255,255,0.72); font-size: 17px; line-height: 1.85; max-width: 920px; margin: 0 auto 40px; }
     .page-hero::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--grad-main); z-index: 20; }
 
     /* Hero image strip */
@@ -634,7 +649,7 @@
             <span class="badge-dot"></span>
             Digital Marketing Agency
         </div>
-        <h1>About Our Company—<br>Driven by Passion, Built on Trust</h1>
+        <h1>About Our Company—Driven by Passion, Built on Trust</h1>
         <p class="ph-desc">We're more than a digital agency — we're a team that believes in purpose, partnership, and performance. Learn the 3 things clients love about our company.</p>
         <a href="contact.php" class="btn-grad">
             Contact Us
@@ -653,9 +668,11 @@
                     <span class="sl-dot"><span></span><span></span><span></span></span>
                     About Us
                 </div>
-                <h2 class="section-title">Learn All About <span class="grad-text">Hashtag Media</span></h2>
+                <h2 class="section-title">Learn All About <span class="grad-text">
+Virex Social</span></h2>
                 <p>We're more than a digital agency — we're a team that believes in purpose, partnership, and performance. Our clients love us for 3 key reasons: we listen, we innovate, and we deliver.</p>
-                <p>At Hashtag Media, we create digital experiences that excite and inspire. Every project is unique — our team uses fresh ideas and the latest tools to make your brand stand out. From sleek designs to full marketing strategies, we help businesses of all sizes bring their vision to life.</p>
+                <p>At 
+Virex Social, we create digital experiences that excite and inspire. Every project is unique — our team uses fresh ideas and the latest tools to make your brand stand out. From sleek designs to full marketing strategies, we help businesses of all sizes bring their vision to life.</p>
                 <a href="contact.php" class="btn-grad">
                     Contact Us
                     <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -663,7 +680,8 @@
             </div>
             <div class="about-intro-right">
                 <div class="about-intro-img">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80" alt="Hashtag Media Office">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80" alt="
+Virex Social Office">
                     <div class="about-intro-img-badge">
                         <div class="aib-icon">
                             <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -736,7 +754,8 @@
             <div class="tab-content-grid-v2">
                 <div class="tab-text-v2">
                     <h3>Building Digital Experiences That Drive Results</h3>
-                    <p>At Hashtag Media, our core values guide everything we do. From how we treat our clients to how we approach every campaign — integrity, innovation, and impact are at the heart of it all.</p>
+                    <p>At 
+Virex Social, our core values guide everything we do. From how we treat our clients to how we approach every campaign — integrity, innovation, and impact are at the heart of it all.</p>
                     <div class="tab-point-v2">
                         <div class="tpv-icon tpv-purple">
                             <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
@@ -797,7 +816,8 @@
                 </div>
                 <div class="tab-text-v2">
                     <h3>Do You Know About Our Company?</h3>
-                    <p>We are Hashtag Media. We help brands grow, connect, and inspire. Our mission is simple — help businesses achieve digital success through creative thinking and smart execution.</p>
+                    <p>We are 
+Virex Social. We help brands grow, connect, and inspire. Our mission is simple — help businesses achieve digital success through creative thinking and smart execution.</p>
                     <div class="tab-point-v2">
                         <div class="tpv-icon tpv-purple">
                             <svg viewBox="0 0 24 24"><path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"/></svg>
@@ -847,7 +867,8 @@
                     Why Choose Us
                 </div>
                 <h2 class="section-title">What Makes <span class="grad-text">Us Different</span></h2>
-                <p style="font-size:16px;line-height:1.85;color:#6b7280;margin-bottom:10px;">In a crowded market, Hashtag Media stands out because we combine creative passion with data-driven precision. We don't just run campaigns — we build relationships and long-term growth engines for your brand.</p>
+                <p style="font-size:16px;line-height:1.85;color:#6b7280;margin-bottom:10px;">In a crowded market, 
+Virex Social stands out because we combine creative passion with data-driven precision. We don't just run campaigns — we build relationships and long-term growth engines for your brand.</p>
                 <div class="why-list">
                     <div class="why-item">
                         <div class="wi-icon wii-p">
@@ -888,7 +909,8 @@
                 </div>
             </div>
             <div class="why-img">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80" alt="Why choose Hashtag Media">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80" alt="Why choose 
+Virex Social">
             </div>
         </div>
     </div>
@@ -973,12 +995,13 @@
             <span class="sl-dot"><span></span><span></span><span></span></span>
             Testimonials
         </div>
-        <h2 class="section-title">What Our <span class="grad-text">Clients Say</span></h2>
+        <h2 class="section-title1">What Our <span class="grad-text">Clients Say</span></h2>
         <div class="testimonial-grid">
            
             <div class="testimonial-card">
                 <span class="testimonial-quote">"</span>
-                <p class="testimonial-text">The team at Hashtag Media turned our vision into a brand that truly connects with our audience. From logo design to content strategy, everything was done with care and delivered on time. Our online sales jumped 3x within 6 months!</p>
+                <p class="testimonial-text">The team at 
+Virex Social turned our vision into a brand that truly connects with our audience. From logo design to content strategy, everything was done with care and delivered on time. Our online sales jumped 3x within 6 months!</p>
                 <div class="testimonial-author">
                     <div class="ta-avatar">T</div>
                     <div class="ta-info">
@@ -1001,20 +1024,23 @@
                 FAQ
             </div>
             <h2 class="section-title">Most Popular <span class="grad-text">Questions</span></h2>
-            <p class="faq2-subtitle">Have questions about Hashtag Media? We've got answers.</p>
+            <p class="faq2-subtitle">Have questions about 
+Virex Social? We've got answers.</p>
         </div>
         <div class="faq2-body">
             <div class="faq2-list">
                 <div class="faq2-item open">
                     <div class="faq2-question" onclick="toggleFaq2(this)">
-                        <div class="faq2-q-inner"><span class="faq2-num">01</span><span>What services does Hashtag Media offer?</span></div>
+                        <div class="faq2-q-inner"><span class="faq2-num">01</span><span>What services does 
+Virex Social offer?</span></div>
                         <div class="faq2-toggle"><svg viewBox="0 0 24 24" fill="none"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
                     </div>
                     <div class="faq2-answer">We provide many digital services — branding, social media marketing, website design, SEO, content writing, paid ads, and event coverage. We help your business grow online.</div>
                 </div>
                 <div class="faq2-item">
                     <div class="faq2-question" onclick="toggleFaq2(this)">
-                        <div class="faq2-q-inner"><span class="faq2-num">02</span><span>How do I get started with Hashtag Media?</span></div>
+                        <div class="faq2-q-inner"><span class="faq2-num">02</span><span>How do I get started with 
+Virex Social?</span></div>
                         <div class="faq2-toggle"><svg viewBox="0 0 24 24" fill="none"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
                     </div>
                     <div class="faq2-answer">Contact us by form, email, or WhatsApp. We will talk with you, understand your goals, and suggest the best plan for your business.</div>
@@ -1082,52 +1108,78 @@
 <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script>
-(function(){
-    var t1 = [
-        {text:'Passion & Purpose',style:'b',icon:'<svg viewBox="0 0 24 24" fill="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-width="2"/></svg>'},
-        {text:'Creative Strategies',style:'d',icon:'<svg viewBox="0 0 24 24" fill="none"><path d="M12 20h9" stroke="currentColor" stroke-width="2"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" stroke="currentColor" stroke-width="2"/></svg>'},
-        {text:'Client-First Approach',style:'e',icon:'<svg viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2"/></svg>'},
-        {text:'Data-Driven Results',style:'c',icon:'<svg viewBox="0 0 24 24" fill="none"><line x1="18" y1="20" x2="18" y2="10" stroke="currentColor" stroke-width="2"/><line x1="12" y1="20" x2="12" y2="4" stroke="currentColor" stroke-width="2"/><line x1="6" y1="20" x2="6" y2="14" stroke="currentColor" stroke-width="2"/></svg>'},
-        {text:'10+ Years Experience',style:'a',icon:'<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="12 6 12 12 16 14" stroke="currentColor" stroke-width="2"/></svg>'},
-        {text:'1,200+ Happy Clients',style:'b',icon:'<svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/></svg>'},
-        {text:'UAE\'s Leading Agency',style:'d',icon:'<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="2"/></svg>'},
-        {text:'Full-Service Digital',style:'e',icon:'<svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/><line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="2"/></svg>'},
-    ];
-    var t2 = [
-        {text:'Brand Identity',style:'c',icon:'<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/></svg>'},
-        {text:'Social Media',style:'b',icon:'<svg viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="2"/></svg>'},
-        {text:'SEO & Growth',style:'a',icon:'<svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2"/></svg>'},
-        {text:'Web Development',style:'d',icon:'<svg viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="currentColor" stroke-width="2"/><polyline points="8 6 2 12 8 18" stroke="currentColor" stroke-width="2"/></svg>'},
-        {text:'Video Editing',style:'e',icon:'<svg viewBox="0 0 24 24" fill="none"><polygon points="23 7 16 12 23 17 23 7" stroke="currentColor" stroke-width="2"/><rect x="1" y="5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="2"/></svg>'},
-        {text:'App Development',style:'b',icon:'<svg viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" stroke-width="2"/></svg>'},
-        {text:'Paid Advertising',style:'c',icon:'<svg viewBox="0 0 24 24" fill="none"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" stroke="currentColor" stroke-width="2"/></svg>'},
-        {text:'Content Creation',style:'a',icon:'<svg viewBox="0 0 24 24" fill="none"><path d="M12 20h9" stroke="currentColor" stroke-width="2"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4z" stroke="currentColor" stroke-width="2"/></svg>'},
-    ];
-    function buildTrack(items, id) {
-        var el = document.getElementById(id);
-        if(!el) return;
-        var doubled = items.concat(items);
-        var html = doubled.map(function(item){
-            return '<div class="scroll-item"><div class="scroll-pill style-'+item.style+'"><div class="scroll-pill-icon">'+item.icon+'</div>'+item.text+'</div></div><span class="scroll-sep-star">✦</span>';
-        }).join('');
-        el.innerHTML = html;
-    }
-    buildTrack(t1, 'scrollTrack1');
-    buildTrack(t2, 'scrollTrack2');
-})();
+/* ── Tab Switcher Fix ── */
+function switchTabV2(tabName, clickedBtn) {
+  /* 1. Saare panels hide karo */
+  document.querySelectorAll('.tab-panel-v2').forEach(function(p) {
+    p.classList.remove('active');
+  });
 
-function toggleFaq2(q) {
-    var item = q.parentElement;
-    var isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq2-item.open').forEach(function(i){ i.classList.remove('open'); });
-    if(!isOpen) item.classList.add('open');
+  /* 2. Saare buttons se active class hatao */
+  document.querySelectorAll('.tab-btn-v2').forEach(function(b) {
+    b.classList.remove('active');
+  });
+
+  /* 3. Selected panel show karo */
+  var panel = document.getElementById('tabv2-' + tabName);
+  if (panel) panel.classList.add('active');
+
+  /* 4. Clicked button ko active karo */
+  if (clickedBtn) clickedBtn.classList.add('active');
 }
 
-window.addEventListener('scroll', function(){
-    var btn = document.getElementById('back-to-top');
-    if(window.scrollY > 400) btn.classList.add('visible');
-    else btn.classList.remove('visible');
+/* ── FAQ Toggle ── */
+function toggleFaq2(q) {
+  var item = q.parentElement;
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq2-item.open').forEach(function(i) {
+    i.classList.remove('open');
+  });
+  if (!isOpen) item.classList.add('open');
+}
+
+/* ── Scrolling Marquee Builder ── */
+(function() {
+  var t1 = [
+    {text:'Passion & Purpose', style:'b', icon:'<svg viewBox="0 0 24 24" fill="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-width="2"/></svg>'},
+    {text:'Creative Strategies', style:'d', icon:'<svg viewBox="0 0 24 24" fill="none"><path d="M12 20h9" stroke="currentColor" stroke-width="2"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" stroke="currentColor" stroke-width="2"/></svg>'},
+    {text:'Client-First Approach', style:'e', icon:'<svg viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2"/></svg>'},
+    {text:'Data-Driven Results', style:'c', icon:'<svg viewBox="0 0 24 24" fill="none"><line x1="18" y1="20" x2="18" y2="10" stroke="currentColor" stroke-width="2"/><line x1="12" y1="20" x2="12" y2="4" stroke="currentColor" stroke-width="2"/><line x1="6" y1="20" x2="6" y2="14" stroke="currentColor" stroke-width="2"/></svg>'},
+    {text:'10+ Years Experience', style:'a', icon:'<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="12 6 12 12 16 14" stroke="currentColor" stroke-width="2"/></svg>'},
+    {text:'1,200+ Happy Clients', style:'b', icon:'<svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/></svg>'},
+    {text:"UAE's Leading Agency", style:'d', icon:'<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="2"/></svg>'},
+    {text:'Full-Service Digital', style:'e', icon:'<svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/><line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="2"/></svg>'}
+  ];
+  var t2 = [
+    {text:'Brand Identity', style:'c', icon:'<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/></svg>'},
+    {text:'Social Media', style:'b', icon:'<svg viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="2"/></svg>'},
+    {text:'SEO & Growth', style:'a', icon:'<svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2"/></svg>'},
+    {text:'Web Development', style:'d', icon:'<svg viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="currentColor" stroke-width="2"/><polyline points="8 6 2 12 8 18" stroke="currentColor" stroke-width="2"/></svg>'},
+    {text:'Video Editing', style:'e', icon:'<svg viewBox="0 0 24 24" fill="none"><polygon points="23 7 16 12 23 17 23 7" stroke="currentColor" stroke-width="2"/><rect x="1" y="5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="2"/></svg>'},
+    {text:'App Development', style:'b', icon:'<svg viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" stroke-width="2"/></svg>'},
+    {text:'Paid Advertising', style:'c', icon:'<svg viewBox="0 0 24 24" fill="none"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" stroke="currentColor" stroke-width="2"/></svg>'},
+    {text:'Content Creation', style:'a', icon:'<svg viewBox="0 0 24 24" fill="none"><path d="M12 20h9" stroke="currentColor" stroke-width="2"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4z" stroke="currentColor" stroke-width="2"/></svg>'}
+  ];
+  function buildTrack(items, id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var doubled = items.concat(items);
+    var html = doubled.map(function(item) {
+      return '<div class="scroll-item"><div class="scroll-pill style-' + item.style + '"><div class="scroll-pill-icon">' + item.icon + '</div>' + item.text + '</div></div><span class="scroll-sep-star">✦</span>';
+    }).join('');
+    el.innerHTML = html;
+  }
+  buildTrack(t1, 'scrollTrack1');
+  buildTrack(t2, 'scrollTrack2');
+})();
+
+/* ── Back to Top ── */
+window.addEventListener('scroll', function() {
+  var btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  if (window.scrollY > 400) btn.classList.add('visible');
+  else btn.classList.remove('visible');
 });
 </script>
-
+<?php include 'includes/virex-floating-social.php'; ?>
 <?php include 'includes/footer.php'; ?>

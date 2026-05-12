@@ -1,16 +1,5 @@
 <?php
-/**
- * ╔══════════════════════════════════════════════╗
- * ║   VIREX SOCIAL — includes/header.php        ║
- * ╚══════════════════════════════════════════════╝
- *
- * CONFIG — edit before including:
- *   $page_title    = "Page Title | Virex Social";
- *   $active_page   = "home"; // home | about | services | blog | faqs
- *
- * NOTE: Active tab is now handled automatically by JS based on current URL.
- *       PHP $active_page is kept for fallback / SEO purposes only.
- */
+
 
 if (!isset($page_title))  $page_title  = "Virex Social – Expert Digital Marketing Services";
 if (!isset($active_page)) $active_page = "home";
@@ -462,9 +451,7 @@ function nav_active($page, $current) {
 
             <!-- Right -->
             <div class="nav-right">
-                <div class="nav-badge">
-                    <span class="nav-badge-dot"></span>Now Available
-                </div>
+             
                 <a href="<?php echo $base_url; ?>contact-us.php" class="nav-cta">Contact Today</a>
                 <button class="hamburger" id="hamburger" aria-label="Open menu">
                     <span></span><span></span><span></span>

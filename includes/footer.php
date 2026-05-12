@@ -151,10 +151,7 @@
             <div class="footer-bottom-inner">
                 <div class="footer-bottom-left">
                     <p>© Virex Social <?php echo date('Y'); ?> — All Rights Reserved.</p>
-                    <div class="footer-bottom-badge">
-                        <span class="footer-bottom-badge-dot"></span>
-                        Proudly Based in UAE
-                    </div>
+                  
                 </div>
                 <div class="footer-bottom-links">
                     <a href="/privacy.php">Privacy Policy</a>

@@ -104,7 +104,7 @@
     .page-hero-badge .badge-dot { width:7px;height:7px;border-radius:50%;background:#f97316;animation:pulse 1.5s infinite; }
    .page-hero h1 {
     font-family:'Clash Display',sans-serif;
-    font-size: clamp(26px, 4vw, 48px);
+    font-size: clamp(26px, 4vw, 45px);
     line-height: 1.1;
     letter-spacing:-1px;
     color: #fff;
@@ -113,7 +113,7 @@
     .page-hero p.ph-desc {
         color: rgba(255,255,255,0.72);
         font-size: 17px; line-height: 1.85;
-        max-width: 920px; margin: 0 auto 40px;
+        max-width: 820px; margin: 0 auto 40px;
     }
     .btn-grad {
         display: inline-flex; align-items: center; gap: 10px;

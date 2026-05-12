@@ -109,7 +109,7 @@
         .page-hero-badge .badge-dot { width:7px;height:7px;border-radius:50%;background:#f97316;animation:pulse 1.5s infinite; }
         .page-hero h1 {
             font-family:'Manrope',sans-serif;
-            font-size: clamp(26px, 4vw, 52px);
+           font-size: clamp(26px, 4vw, 45px);
             font-weight: 800;
             line-height: 1.1;
             letter-spacing:-1px;

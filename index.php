@@ -531,11 +531,11 @@
                 </h1>
                 <p class="hero-desc">Our results-driven digital marketing services connect you with the right audience and fuel sustainable business growth.</p>
                 <div class="hero-actions">
-                    <a href="#" class="btn-grad">
+                    <a href="contact-us.php" class="btn-grad">
                         Contact Today
                         <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
-                    <a href="#" class="btn-ghost">Our Services</a>
+                    <a href="services.php" class="btn-ghost">Our Services</a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat-item">
@@ -682,7 +682,7 @@
             </div>
         </div>
         <div class="services-cta">
-            <a href="#" class="btn-outline">View More Services</a>
+            <a href="services.php" class="btn-outline">View More Services</a>
         </div>
     </div>
 </section>
@@ -783,36 +783,7 @@
     </div>
 </section>
 
-<!-- ══ TESTIMONIALS ══ -->
-<section class="testimonials-section">
-    <div class="container">
-        <div class="testimonials-header">
-            <div class="section-label" style="color:#f97316;justify-content:center">
-                <span class="sl-dot"><span></span><span></span><span></span></span>
-                Testimonials
-            </div>
-            <h2 class="section-title">What People <span class="grad-text">Say About Us</span></h2>
-        </div>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="testimonial-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-                <p class="testimonial-text">"Working with Virex Social was one of the best decisions we made. Their team is responsive, innovative, and truly understands what works in the digital space."</p>
-                <div class="testimonial-author"><div class="author-avatar">AK</div><div class="author-info"><strong>Ahmed Khan</strong><span>CEO, TechBrand UAE</span></div></div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-                <p class="testimonial-text">"We saw amazing results within weeks. The team delivered real value through targeted campaigns, creative strategies, and expert support. They're our go-to agency."</p>
-                <div class="testimonial-author"><div class="author-avatar" style="background:var(--grad-warm)">SR</div><div class="author-info"><strong>Sara Rizwan</strong><span>Marketing Manager, Luxe Co</span></div></div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-                <p class="testimonial-text">"Professional, fast, and effective. Virex Social helped us grow online and become more visible. Easily the best digital marketing company we've worked with."</p>
-                <div class="testimonial-author"><div class="author-avatar" style="background:linear-gradient(135deg,#06b6d4,#2563eb)">MJ</div><div class="author-info"><strong>Michael John</strong><span>Founder, StartupX</span></div></div>
-            </div>
-        </div>
-    </div>
-</section>
-
+<?php include 'includes/testimonials-section.php'; ?>
 <?php include 'includes/faq-section.php'; ?>
 <?php include 'includes/contact-section.php'; ?>
 <?php include 'includes/virex-floating-social.php'; ?>

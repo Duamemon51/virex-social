@@ -189,7 +189,7 @@
     }
     .blog-card:hover::before { transform: scaleX(1); }
 
-    /* Thumbnail */
+    /* ══ THUMBNAIL — FIXED ══ */
     .blog-thumb {
         width: 100%;
         aspect-ratio: 4/3;
@@ -197,6 +197,8 @@
         display: block;
         background: #eee;
         position: relative;
+        /* Top corners match card radius, bottom corners flat */
+        border-radius: 26px 26px 0 0;
     }
     .blog-thumb img {
         width: 100%;
@@ -204,35 +206,40 @@
         object-fit: cover;
         display: block;
         transition: transform 0.5s ease;
+        /* Ensure image fills completely, no gap */
+        border-radius: 0;
     }
     .blog-card:hover .blog-thumb img { transform: scale(1.05); }
 
-    /* Category badge on image */
-    .thumb-cat {
-        position: absolute;
-        top: 14px; left: 14px;
-        z-index: 3;
+    /* Category tags — image overlay removed, now in content area */
+    .thumb-cat { display: none; }
+
+    .card-cats {
         display: flex; gap: 6px; flex-wrap: wrap;
+        margin-bottom: 10px;
     }
-    .thumb-cat a {
-        display: inline-block;
-        background: rgba(13,5,32,0.72);
-        border: 1px solid rgba(255,255,255,0.15);
-        color: #fbbf24;
+    .card-cats a {
+        display: inline-flex; align-items: center; gap: 5px;
         font-family: 'Manrope', sans-serif;
-        font-weight: 700;
-        font-size: 10px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        padding: 5px 12px;
-        border-radius: 50px;
-        backdrop-filter: blur(6px);
+        font-weight: 700; font-size: 9.5px;
+        letter-spacing: 1.8px; text-transform: uppercase;
+        color: var(--purple);
+        background: rgba(124,58,237,0.08);
+        border: 1px solid rgba(124,58,237,0.18);
+        padding: 4px 11px; border-radius: 6px;
         transition: all 0.2s;
     }
-    .thumb-cat a:hover {
-        background: var(--grad-btn);
-        border-color: transparent;
-        color: #fff;
+    .card-cats a::before {
+        content: '';
+        width: 5px; height: 5px; border-radius: 50%;
+        background: var(--purple);
+        opacity: 0.7;
+        flex-shrink: 0;
+    }
+    .card-cats a:hover {
+        background: rgba(124,58,237,0.15);
+        border-color: rgba(124,58,237,0.35);
+        color: var(--purple);
     }
 
     /* Content */
@@ -874,7 +881,7 @@
             <?php foreach ($posts as $post): ?>
             <article class="blog-card">
 
-                <a href="<?php echo htmlspecialchars($post['url']); ?>" class="blog-thumb">
+                <a href="single-post.php?slug=<?php echo urlencode(rtrim($post['url'], '/')); ?>" class="blog-thumb">
                     <img
                         src="<?php echo htmlspecialchars($post['img']); ?>"
                         alt="<?php echo htmlspecialchars($post['alt']); ?>"
@@ -889,19 +896,25 @@
 
                 <div class="blog-content">
 
+                    <div class="card-cats">
+                        <?php foreach ($post['cats'] as $cat): ?>
+                            <a href="<?php echo htmlspecialchars($cat[1]); ?>"><?php echo htmlspecialchars($cat[0]); ?></a>
+                        <?php endforeach; ?>
+                    </div>
+
                     <div class="listing-meta">
                         <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                         <?php echo $post['date']; ?>
                     </div>
 
-                    <a href="<?php echo htmlspecialchars($post['url']); ?>" class="blog-title">
+                    <a href="single-post.php?slug=<?php echo urlencode(rtrim($post['url'], '/')); ?>" class="blog-title">
                         <?php echo htmlspecialchars($post['title']); ?>
                     </a>
 
                     <p class="blog-excerpt"><?php echo htmlspecialchars($post['excerpt']); ?></p>
 
                     <div class="card-footer">
-                        <a href="<?php echo htmlspecialchars($post['url']); ?>" class="read-more">
+                        <a href="single-post.php?slug=<?php echo urlencode(rtrim($post['url'], '/')); ?>" class="read-more">
                             Read More
                             <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </a>
