@@ -1,0 +1,347 @@
+<!-- ════════════════════════════════════════════
+     GET IN TOUCH — SECTION (No Form, Social Links Only)
+     Replace old contact-section in index.php
+════════════════════════════════════════════ -->
+<section class="git-section">
+
+    <!-- Background Elements -->
+    <div class="git-orb git-orb-1"></div>
+    <div class="git-orb git-orb-2"></div>
+    <div class="git-orb git-orb-3"></div>
+    <div class="git-grid-lines"></div>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="git-header">
+            <div class="section-label" style="color:#7c3aed; justify-content:center;">
+                <span class="sl-dot"><span></span><span></span><span></span></span>
+                Get In Touch
+            </div>
+            <h2 class="section-title git-title">Let's Build Something <span class="grad-text">Amazing Together</span></h2>
+            <p class="git-subtitle">Choose your preferred platform and reach out to us directly. We're always ready to help.</p>
+        </div>
+
+        <!-- Main Contact Card -->
+        <div class="git-main-card">
+
+            <!-- Left: Info Side -->
+            <div class="git-info-side">
+                <div class="git-info-badge">
+                    <span class="git-badge-dot"></span>
+                    We're online & ready to chat
+                </div>
+
+                <h3 class="git-info-title">Talk to Our Team</h3>
+                <p class="git-info-desc">Whether you have a question, a project in mind, or just want to say hello — we're just one click away. Pick your platform below and we'll get back to you fast.</p>
+
+                <div class="git-quick-info">
+                    <div class="git-qi-item">
+                        <div class="git-qi-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div class="git-qi-text">
+                            <strong>Response Time</strong>
+                            <span>Within 2 hours</span>
+                        </div>
+                    </div>
+                    <div class="git-qi-item">
+                        <div class="git-qi-icon warm">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div class="git-qi-text">
+                            <strong>Location</strong>
+                            <span>Dubai, UAE</span>
+                        </div>
+                    </div>
+                    <div class="git-qi-item">
+                        <div class="git-qi-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div class="git-qi-text">
+                            <strong>Email</strong>
+                            <span>contact@virexsocial.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Decorative avatar stack -->
+                <div class="git-team-row">
+                    <div class="git-avatars">
+                        <div class="git-av" style="background: linear-gradient(135deg,#e040fb,#7c3aed)">A</div>
+                        <div class="git-av" style="background: linear-gradient(135deg,#f97316,#fbbf24)">S</div>
+                        <div class="git-av" style="background: linear-gradient(135deg,#06b6d4,#2563eb)">M</div>
+                        <div class="git-av" style="background: linear-gradient(135deg,#10b981,#06b6d4)">R</div>
+                    </div>
+                    <div class="git-team-text">
+                        <strong>Meet our team</strong>
+                        <span>50+ digital marketing professionals</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Social Links Side -->
+            <div class="git-links-side">
+                <p class="git-links-label">Connect with us on</p>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/971000000000" target="_blank" class="git-link-card whatsapp">
+                    <div class="glc-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="white" width="26" height="26">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                    </div>
+                    <div class="glc-text">
+                        <span class="glc-platform">WhatsApp</span>
+                        <span class="glc-handle">Chat with us directly</span>
+                    </div>
+                    <div class="glc-arrow">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                </a>
+
+                <!-- Gmail -->
+                <a href="mailto:contact@virexsocial.com" class="git-link-card gmail">
+                    <div class="glc-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="white" width="24" height="24">
+                            <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+                        </svg>
+                    </div>
+                    <div class="glc-text">
+                        <span class="glc-platform">Gmail</span>
+                        <span class="glc-handle">contact@virexsocial.com</span>
+                    </div>
+                    <div class="glc-arrow">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                </a>
+
+                <!-- Messenger -->
+                <a href="https://m.me/virexsocial" target="_blank" class="git-link-card messenger">
+                    <div class="glc-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="white" width="24" height="24">
+                            <path d="M12 0C5.374 0 0 4.975 0 11.111c0 3.497 1.745 6.616 4.472 8.652V24l4.086-2.242c1.09.301 2.246.464 3.442.464 6.626 0 12-4.974 12-11.111C24 4.975 18.626 0 12 0zm1.191 14.963l-3.055-3.26-5.963 3.26L10.732 8.1l3.13 3.26 5.888-3.26-6.559 6.863z"/>
+                        </svg>
+                    </div>
+                    <div class="glc-text">
+                        <span class="glc-platform">Messenger</span>
+                        <span class="glc-handle">@virexsocial</span>
+                    </div>
+                    <div class="glc-arrow">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com/virexsocial" target="_blank" class="git-link-card instagram">
+                    <div class="glc-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="white" width="24" height="24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                        </svg>
+                    </div>
+                    <div class="glc-text">
+                        <span class="glc-platform">Instagram</span>
+                        <span class="glc-handle">@virexsocial</span>
+                    </div>
+                    <div class="glc-arrow">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com/company/virexsocial" target="_blank" class="git-link-card linkedin">
+                    <div class="glc-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="white" width="24" height="24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </div>
+                    <div class="glc-text">
+                        <span class="glc-platform">LinkedIn</span>
+                        <span class="glc-handle">Virex Social</span>
+                    </div>
+                    <div class="glc-arrow">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ════════════════════════
+     GET IN TOUCH STYLES
+════════════════════════ -->
+<style>
+    /* ── Section wrapper ── */
+    .git-section {
+        padding: 120px 0;
+        background: linear-gradient(135deg, #fdf8ff 0%, #fff8f0 50%, #f0f9ff 100%);
+        position: relative; z-index: 2; overflow: hidden;
+    }
+
+    /* ── Background orbs ── */
+    .git-orb { position: absolute; border-radius: 50%; filter: blur(110px); pointer-events: none; }
+    .git-orb-1 { width: 450px; height: 450px; background: rgba(124,58,237,0.08);  top: -150px; right: -80px; }
+    .git-orb-2 { width: 350px; height: 350px; background: rgba(249,115,22,0.07);  bottom: -100px; left: -80px; }
+    .git-orb-3 { width: 250px; height: 250px; background: rgba(6,182,212,0.06);   top: 40%; left: 40%; }
+
+    /* ── Grid lines bg decoration ── */
+    .git-grid-lines {
+        position: absolute; inset: 0; pointer-events: none;
+        background-image:
+            linear-gradient(rgba(124,58,237,0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(124,58,237,0.04) 1px, transparent 1px);
+        background-size: 60px 60px;
+        mask-image: radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.5) 80%);
+    }
+
+    /* ── Header ── */
+    .git-header { text-align: center; max-width: 640px; margin: 0 auto 60px; }
+    .git-title { margin-bottom: 16px; }
+    .git-subtitle { font-size: 17px; line-height: 1.85; color: #6b7280; }
+
+    /* ── Main card ── */
+    .git-main-card {
+        display: grid; grid-template-columns: 1fr 1fr;
+        gap: 0; background: white;
+        border: 1.5px solid rgba(124,58,237,0.12);
+        border-radius: 32px; overflow: hidden;
+        box-shadow: 0 20px 80px rgba(124,58,237,0.08), 0 4px 20px rgba(0,0,0,0.04);
+        position: relative; z-index: 1;
+    }
+
+    /* ── Info side (left) ── */
+    .git-info-side {
+        padding: 56px 52px;
+        background: linear-gradient(145deg, #0d0520 0%, #130a35 50%, #0a1a40 100%);
+        position: relative; overflow: hidden;
+    }
+    .git-info-side::before {
+        content: '';
+        position: absolute; inset: 0;
+        background: radial-gradient(ellipse at 80% 20%, rgba(124,58,237,0.3) 0%, transparent 60%),
+                    radial-gradient(ellipse at 10% 90%, rgba(249,115,22,0.15) 0%, transparent 50%);
+        pointer-events: none;
+    }
+    .git-info-side > * { position: relative; z-index: 1; }
+
+    .git-info-badge {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: rgba(249,115,22,0.12); border: 1px solid rgba(249,115,22,0.3);
+        color: #fbbf24; font-size: 11px; font-weight: 700;
+        padding: 6px 14px; border-radius: 50px; letter-spacing: 0.5px;
+        margin-bottom: 28px;
+    }
+    .git-badge-dot {
+        width: 6px; height: 6px; border-radius: 50%;
+        background: #f97316; animation: pulse 1.5s infinite;
+    }
+
+    .git-info-title {
+        font-family: 'Clash Display', sans-serif; font-weight: 700;
+        font-size: 28px; color: white; line-height: 1.2; margin-bottom: 16px;
+    }
+    .git-info-desc {
+        font-size: 14.5px; line-height: 1.85;
+        color: rgba(255,255,255,0.55); margin-bottom: 36px;
+    }
+
+    /* Quick info items */
+    .git-quick-info { display: flex; flex-direction: column; gap: 18px; margin-bottom: 40px; }
+    .git-qi-item { display: flex; align-items: center; gap: 14px; }
+    .git-qi-icon {
+        width: 38px; height: 38px; background: rgba(124,58,237,0.2);
+        border: 1px solid rgba(124,58,237,0.3); border-radius: 11px;
+        display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .git-qi-icon svg { width: 16px; height: 16px; stroke: rgba(164,120,255,0.9); fill: none; }
+    .git-qi-icon.warm { background: rgba(249,115,22,0.15); border-color: rgba(249,115,22,0.3); }
+    .git-qi-icon.warm svg { stroke: rgba(249,180,100,0.9); }
+    .git-qi-text strong { display: block; font-family: 'Clash Display', sans-serif; font-size: 13px; color: rgba(255,255,255,0.85); margin-bottom: 2px; }
+    .git-qi-text span { font-size: 13px; color: rgba(255,255,255,0.45); }
+
+    /* Team row */
+    .git-team-row { display: flex; align-items: center; gap: 16px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.08); }
+    .git-avatars { display: flex; }
+    .git-av {
+        width: 38px; height: 38px; border-radius: 50%; border: 2.5px solid rgba(13,5,32,0.8);
+        display: flex; align-items: center; justify-content: center;
+        font-family: 'Clash Display', sans-serif; font-weight: 700; font-size: 13px; color: white;
+        margin-right: -10px;
+    }
+    .git-avatars .git-av:last-child { margin-right: 0; }
+    .git-team-text strong { display: block; font-family: 'Clash Display', sans-serif; font-size: 13.5px; color: rgba(255,255,255,0.85); }
+    .git-team-text span { font-size: 12px; color: rgba(255,255,255,0.4); }
+
+    /* ── Links side (right) ── */
+    .git-links-side { padding: 48px 48px; display: flex; flex-direction: column; justify-content: center; }
+    .git-links-label {
+        font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
+        color: #a78bfa; margin-bottom: 24px;
+    }
+
+    /* ── Individual link cards ── */
+    .git-link-card {
+        display: flex; align-items: center; gap: 16px;
+        padding: 16px 20px; border-radius: 16px;
+        border: 1.5px solid transparent;
+        background: #fafafa;
+        text-decoration: none; color: inherit;
+        transition: all 0.3s cubic-bezier(.4,0,.2,1);
+        margin-bottom: 12px; position: relative; overflow: hidden;
+    }
+    .git-link-card:last-child { margin-bottom: 0; }
+    .git-link-card::before {
+        content: ''; position: absolute; inset: 0; border-radius: 14px;
+        opacity: 0; transition: opacity 0.3s;
+    }
+    .git-link-card:hover { transform: translateX(6px); box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+    .git-link-card > * { position: relative; z-index: 1; }
+
+    /* Platform brand colors on hover */
+    .git-link-card.whatsapp:hover   { border-color: rgba(37,211,102,0.35); background: #f0fdf4; }
+    .git-link-card.gmail:hover      { border-color: rgba(234,67,53,0.3);   background: #fff5f5; }
+    .git-link-card.messenger:hover  { border-color: rgba(0,153,255,0.3);   background: #f0f8ff; }
+    .git-link-card.instagram:hover  { border-color: rgba(225,48,108,0.3);  background: #fff0f6; }
+    .git-link-card.linkedin:hover   { border-color: rgba(0,119,181,0.3);   background: #f0f7ff; }
+
+    /* Icon wraps */
+    .glc-icon-wrap {
+        width: 46px; height: 46px; border-radius: 14px;
+        display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+        transition: transform 0.3s;
+    }
+    .git-link-card:hover .glc-icon-wrap { transform: rotate(-8deg) scale(1.08); }
+
+    .whatsapp   .glc-icon-wrap { background: linear-gradient(135deg, #25D366, #128C7E); }
+    .gmail      .glc-icon-wrap { background: linear-gradient(135deg, #EA4335, #FBBC05); }
+    .messenger  .glc-icon-wrap { background: linear-gradient(135deg, #0099FF, #A033FF); }
+    .instagram  .glc-icon-wrap { background: linear-gradient(135deg, #f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+    .linkedin   .glc-icon-wrap { background: linear-gradient(135deg, #0077B5, #00A0DC); }
+
+    /* Text */
+    .glc-text { flex: 1; }
+    .glc-platform { display: block; font-family: 'Clash Display', sans-serif; font-weight: 700; font-size: 15px; color: var(--text-strong); margin-bottom: 2px; }
+    .glc-handle { display: block; font-size: 12.5px; color: #9ca3af; }
+
+    /* Arrow */
+    .glc-arrow { flex-shrink: 0; opacity: 0; transform: translateX(-6px); transition: all 0.3s; }
+    .glc-arrow svg { width: 16px; height: 16px; stroke: #9ca3af; stroke-width: 2.5; fill: none; }
+    .git-link-card:hover .glc-arrow { opacity: 1; transform: translateX(0); }
+
+    /* ── Responsive ── */
+    @media(max-width: 992px) {
+        .git-main-card { grid-template-columns: 1fr; }
+        .git-info-side { padding: 40px 36px; }
+        .git-links-side { padding: 40px 36px; }
+    }
+    @media(max-width: 600px) {
+        .git-section { padding: 80px 0; }
+        .git-info-side { padding: 32px 24px; }
+        .git-links-side { padding: 32px 24px; }
+        .git-info-title { font-size: 22px; }
+        .git-link-card { padding: 14px 16px; }
+    }
+</style>
