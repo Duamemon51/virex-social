@@ -7,6 +7,9 @@
  * CONFIG — edit before including:
  *   $page_title    = "Page Title | Virex Social";
  *   $active_page   = "home"; // home | about | services | blog | faqs
+ *
+ * NOTE: Active tab is now handled automatically by JS based on current URL.
+ *       PHP $active_page is kept for fallback / SEO purposes only.
  */
 
 if (!isset($page_title))  $page_title  = "Virex Social – Expert Digital Marketing Services";
@@ -151,26 +154,25 @@ function nav_active($page, $current) {
             padding: 8px 20px; border-radius: 50px; transition: all 0.25s;
             white-space: nowrap; font-family: 'Manrope', sans-serif;
             background: none; border: none; outline: none; cursor: pointer;
-            /* Default color same as other nav links */
             color: rgba(255,255,255,0.55);
         }
 
-        /* Highlighted "Services" pill — like image (purple-tinted active) */
-        .nav-dropdown.hl > .nav-drop-toggle {
-            color: #fff;
-            background: rgba(99,102,241,0.4);
-            border: 1px solid rgba(139,92,246,0.35);
+        /* Services toggle default */
+        .nav-drop-toggle:hover { color: rgba(255,255,255,0.92); background: rgba(255,255,255,0.07); }
+
+        /* ── Services active state (when on a services/* page) ── */
+        .nav-dropdown.services-active > .nav-drop-toggle {
+            color: white;
+            background: rgba(124,58,237,0.35);
         }
-        .nav-dropdown:not(.hl) > .nav-drop-toggle:hover { color: rgba(255,255,255,0.92); background: rgba(255,255,255,0.07); }
-        .nav-dropdown.active > .nav-drop-toggle { color: white; background: rgba(124,58,237,0.35); }
 
         .chevron { width: 13px; height: 13px; transition: transform 0.3s; }
         .chevron path { stroke: rgba(255,255,255,0.55); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
-        .nav-dropdown.hl .chevron path { stroke: rgba(255,255,255,0.85); }
+        .nav-dropdown.services-active .chevron path { stroke: rgba(255,255,255,0.85); }
         .nav-dropdown:hover .chevron { transform: rotate(180deg); }
 
         /* ══════════════════════════════════════
-           DARK MEGA MENU — matches image exactly
+           DARK MEGA MENU
         ══════════════════════════════════════ */
         .mega-menu {
             position: absolute;
@@ -178,8 +180,6 @@ function nav_active($page, $current) {
             left: 50%;
             transform: translateX(-50%) translateY(-8px);
             width: 760px;
-
-            /* Deep dark navy-purple — same as image */
             background: var(--dd-bg);
             border-radius: 18px;
             border: 1px solid var(--dd-border);
@@ -187,7 +187,6 @@ function nav_active($page, $current) {
                 0 30px 80px rgba(0,0,0,0.6),
                 0 0 0 1px rgba(99,102,241,0.08),
                 inset 0 1px 0 rgba(255,255,255,0.05);
-
             padding: 32px 36px 30px;
             opacity: 0; visibility: hidden; pointer-events: none;
             transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
@@ -195,14 +194,12 @@ function nav_active($page, $current) {
             overflow: hidden;
         }
 
-        /* Subtle top glow line */
         .mega-menu::before {
             content: '';
             position: absolute; top: 0; left: 10%; right: 10%; height: 1px;
             background: linear-gradient(90deg, transparent, rgba(99,102,241,0.5), transparent);
         }
 
-        /* Arrow */
         .mega-menu::after {
             content: '';
             position: absolute; top: -6px; left: 50%;
@@ -233,7 +230,6 @@ function nav_active($page, $current) {
             border-left: 1px solid var(--dd-divider);
         }
 
-        /* Category label — exactly like image uppercase muted */
         .mega-col-label {
             font-family: 'Manrope', sans-serif;
             font-size: 10px; font-weight: 700;
@@ -244,7 +240,6 @@ function nav_active($page, $current) {
             border-bottom: 1px solid var(--dd-divider);
         }
 
-        /* Service link row */
         .mega-item {
             display: flex; align-items: center; gap: 12px;
             padding: 9px 8px;
@@ -262,7 +257,17 @@ function nav_active($page, $current) {
             padding-left: 14px;
         }
 
-        /* Blue glowing dot — exactly like image */
+        /* Active mega item — currently selected service page */
+        .mega-item.active {
+            background: rgba(99,102,241,0.18);
+            color: #fff;
+            padding-left: 14px;
+        }
+        .mega-item.active .mega-dot {
+            background: #a5b4fc;
+            box-shadow: 0 0 12px rgba(165,180,252,0.9);
+        }
+
         .mega-dot {
             width: 8px; height: 8px; border-radius: 50%;
             background: var(--dd-dot);
@@ -309,17 +314,32 @@ function nav_active($page, $current) {
             padding: 12px 20px 20px;
         }
         .mobile-menu.open { display: flex; }
-        .mobile-menu > a,
+        /* Mobile services row — link + chevron toggle side by side */
+        .mob-services-row {
+            display: flex; align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .mob-services-link {
+            flex: 1;
+            color: rgba(255,255,255,0.65); font-size: 15px; font-weight: 600;
+            padding: 12px 0;
+            font-family: 'Manrope', sans-serif; transition: color 0.2s;
+        }
+        .mob-services-link:hover, .mob-services-link.active { color: white; }
         .mobile-acc-toggle {
+            background: none; border: none; cursor: pointer;
+            padding: 12px 4px; display: flex; align-items: center;
+        }
+
+        .mobile-menu > a {
             color: rgba(255,255,255,0.65); font-size: 15px; font-weight: 600;
             padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
             font-family: 'Manrope', sans-serif; transition: color 0.2s;
-            background: none; border-top: none; border-left: none; border-right: none;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            width: 100%; text-align: left; cursor: pointer;
             display: flex; align-items: center; justify-content: space-between;
         }
-        .mobile-menu > a:hover, .mobile-acc-toggle:hover { color: white; }
+        .mobile-menu > a:hover { color: white; }
+        .mobile-menu > a.active { color: white; }
+
         .mob-chevron { width: 16px; height: 16px; transition: transform 0.3s; }
         .mob-chevron path { stroke: rgba(255,255,255,0.4); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
         .mobile-acc-toggle.open .mob-chevron { transform: rotate(180deg); }
@@ -344,6 +364,7 @@ function nav_active($page, $current) {
         }
         .mobile-services-panel a:last-child { border-bottom: none; }
         .mobile-services-panel a:hover { color: white; background: rgba(99,102,241,0.15); padding-left: 22px; }
+        .mobile-services-panel a.active { color: white; background: rgba(99,102,241,0.25); padding-left: 22px; }
         .mob-dot-sm { width: 7px; height: 7px; border-radius: 50%; background: #6366f1; flex-shrink: 0; box-shadow: 0 0 5px rgba(99,102,241,0.6); }
 
         @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.4)} }
@@ -380,20 +401,20 @@ function nav_active($page, $current) {
             </a>
 
             <!-- Desktop Nav -->
-            <div class="nav-links">
+            <div class="nav-links" id="desktopNav">
 
-                <a href="<?php echo $base_url; ?>"<?php if($active_page==='home') echo ' class="active"'; ?>>Home</a>
+                <a href="<?php echo $base_url; ?>" data-page="home">Home</a>
 
-                <a href="<?php echo $base_url; ?>about.php"<?php if($active_page==='about') echo ' class="active"'; ?>>About</a>
+                <a href="<?php echo $base_url; ?>about.php" data-page="about">About</a>
 
                 <!-- ── Services Mega Dropdown ── -->
-                <div class="nav-dropdown hl<?php if($active_page==='services') echo ' active'; ?>">
-                    <button class="nav-drop-toggle" aria-haspopup="true" aria-expanded="false">
+                <div class="nav-dropdown" id="servicesDropdown">
+                    <a href="<?php echo $base_url; ?>services.php" class="nav-drop-toggle" data-page="services" aria-haspopup="true">
                         Services
                         <svg class="chevron" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4 6l4 4 4-4"/>
                         </svg>
-                    </button>
+                    </a>
 
                     <div class="mega-menu" role="menu">
                         <div class="mega-grid">
@@ -433,9 +454,9 @@ function nav_active($page, $current) {
                     </div><!-- /.mega-menu -->
                 </div><!-- /.nav-dropdown -->
 
-                <a href="<?php echo $base_url; ?>blog.php"<?php if($active_page==='blog') echo ' class="active"'; ?>>Blog</a>
+                <a href="<?php echo $base_url; ?>blog.php" data-page="blog">Blog</a>
 
-                <a href="<?php echo $base_url; ?>faqs.php"<?php if($active_page==='faqs') echo ' class="active"'; ?>>FAQs</a>
+                <a href="<?php echo $base_url; ?>faqs.php" data-page="faqs">FAQs</a>
 
             </div><!-- /.nav-links -->
 
@@ -455,15 +476,17 @@ function nav_active($page, $current) {
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <a href="<?php echo $base_url; ?>">Home</a>
-        <a href="<?php echo $base_url; ?>about.php">About</a>
+        <a href="<?php echo $base_url; ?>" data-mob-page="home">Home</a>
+        <a href="<?php echo $base_url; ?>about.php" data-mob-page="about">About</a>
 
-        <button class="mobile-acc-toggle" id="mobServicesToggle">
-            Services
-            <svg class="mob-chevron" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 6l4 4 4-4"/>
-            </svg>
-        </button>
+        <div class="mob-services-row">
+            <a href="<?php echo $base_url; ?>services.php" class="mob-services-link" data-mob-page="services">Services</a>
+            <button class="mobile-acc-toggle" id="mobServicesToggle" aria-label="Toggle services menu">
+                <svg class="mob-chevron" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6l4 4 4-4"/>
+                </svg>
+            </button>
+        </div>
         <div class="mobile-services-panel" id="mobServicesPanel">
 
             <div class="mob-svc-group-label">Web &amp; SEO</div>
@@ -489,19 +512,25 @@ function nav_active($page, $current) {
             <a href="<?php echo $base_url; ?>services/online-reputation.php"><span class="mob-dot-sm"></span>Online Reputation Mgmt</a>
         </div>
 
-        <a href="<?php echo $base_url; ?>blog.php">Blog</a>
-        <a href="<?php echo $base_url; ?>faqs.php">FAQs</a>
+        <a href="<?php echo $base_url; ?>blog.php" data-mob-page="blog">Blog</a>
+        <a href="<?php echo $base_url; ?>faqs.php" data-mob-page="faqs">FAQs</a>
         <a href="<?php echo $base_url; ?>contact-us.php">Contact Today</a>
     </div>
 </nav>
 
 <script>
 (function(){
+    /* ══════════════════════════════════════════
+       1. Scroll effect
+    ══════════════════════════════════════════ */
     const nav = document.getElementById('mainNav');
     window.addEventListener('scroll', function(){
         nav.classList.toggle('scrolled', window.scrollY > 30);
     });
 
+    /* ══════════════════════════════════════════
+       2. Hamburger toggle
+    ══════════════════════════════════════════ */
     const hamburger  = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     hamburger.addEventListener('click', function(){
@@ -509,13 +538,9 @@ function nav_active($page, $current) {
         mobileMenu.classList.toggle('open');
     });
 
-    mobileMenu.querySelectorAll('a').forEach(function(link){
-        link.addEventListener('click', function(){
-            hamburger.classList.remove('open');
-            mobileMenu.classList.remove('open');
-        });
-    });
-
+    /* ══════════════════════════════════════════
+       3. Mobile services accordion
+    ══════════════════════════════════════════ */
     const mobToggle = document.getElementById('mobServicesToggle');
     const mobPanel  = document.getElementById('mobServicesPanel');
     if (mobToggle && mobPanel) {
@@ -524,6 +549,87 @@ function nav_active($page, $current) {
             mobPanel.classList.toggle('open');
         });
     }
+
+    /* ══════════════════════════════════════════
+       4. ACTIVE TAB — JS-based URL detection
+       Compares current window.location.pathname
+       with each link's href to set .active class.
+    ══════════════════════════════════════════ */
+    const currentPath = window.location.pathname;
+
+    // ── Helper: normalize path (remove trailing slash, lowercase) ──
+    function normalizePath(p) {
+        return p.replace(/\/$/, '').toLowerCase() || '/';
+    }
+
+    const norm = normalizePath(currentPath);
+
+    // ── Desktop: main nav links + services toggle link ──
+    document.querySelectorAll('#desktopNav > a[data-page], #desktopNav .nav-drop-toggle[data-page]').forEach(function(link){
+        const linkPath = normalizePath(new URL(link.href).pathname);
+        if (norm === linkPath) {
+            link.classList.add('active');
+        }
+    });
+
+    // ── Desktop: mega-menu items ──
+    const servicesDropdown = document.getElementById('servicesDropdown');
+    let servicePageActive  = false;
+
+    document.querySelectorAll('.mega-item').forEach(function(item){
+        const linkPath = normalizePath(new URL(item.href).pathname);
+        if (norm === linkPath) {
+            item.classList.add('active');
+            servicePageActive = true;
+        }
+    });
+
+    // If we're on services.php or any /services/* page, highlight Services toggle
+    if (servicePageActive || norm.includes('/services')) {
+        servicesDropdown.classList.add('services-active');
+    }
+
+    // ── Mobile: main nav links ──
+    document.querySelectorAll('#mobileMenu > a[data-mob-page]').forEach(function(link){
+        const linkPath = normalizePath(new URL(link.href).pathname);
+        if (norm === linkPath) {
+            link.classList.add('active');
+        }
+    });
+
+    // ── Mobile: services main link ──
+    const mobServicesLink = document.querySelector('.mob-services-link');
+    if (mobServicesLink) {
+        const svcLinkPath = normalizePath(new URL(mobServicesLink.href).pathname);
+        if (norm === svcLinkPath) {
+            mobServicesLink.classList.add('active');
+        }
+    }
+
+    // ── Mobile: service sub-links ──
+    let mobServiceActive = false;
+    document.querySelectorAll('#mobServicesPanel a').forEach(function(link){
+        const linkPath = normalizePath(new URL(link.href).pathname);
+        if (norm === linkPath) {
+            link.classList.add('active');
+            mobServiceActive = true;
+        }
+    });
+
+    // Auto-open mobile services panel if we're on a service page
+    if (mobServiceActive) {
+        mobToggle.classList.add('open');
+        mobPanel.classList.add('open');
+    }
+
+    // ── Close mobile menu when any link is clicked ──
+    mobileMenu.querySelectorAll('a').forEach(function(link){
+        link.addEventListener('click', function(){
+            hamburger.classList.remove('open');
+            mobileMenu.classList.remove('open');
+        });
+    });
+
 })();
 </script>
 <!-- ══ END NAVBAR ══ -->
