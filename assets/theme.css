@@ -1,0 +1,126 @@
+:root {
+
+    /* ───────── Core Brand Colors ───────── */
+    --c-purple:   #7B4DFF;
+    --c-magenta:  #D85BFF;
+    --c-pink:     #FF6FB5;
+    --c-orange:   #FF9A57;
+    --c-lavender: #B79CFF;
+    --c-peach:    #FFC29B;
+
+    /* Aliases */
+    --purple:     #7B4DFF;
+    --violet:     #A855F7;
+    --magenta:    #D85BFF;
+    --pink:       #FF6FB5;
+    --orange:     #FF9A57;
+    --peach:      #FFB78A;
+    --blue:       #5B8CFF;
+    --sky:        #6EDCFF;
+    --teal:       #5EEAD4;
+    --yellow:     #FFD36B;
+
+    /* ───────── Backgrounds ───────── */
+    --bg:         #FDF8FF;
+    --bg2:        #FFF4FA;
+    --bg3:        #FFF2EB;
+
+    --surface:    #FFFFFF;
+    --surface2:   rgba(255,255,255,0.75);
+
+    /* ───────── Text ───────── */
+    --text:        #5D4B78;
+    --text-strong: #2E1F4D;
+    --text-mid:    #85739A;
+    --muted:       #B2A4C2;
+
+    /* ───────── Borders ───────── */
+    --border:      rgba(123,77,255,0.12);
+    --border-soft: rgba(255,255,255,0.35);
+
+    /* ───────── Page Background ───────── */
+    --page-bg: linear-gradient(160deg,
+        #F8F2FF 0%,
+        #FFF4FA 35%,
+        #FFF2EB 70%,
+        #FDF8FF 100%
+    );
+
+    /* ───────── Dark Section BG ───────── */
+    --grad-header: linear-gradient(135deg,
+        #0d0520 0%,
+        #130a35 40%,
+        #0a1a40 70%,
+        #0d0a2e 100%
+    );
+
+    /* ───────── Main Gradient ───────── */
+    --grad-main: linear-gradient(135deg,
+        #7B4DFF 0%,
+        #A855F7 20%,
+        #D85BFF 40%,
+        #FF6FB5 65%,
+        #FF9A57 100%
+    );
+
+    /* Alias */
+    --grad-copilot: linear-gradient(135deg,
+        #7B4DFF 0%,
+        #A855F7 20%,
+        #D85BFF 40%,
+        #FF6FB5 65%,
+        #FF9A57 100%
+    );
+
+    /* ───────── Button Gradients ───────── */
+    --grad-btn: linear-gradient(135deg,
+        #7B4DFF 0%,
+        #D85BFF 50%,
+        #FF8C7A 100%
+    );
+
+    --grad-btn-warm: linear-gradient(135deg,
+        #FF9A57 0%,
+        #FFD36B 50%,
+        #FF6FB5 100%
+    );
+
+    --grad-warm: linear-gradient(135deg,
+        #FFB084 0%,
+        #FF8FB1 45%,
+        #D85BFF 100%
+    );
+
+    --grad-warm2: linear-gradient(135deg,
+        #FF9A57 0%,
+        #FF6FB5 60%,
+        #D85BFF 100%
+    );
+
+    --grad-cool: linear-gradient(135deg,
+        #7B4DFF 0%,
+        #5B8CFF 50%,
+        #6EDCFF 100%
+    );
+
+    --grad-soft: linear-gradient(135deg,
+        #B79CFF 0%,
+        #D85BFF 50%,
+        #FF6FB5 100%
+    );
+
+    --grad-card: linear-gradient(135deg,
+        rgba(123,77,255,0.08),
+        rgba(216,91,255,0.06),
+        rgba(255,111,181,0.05),
+        rgba(255,154,87,0.04)
+    );
+
+    /* ───────── Mega Menu (dark) ───────── */
+    --dd-bg:      #181238;
+    --dd-border:  rgba(255,255,255,0.08);
+    --dd-text:    rgba(255,255,255,0.84);
+    --dd-label:   rgba(255,255,255,0.32);
+    --dd-dot:     #A855F7;
+    --dd-divider: rgba(255,255,255,0.07);
+}

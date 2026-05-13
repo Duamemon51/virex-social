@@ -174,174 +174,477 @@
      GET IN TOUCH STYLES
 ════════════════════════ -->
 <style>
-    /* ── Section wrapper ── */
-    .git-section {
-        padding: 120px 0;
-        background: linear-gradient(135deg, #fdf8ff 0%, #fff8f0 50%, #f0f9ff 100%);
-        position: relative; z-index: 2; overflow: hidden;
+   /* ── Section wrapper ── */
+.git-section{
+    padding:120px 0;
+    background:linear-gradient(135deg,
+        #F8F2FF 0%,
+        #FFF4FA 50%,
+        #FFF2EB 100%);
+    position:relative;
+    z-index:2;
+    overflow:hidden;
+}
+
+/* ── Background orbs ── */
+.git-orb{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(110px);
+    pointer-events:none;
+}
+
+.git-orb-1{
+    width:450px;
+    height:450px;
+    background:rgba(123,77,255,0.10);
+    top:-150px;
+    right:-80px;
+}
+
+.git-orb-2{
+    width:350px;
+    height:350px;
+    background:rgba(255,111,181,0.08);
+    bottom:-100px;
+    left:-80px;
+}
+
+.git-orb-3{
+    width:250px;
+    height:250px;
+    background:rgba(216,91,255,0.07);
+    top:40%;
+    left:40%;
+}
+
+/* ── Grid lines bg decoration ── */
+.git-grid-lines{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background-image:
+        linear-gradient(rgba(123,77,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(123,77,255,0.035) 1px, transparent 1px);
+    background-size:60px 60px;
+    mask-image:radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,.5) 80%);
+}
+
+/* ── Header ── */
+.git-header{
+    text-align:center;
+    max-width:640px;
+    margin:0 auto 60px;
+}
+
+.git-title{
+    margin-bottom:16px;
+}
+
+.git-subtitle{
+    font-size:17px;
+    line-height:1.85;
+    color:#7B6F8F;
+}
+
+/* ── Main card ── */
+.git-main-card{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    background:rgba(255,255,255,0.88);
+    backdrop-filter:blur(18px);
+    border:1.5px solid rgba(123,77,255,0.10);
+    border-radius:34px;
+    overflow:hidden;
+    box-shadow:
+        0 24px 80px rgba(123,77,255,0.08),
+        0 4px 24px rgba(0,0,0,0.04);
+    position:relative;
+    z-index:1;
+}
+
+/* ── Info side (left) ── */
+.git-info-side{
+    padding:56px 52px;
+    background:linear-gradient(145deg,
+        #181238 0%,
+        #2A1659 50%,
+        #4B2A8F 100%);
+    position:relative;
+    overflow:hidden;
+}
+
+.git-info-side::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(216,91,255,0.32) 0%, transparent 55%),
+        radial-gradient(circle at 10% 90%, rgba(255,154,87,0.18) 0%, transparent 45%);
+    pointer-events:none;
+}
+
+.git-info-side>*{
+    position:relative;
+    z-index:1;
+}
+
+/* Badge */
+.git-info-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:rgba(255,111,181,0.12);
+    border:1px solid rgba(255,111,181,0.24);
+    color:#FFD2E8;
+    font-size:11px;
+    font-weight:700;
+    padding:6px 14px;
+    border-radius:50px;
+    letter-spacing:.5px;
+    margin-bottom:28px;
+}
+
+.git-badge-dot{
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:#FF6FB5;
+    animation:pulse 1.5s infinite;
+}
+
+/* Title */
+.git-info-title{
+    font-family:'Clash Display',sans-serif;
+    font-weight:700;
+    font-size:28px;
+    color:white;
+    line-height:1.2;
+    margin-bottom:16px;
+}
+
+.git-info-desc{
+    font-size:14.5px;
+    line-height:1.85;
+    color:rgba(255,255,255,0.60);
+    margin-bottom:36px;
+}
+
+/* Quick info items */
+.git-quick-info{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    margin-bottom:40px;
+}
+
+.git-qi-item{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.git-qi-icon{
+    width:40px;
+    height:40px;
+    background:rgba(123,77,255,0.18);
+    border:1px solid rgba(123,77,255,0.28);
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    box-shadow:0 6px 18px rgba(123,77,255,0.12);
+}
+
+.git-qi-icon svg{
+    width:16px;
+    height:16px;
+    stroke:#D8C7FF;
+    fill:none;
+}
+
+.git-qi-icon.warm{
+    background:rgba(255,154,87,0.14);
+    border-color:rgba(255,154,87,0.28);
+}
+
+.git-qi-icon.warm svg{
+    stroke:#FFD1B2;
+}
+
+.git-qi-text strong{
+    display:block;
+    font-family:'Clash Display',sans-serif;
+    font-size:13px;
+    color:rgba(255,255,255,0.88);
+    margin-bottom:2px;
+}
+
+.git-qi-text span{
+    font-size:13px;
+    color:rgba(255,255,255,0.48);
+}
+
+/* Team row */
+.git-team-row{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding-top:28px;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.git-avatars{
+    display:flex;
+}
+
+.git-av{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    border:2.5px solid rgba(24,18,56,0.9);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Clash Display',sans-serif;
+    font-weight:700;
+    font-size:13px;
+    color:white;
+    background:var(--grad-main);
+    margin-right:-10px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.22);
+}
+
+.git-avatars .git-av:last-child{
+    margin-right:0;
+}
+
+.git-team-text strong{
+    display:block;
+    font-family:'Clash Display',sans-serif;
+    font-size:13.5px;
+    color:rgba(255,255,255,0.88);
+}
+
+.git-team-text span{
+    font-size:12px;
+    color:rgba(255,255,255,0.42);
+}
+
+/* ── Links side (right) ── */
+.git-links-side{
+    padding:48px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.git-links-label{
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+    color:#A855F7;
+    margin-bottom:24px;
+}
+
+/* ── Link cards ── */
+.git-link-card{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:16px 20px;
+    border-radius:18px;
+    border:1.5px solid transparent;
+    background:rgba(255,255,255,0.72);
+    backdrop-filter:blur(10px);
+    text-decoration:none;
+    color:inherit;
+    transition:all .35s cubic-bezier(.4,0,.2,1);
+    margin-bottom:12px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 4px 16px rgba(123,77,255,0.04);
+}
+
+.git-link-card:last-child{
+    margin-bottom:0;
+}
+
+.git-link-card::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    border-radius:18px;
+    opacity:0;
+    transition:opacity .3s;
+    background:linear-gradient(135deg,
+        rgba(123,77,255,0.04),
+        rgba(216,91,255,0.03));
+}
+
+.git-link-card:hover{
+    transform:translateX(6px);
+    box-shadow:
+        0 12px 32px rgba(123,77,255,0.10),
+        0 2px 12px rgba(0,0,0,0.04);
+}
+
+.git-link-card:hover::before{
+    opacity:1;
+}
+
+.git-link-card>*{
+    position:relative;
+    z-index:1;
+}
+
+/* Hover states */
+.git-link-card.whatsapp:hover{
+    border-color:rgba(37,211,102,0.28);
+    background:#F4FFF7;
+}
+
+.git-link-card.gmail:hover{
+    border-color:rgba(234,67,53,0.24);
+    background:#FFF6F5;
+}
+
+.git-link-card.messenger:hover{
+    border-color:rgba(123,77,255,0.24);
+    background:#F7F2FF;
+}
+
+.git-link-card.instagram:hover{
+    border-color:rgba(255,111,181,0.24);
+    background:#FFF3F8;
+}
+
+.git-link-card.linkedin:hover{
+    border-color:rgba(0,119,181,0.24);
+    background:#F2F8FF;
+}
+
+/* Icon wraps */
+.glc-icon-wrap{
+    width:48px;
+    height:48px;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    transition:transform .3s;
+    box-shadow:0 8px 22px rgba(0,0,0,0.12);
+}
+
+.git-link-card:hover .glc-icon-wrap{
+    transform:rotate(-8deg) scale(1.08);
+}
+
+/* Brand gradients */
+.whatsapp .glc-icon-wrap{
+    background:linear-gradient(135deg,#25D366,#128C7E);
+}
+
+.gmail .glc-icon-wrap{
+    background:linear-gradient(135deg,#EA4335,#FBBC05);
+}
+
+.messenger .glc-icon-wrap{
+    background:linear-gradient(135deg,#7B4DFF,#D85BFF);
+}
+
+.instagram .glc-icon-wrap{
+    background:linear-gradient(135deg,
+        #FF9A57,
+        #FF6FB5,
+        #D85BFF);
+}
+
+.linkedin .glc-icon-wrap{
+    background:linear-gradient(135deg,#0077B5,#00A0DC);
+}
+
+/* Text */
+.glc-text{
+    flex:1;
+}
+
+.glc-platform{
+    display:block;
+    font-family:'Clash Display',sans-serif;
+    font-weight:700;
+    font-size:15px;
+    color:#2E1F4D;
+    margin-bottom:2px;
+}
+
+.glc-handle{
+    display:block;
+    font-size:12.5px;
+    color:#9CA3AF;
+}
+
+/* Arrow */
+.glc-arrow{
+    flex-shrink:0;
+    opacity:0;
+    transform:translateX(-6px);
+    transition:all .3s;
+}
+
+.glc-arrow svg{
+    width:16px;
+    height:16px;
+    stroke:#A89BB8;
+    stroke-width:2.5;
+    fill:none;
+}
+
+.git-link-card:hover .glc-arrow{
+    opacity:1;
+    transform:translateX(0);
+}
+
+/* ── Responsive ── */
+@media(max-width:992px){
+
+    .git-main-card{
+        grid-template-columns:1fr;
     }
 
-    /* ── Background orbs ── */
-    .git-orb { position: absolute; border-radius: 50%; filter: blur(110px); pointer-events: none; }
-    .git-orb-1 { width: 450px; height: 450px; background: rgba(124,58,237,0.08);  top: -150px; right: -80px; }
-    .git-orb-2 { width: 350px; height: 350px; background: rgba(249,115,22,0.07);  bottom: -100px; left: -80px; }
-    .git-orb-3 { width: 250px; height: 250px; background: rgba(6,182,212,0.06);   top: 40%; left: 40%; }
-
-    /* ── Grid lines bg decoration ── */
-    .git-grid-lines {
-        position: absolute; inset: 0; pointer-events: none;
-        background-image:
-            linear-gradient(rgba(124,58,237,0.04) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(124,58,237,0.04) 1px, transparent 1px);
-        background-size: 60px 60px;
-        mask-image: radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.5) 80%);
+    .git-info-side{
+        padding:40px 36px;
     }
 
-    /* ── Header ── */
-    .git-header { text-align: center; max-width: 640px; margin: 0 auto 60px; }
-    .git-title { margin-bottom: 16px; }
-    .git-subtitle { font-size: 17px; line-height: 1.85; color: #6b7280; }
+    .git-links-side{
+        padding:40px 36px;
+    }
+}
 
-    /* ── Main card ── */
-    .git-main-card {
-        display: grid; grid-template-columns: 1fr 1fr;
-        gap: 0; background: white;
-        border: 1.5px solid rgba(124,58,237,0.12);
-        border-radius: 32px; overflow: hidden;
-        box-shadow: 0 20px 80px rgba(124,58,237,0.08), 0 4px 20px rgba(0,0,0,0.04);
-        position: relative; z-index: 1;
+@media(max-width:600px){
+
+    .git-section{
+        padding:80px 0;
     }
 
-    /* ── Info side (left) ── */
-    .git-info-side {
-        padding: 56px 52px;
-        background: linear-gradient(145deg, #0d0520 0%, #130a35 50%, #0a1a40 100%);
-        position: relative; overflow: hidden;
-    }
-    .git-info-side::before {
-        content: '';
-        position: absolute; inset: 0;
-        background: radial-gradient(ellipse at 80% 20%, rgba(124,58,237,0.3) 0%, transparent 60%),
-                    radial-gradient(ellipse at 10% 90%, rgba(249,115,22,0.15) 0%, transparent 50%);
-        pointer-events: none;
-    }
-    .git-info-side > * { position: relative; z-index: 1; }
-
-    .git-info-badge {
-        display: inline-flex; align-items: center; gap: 8px;
-        background: rgba(249,115,22,0.12); border: 1px solid rgba(249,115,22,0.3);
-        color: #fbbf24; font-size: 11px; font-weight: 700;
-        padding: 6px 14px; border-radius: 50px; letter-spacing: 0.5px;
-        margin-bottom: 28px;
-    }
-    .git-badge-dot {
-        width: 6px; height: 6px; border-radius: 50%;
-        background: #f97316; animation: pulse 1.5s infinite;
+    .git-info-side{
+        padding:32px 24px;
     }
 
-    .git-info-title {
-        font-family: 'Clash Display', sans-serif; font-weight: 700;
-        font-size: 28px; color: white; line-height: 1.2; margin-bottom: 16px;
-    }
-    .git-info-desc {
-        font-size: 14.5px; line-height: 1.85;
-        color: rgba(255,255,255,0.55); margin-bottom: 36px;
+    .git-links-side{
+        padding:32px 24px;
     }
 
-    /* Quick info items */
-    .git-quick-info { display: flex; flex-direction: column; gap: 18px; margin-bottom: 40px; }
-    .git-qi-item { display: flex; align-items: center; gap: 14px; }
-    .git-qi-icon {
-        width: 38px; height: 38px; background: rgba(124,58,237,0.2);
-        border: 1px solid rgba(124,58,237,0.3); border-radius: 11px;
-        display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-    }
-    .git-qi-icon svg { width: 16px; height: 16px; stroke: rgba(164,120,255,0.9); fill: none; }
-    .git-qi-icon.warm { background: rgba(249,115,22,0.15); border-color: rgba(249,115,22,0.3); }
-    .git-qi-icon.warm svg { stroke: rgba(249,180,100,0.9); }
-    .git-qi-text strong { display: block; font-family: 'Clash Display', sans-serif; font-size: 13px; color: rgba(255,255,255,0.85); margin-bottom: 2px; }
-    .git-qi-text span { font-size: 13px; color: rgba(255,255,255,0.45); }
-
-    /* Team row */
-    .git-team-row { display: flex; align-items: center; gap: 16px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.08); }
-    .git-avatars { display: flex; }
-    .git-av {
-        width: 38px; height: 38px; border-radius: 50%; border: 2.5px solid rgba(13,5,32,0.8);
-        display: flex; align-items: center; justify-content: center;
-        font-family: 'Clash Display', sans-serif; font-weight: 700; font-size: 13px; color: white;
-        margin-right: -10px;
-    }
-    .git-avatars .git-av:last-child { margin-right: 0; }
-    .git-team-text strong { display: block; font-family: 'Clash Display', sans-serif; font-size: 13.5px; color: rgba(255,255,255,0.85); }
-    .git-team-text span { font-size: 12px; color: rgba(255,255,255,0.4); }
-
-    /* ── Links side (right) ── */
-    .git-links-side { padding: 48px 48px; display: flex; flex-direction: column; justify-content: center; }
-    .git-links-label {
-        font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
-        color: #a78bfa; margin-bottom: 24px;
+    .git-info-title{
+        font-size:22px;
     }
 
-    /* ── Individual link cards ── */
-    .git-link-card {
-        display: flex; align-items: center; gap: 16px;
-        padding: 16px 20px; border-radius: 16px;
-        border: 1.5px solid transparent;
-        background: #fafafa;
-        text-decoration: none; color: inherit;
-        transition: all 0.3s cubic-bezier(.4,0,.2,1);
-        margin-bottom: 12px; position: relative; overflow: hidden;
+    .git-link-card{
+        padding:14px 16px;
     }
-    .git-link-card:last-child { margin-bottom: 0; }
-    .git-link-card::before {
-        content: ''; position: absolute; inset: 0; border-radius: 14px;
-        opacity: 0; transition: opacity 0.3s;
-    }
-    .git-link-card:hover { transform: translateX(6px); box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
-    .git-link-card > * { position: relative; z-index: 1; }
-
-    /* Platform brand colors on hover */
-    .git-link-card.whatsapp:hover   { border-color: rgba(37,211,102,0.35); background: #f0fdf4; }
-    .git-link-card.gmail:hover      { border-color: rgba(234,67,53,0.3);   background: #fff5f5; }
-    .git-link-card.messenger:hover  { border-color: rgba(0,153,255,0.3);   background: #f0f8ff; }
-    .git-link-card.instagram:hover  { border-color: rgba(225,48,108,0.3);  background: #fff0f6; }
-    .git-link-card.linkedin:hover   { border-color: rgba(0,119,181,0.3);   background: #f0f7ff; }
-
-    /* Icon wraps */
-    .glc-icon-wrap {
-        width: 46px; height: 46px; border-radius: 14px;
-        display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-        transition: transform 0.3s;
-    }
-    .git-link-card:hover .glc-icon-wrap { transform: rotate(-8deg) scale(1.08); }
-
-    .whatsapp   .glc-icon-wrap { background: linear-gradient(135deg, #25D366, #128C7E); }
-    .gmail      .glc-icon-wrap { background: linear-gradient(135deg, #EA4335, #FBBC05); }
-    .messenger  .glc-icon-wrap { background: linear-gradient(135deg, #0099FF, #A033FF); }
-    .instagram  .glc-icon-wrap { background: linear-gradient(135deg, #f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
-    .linkedin   .glc-icon-wrap { background: linear-gradient(135deg, #0077B5, #00A0DC); }
-
-    /* Text */
-    .glc-text { flex: 1; }
-    .glc-platform { display: block; font-family: 'Clash Display', sans-serif; font-weight: 700; font-size: 15px; color: var(--text-strong); margin-bottom: 2px; }
-    .glc-handle { display: block; font-size: 12.5px; color: #9ca3af; }
-
-    /* Arrow */
-    .glc-arrow { flex-shrink: 0; opacity: 0; transform: translateX(-6px); transition: all 0.3s; }
-    .glc-arrow svg { width: 16px; height: 16px; stroke: #9ca3af; stroke-width: 2.5; fill: none; }
-    .git-link-card:hover .glc-arrow { opacity: 1; transform: translateX(0); }
-
-    /* ── Responsive ── */
-    @media(max-width: 992px) {
-        .git-main-card { grid-template-columns: 1fr; }
-        .git-info-side { padding: 40px 36px; }
-        .git-links-side { padding: 40px 36px; }
-    }
-    @media(max-width: 600px) {
-        .git-section { padding: 80px 0; }
-        .git-info-side { padding: 32px 24px; }
-        .git-links-side { padding: 32px 24px; }
-        .git-info-title { font-size: 22px; }
-        .git-link-card { padding: 14px 16px; }
-    }
+}
 </style>

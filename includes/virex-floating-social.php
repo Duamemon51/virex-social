@@ -27,59 +27,613 @@ $vx_wa_url = 'https://wa.me/' . htmlspecialchars($vx_whatsapp_number) . '?text='
 $vx_ms_url = 'https://m.me/' . htmlspecialchars($vx_messenger_user);
 ?>
 <style>
-  .vx-social-sidebar { position:fixed; left:22px; top:50%; transform:translateY(-50%); display:flex; flex-direction:column; align-items:center; gap:0; z-index:900; }
-  .vx-social-line { width:1.5px; height:60px; background:linear-gradient(to bottom,transparent,rgba(124,58,237,0.4)); margin-bottom:12px; border-radius:2px; }
-  .vx-social-line.bottom { background:linear-gradient(to bottom,rgba(124,58,237,0.4),transparent); margin-top:12px; margin-bottom:0; }
-  .vx-social-btn { position:relative; width:44px; height:44px; background:white; border:1.5px solid rgba(124,58,237,0.12); border-radius:14px; margin:5px 0; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1); box-shadow:0 4px 16px rgba(0,0,0,0.06); text-decoration:none; }
-  .vx-social-btn svg { width:18px; height:18px; }
-  .vx-social-btn:hover { transform:translateX(6px) scale(1.1); box-shadow:0 8px 28px rgba(124,58,237,0.22); border-color:transparent; }
-  .vx-social-btn.fb:hover { background:#1877f2; } .vx-social-btn.fb svg path { fill:#1877f2; transition:fill .3s; } .vx-social-btn.fb:hover svg path { fill:white; }
-  .vx-social-btn.ig:hover { background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); } .vx-social-btn.ig svg path { fill:#e1306c; transition:fill .3s; } .vx-social-btn.ig:hover svg path { fill:white; }
-  .vx-social-btn.tw:hover { background:#000; } .vx-social-btn.tw svg path { fill:#333; transition:fill .3s; } .vx-social-btn.tw:hover svg path { fill:white; }
-  .vx-social-btn.li:hover { background:#0a66c2; } .vx-social-btn.li svg path { fill:#0a66c2; transition:fill .3s; } .vx-social-btn.li:hover svg path { fill:white; }
-  .vx-social-btn.yt:hover { background:#ff0000; } .vx-social-btn.yt svg path { fill:#ff0000; transition:fill .3s; } .vx-social-btn.yt:hover svg path { fill:white; }
-  .vx-social-btn.tt:hover { background:#010101; } .vx-social-btn.tt svg path { fill:#333; transition:fill .3s; } .vx-social-btn.tt:hover svg path { fill:white; }
-  .vx-social-btn::after { content:attr(data-label); position:absolute; left:calc(100% + 12px); top:50%; transform:translateY(-50%) translateX(-8px); background:rgba(13,5,32,0.9); color:white; font-family:'Clash Display',sans-serif; font-weight:600; font-size:12px; padding:5px 12px; border-radius:8px; white-space:nowrap; opacity:0; pointer-events:none; transition:opacity .25s,transform .25s; }
-  .vx-social-btn:hover::after { opacity:1; transform:translateY(-50%) translateX(0); }
-  @media(max-width:768px){ .vx-social-sidebar { display:none; } }
+  /* ─────────────────────────────
+   SOCIAL SIDEBAR — COPILOT THEME
+───────────────────────────── */
 
-  .vx-chat-widget { position:fixed; bottom:32px; right:32px; z-index:9999; display:flex; flex-direction:column; align-items:flex-end; gap:12px; }
-  .vx-chat-popup { background:white; border-radius:22px; box-shadow:0 20px 60px rgba(0,0,0,0.14),0 0 0 1px rgba(0,0,0,0.04); width:310px; overflow:hidden; transform:scale(0.85) translateY(20px); opacity:0; pointer-events:none; transform-origin:bottom right; transition:all 0.4s cubic-bezier(0.34,1.56,0.64,1); }
-  .vx-chat-popup.vx-visible { transform:scale(1) translateY(0); opacity:1; pointer-events:all; }
-  .vx-chat-popup-header { background:var(--grad-btn,linear-gradient(135deg,#e040fb,#7c3aed,#2563eb)); padding:22px 20px 28px; position:relative; overflow:hidden; }
-  .vx-chat-popup-header::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at top right,rgba(255,255,255,0.12),transparent 60%); }
-  .vx-chat-avatar { width:52px; height:52px; border-radius:50%; background:rgba(255,255,255,0.2); border:2.5px solid rgba(255,255,255,0.4); display:flex; align-items:center; justify-content:center; margin-bottom:14px; position:relative; z-index:1; font-family:'Clash Display',sans-serif; font-weight:700; font-size:20px; color:white; }
-  .vx-online-dot { position:absolute; bottom:2px; right:2px; width:13px; height:13px; border-radius:50%; background:#25D366; border:2px solid white; }
-  .vx-chat-popup-title { font-family:'Clash Display',sans-serif; font-weight:700; font-size:17px; color:white; margin-bottom:4px; position:relative; z-index:1; }
-  .vx-chat-popup-status { font-size:12px; color:rgba(255,255,255,0.72); position:relative; z-index:1; }
-  .vx-chat-popup-body { padding:20px; }
-  .vx-chat-msg { background:#f3f4f6; border-radius:16px 16px 16px 4px; padding:13px 16px; font-size:14px; color:#374151; line-height:1.6; margin-bottom:16px; }
-  .vx-chat-channels { display:flex; flex-direction:column; gap:10px; }
-  .vx-channel-btn { display:flex; align-items:center; gap:14px; padding:13px 16px; border-radius:14px; border:none; cursor:pointer; transition:all .25s; text-align:left; text-decoration:none; width:100%; }
-  .vx-channel-btn.wa { background:#f0fdf4; } .vx-channel-btn.wa:hover { background:#dcfce7; transform:translateX(4px); }
-  .vx-channel-btn.ms { background:#f0f4ff; } .vx-channel-btn.ms:hover { background:#e0e8ff; transform:translateX(4px); }
-  .vx-channel-icon { width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-  .vx-channel-icon.wa { background:linear-gradient(135deg,#25D366,#128C7E); } .vx-channel-icon.ms { background:linear-gradient(135deg,#0099FF,#A033FF); }
-  .vx-channel-icon svg { width:20px; height:20px; }
-  .vx-channel-text .vx-ch-label { display:block; font-size:11px; color:#9ca3af; font-weight:600; }
-  .vx-channel-text .vx-ch-name  { font-family:'Clash Display',sans-serif; font-weight:700; font-size:15px; color:#1f2937; }
-  .vx-channel-arrow { margin-left:auto; } .vx-channel-arrow svg { width:16px; height:16px; stroke:#9ca3af; stroke-width:2.5; fill:none; }
-  .vx-chat-toggle { width:62px; height:62px; border-radius:50%; background:var(--grad-btn,linear-gradient(135deg,#e040fb,#7c3aed,#2563eb)); border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 30px rgba(124,58,237,0.45); transition:all .35s cubic-bezier(0.34,1.56,0.64,1); position:relative; z-index:1; animation:vxChatBounce 3s ease-in-out infinite 4s; }
-  .vx-chat-toggle:hover { transform:scale(1.12); box-shadow:0 10px 40px rgba(124,58,237,0.55),0 0 0 8px rgba(124,58,237,0.12); }
-  .vx-chat-toggle.vx-open { animation:none; }
-  .vx-chat-toggle::before,.vx-chat-toggle::after { content:''; position:absolute; inset:0; border-radius:50%; background:var(--grad-btn,linear-gradient(135deg,#e040fb,#7c3aed,#2563eb)); opacity:0; animation:vxRipple 3s ease-out infinite; }
-  .vx-chat-toggle::after { animation-delay:1.2s; }
-  .vx-toggle-chat { display:flex; } .vx-toggle-close { display:none; }
-  .vx-chat-toggle.vx-open .vx-toggle-chat { display:none; } .vx-chat-toggle.vx-open .vx-toggle-close { display:flex; }
-  .vx-chat-notif { position:absolute; top:-4px; right:-4px; width:20px; height:20px; border-radius:50%; background:linear-gradient(135deg,#fbbf24,#f97316,#e040fb); color:white; font-size:11px; font-weight:800; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 8px rgba(249,115,22,0.5); animation:vxBadgePop 2s ease-in-out infinite; border:2px solid white; }
-  .vx-chat-toggle.vx-open .vx-chat-notif { display:none; }
-  .vx-back-top { position:fixed; bottom:40px; left:40px; width:52px; height:52px; background:var(--grad-main,linear-gradient(135deg,#e040fb,#7c3aed,#2563eb,#06b6d4,#f97316,#fbbf24)); color:white; border:none; border-radius:15px; cursor:pointer; display:none; align-items:center; justify-content:center; box-shadow:0 4px 25px rgba(124,58,237,0.4); z-index:999; transition:all .3s; }
-  .vx-back-top.vx-visible { display:flex; } .vx-back-top:hover { transform:translateY(-4px); box-shadow:0 8px 40px rgba(124,58,237,0.55); }
-  .vx-back-top svg { width:22px; height:22px; stroke:white; stroke-width:2.5; fill:none; }
-  @keyframes vxChatBounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
-  @keyframes vxRipple { 0%{opacity:0.4;transform:scale(1)} 100%{opacity:0;transform:scale(2.2)} }
-  @keyframes vxBadgePop { 0%,100%{transform:scale(1)} 50%{transform:scale(1.2)} }
-  @media(max-width:600px){ .vx-chat-widget{bottom:20px;right:20px;} .vx-chat-popup{width:280px;} .vx-back-top{bottom:20px;left:20px;} }
+.vx-social-sidebar{
+    position:fixed;
+    left:22px;
+    top:50%;
+    transform:translateY(-50%);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:0;
+    z-index:900;
+}
+
+/* Decorative gradient lines */
+.vx-social-line{
+    width:2px;
+    height:62px;
+    background:linear-gradient(to bottom,
+        transparent,
+        rgba(123,77,255,0.45),
+        rgba(216,91,255,0.28));
+    margin-bottom:14px;
+    border-radius:20px;
+}
+
+.vx-social-line.bottom{
+    background:linear-gradient(to bottom,
+        rgba(123,77,255,0.45),
+        rgba(255,111,181,0.22),
+        transparent);
+    margin-top:14px;
+    margin-bottom:0;
+}
+
+/* Buttons */
+.vx-social-btn{
+    position:relative;
+    width:46px;
+    height:46px;
+    background:rgba(255,255,255,0.88);
+    backdrop-filter:blur(14px);
+    border:1.5px solid rgba(123,77,255,0.10);
+    border-radius:16px;
+    margin:5px 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:all .38s cubic-bezier(0.34,1.56,0.64,1);
+    box-shadow:
+        0 6px 22px rgba(0,0,0,0.06),
+        0 0 0 1px rgba(255,255,255,0.45);
+    text-decoration:none;
+    overflow:hidden;
+}
+
+.vx-social-btn::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(135deg,
+        rgba(123,77,255,.10),
+        rgba(216,91,255,.10),
+        rgba(255,111,181,.08));
+    opacity:0;
+    transition:opacity .35s;
+}
+
+.vx-social-btn svg{
+    width:18px;
+    height:18px;
+    position:relative;
+    z-index:1;
+}
+
+/* Hover */
+.vx-social-btn:hover{
+    transform:translateX(7px) scale(1.1);
+    border-color:transparent;
+    box-shadow:
+        0 14px 34px rgba(123,77,255,0.22),
+        0 0 0 8px rgba(123,77,255,0.08);
+}
+
+.vx-social-btn:hover::before{
+    opacity:1;
+}
+
+/* Facebook */
+.vx-social-btn.fb:hover{
+    background:linear-gradient(135deg,#1877f2,#5ea8ff);
+}
+.vx-social-btn.fb svg path{
+    fill:#1877f2;
+    transition:fill .3s;
+}
+.vx-social-btn.fb:hover svg path{
+    fill:white;
+}
+
+/* Instagram */
+.vx-social-btn.ig:hover{
+    background:linear-gradient(135deg,
+        #f09433,
+        #e6683c,
+        #dc2743,
+        #cc2366,
+        #bc1888);
+}
+.vx-social-btn.ig svg path{
+    fill:#e1306c;
+    transition:fill .3s;
+}
+.vx-social-btn.ig:hover svg path{
+    fill:white;
+}
+
+/* X / Twitter */
+.vx-social-btn.tw:hover{
+    background:linear-gradient(135deg,#111827,#000);
+}
+.vx-social-btn.tw svg path{
+    fill:#333;
+    transition:fill .3s;
+}
+.vx-social-btn.tw:hover svg path{
+    fill:white;
+}
+
+/* LinkedIn */
+.vx-social-btn.li:hover{
+    background:linear-gradient(135deg,#0a66c2,#2ea0ff);
+}
+.vx-social-btn.li svg path{
+    fill:#0a66c2;
+    transition:fill .3s;
+}
+.vx-social-btn.li:hover svg path{
+    fill:white;
+}
+
+/* YouTube */
+.vx-social-btn.yt:hover{
+    background:linear-gradient(135deg,#ff0000,#ff5b5b);
+}
+.vx-social-btn.yt svg path{
+    fill:#ff0000;
+    transition:fill .3s;
+}
+.vx-social-btn.yt:hover svg path{
+    fill:white;
+}
+
+/* TikTok */
+.vx-social-btn.tt:hover{
+    background:linear-gradient(135deg,#010101,#2a2a2a);
+}
+.vx-social-btn.tt svg path{
+    fill:#333;
+    transition:fill .3s;
+}
+.vx-social-btn.tt:hover svg path{
+    fill:white;
+}
+
+/* Tooltip */
+.vx-social-btn::after{
+    content:attr(data-label);
+    position:absolute;
+    left:calc(100% + 14px);
+    top:50%;
+    transform:translateY(-50%) translateX(-8px);
+    background:rgba(20,16,48,0.92);
+    color:white;
+    font-family:'Clash Display',sans-serif;
+    font-weight:600;
+    font-size:12px;
+    padding:6px 13px;
+    border-radius:10px;
+    white-space:nowrap;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .25s,transform .25s;
+    box-shadow:0 10px 24px rgba(0,0,0,.16);
+}
+
+.vx-social-btn:hover::after{
+    opacity:1;
+    transform:translateY(-50%) translateX(0);
+}
+
+@media(max-width:768px){
+    .vx-social-sidebar{
+        display:none;
+    }
+}
+
+/* ─────────────────────────────
+   CHAT WIDGET — COPILOT THEME
+───────────────────────────── */
+
+.vx-chat-widget{
+    position:fixed;
+    bottom:32px;
+    right:32px;
+    z-index:9999;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:14px;
+}
+
+/* Popup */
+.vx-chat-popup{
+    background:rgba(255,255,255,0.96);
+    backdrop-filter:blur(18px);
+    border-radius:26px;
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.14),
+        0 0 0 1px rgba(255,255,255,0.5);
+    width:320px;
+    overflow:hidden;
+    transform:scale(.85) translateY(20px);
+    opacity:0;
+    pointer-events:none;
+    transform-origin:bottom right;
+    transition:all .42s cubic-bezier(0.34,1.56,0.64,1);
+}
+
+.vx-chat-popup.vx-visible{
+    transform:scale(1) translateY(0);
+    opacity:1;
+    pointer-events:all;
+}
+
+/* Header */
+.vx-chat-popup-header{
+    background:linear-gradient(135deg,
+        #7B4DFF 0%,
+        #A855F7 35%,
+        #D85BFF 65%,
+        #FF6FB5 100%);
+    padding:24px 22px 30px;
+    position:relative;
+    overflow:hidden;
+}
+
+.vx-chat-popup-header::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at top right,
+            rgba(255,255,255,.18),
+            transparent 60%);
+}
+
+/* Avatar */
+.vx-chat-avatar{
+    width:54px;
+    height:54px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.20);
+    border:2.5px solid rgba(255,255,255,0.38);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:14px;
+    position:relative;
+    z-index:1;
+    font-family:'Clash Display',sans-serif;
+    font-weight:700;
+    font-size:20px;
+    color:white;
+    backdrop-filter:blur(10px);
+}
+
+.vx-online-dot{
+    position:absolute;
+    bottom:2px;
+    right:2px;
+    width:13px;
+    height:13px;
+    border-radius:50%;
+    background:#25D366;
+    border:2px solid white;
+    box-shadow:0 0 10px rgba(37,211,102,.55);
+}
+
+/* Title */
+.vx-chat-popup-title{
+    font-family:'Clash Display',sans-serif;
+    font-weight:700;
+    font-size:18px;
+    color:white;
+    margin-bottom:4px;
+    position:relative;
+    z-index:1;
+}
+
+.vx-chat-popup-status{
+    font-size:12px;
+    color:rgba(255,255,255,0.78);
+    position:relative;
+    z-index:1;
+}
+
+/* Body */
+.vx-chat-popup-body{
+    padding:22px;
+}
+
+/* Message bubble */
+.vx-chat-msg{
+    background:linear-gradient(135deg,
+        #F5F3FF 0%,
+        #FDF4FF 100%);
+    border:1px solid rgba(123,77,255,0.08);
+    border-radius:18px 18px 18px 6px;
+    padding:14px 16px;
+    font-size:14px;
+    color:#4B5563;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+/* Channels */
+.vx-chat-channels{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.vx-channel-btn{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:14px 16px;
+    border-radius:16px;
+    border:none;
+    cursor:pointer;
+    transition:all .28s;
+    text-align:left;
+    text-decoration:none;
+    width:100%;
+}
+
+/* WhatsApp */
+.vx-channel-btn.wa{
+    background:#f0fdf4;
+}
+
+.vx-channel-btn.wa:hover{
+    background:#dcfce7;
+    transform:translateX(5px);
+}
+
+/* Messenger */
+.vx-channel-btn.ms{
+    background:#f3f5ff;
+}
+
+.vx-channel-btn.ms:hover{
+    background:#e6ebff;
+    transform:translateX(5px);
+}
+
+/* Icons */
+.vx-channel-icon{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.vx-channel-icon.wa{
+    background:linear-gradient(135deg,#25D366,#128C7E);
+}
+
+.vx-channel-icon.ms{
+    background:linear-gradient(135deg,#0099FF,#A033FF);
+}
+
+.vx-channel-icon svg{
+    width:20px;
+    height:20px;
+}
+
+/* Text */
+.vx-channel-text .vx-ch-label{
+    display:block;
+    font-size:11px;
+    color:#9CA3AF;
+    font-weight:600;
+}
+
+.vx-channel-text .vx-ch-name{
+    font-family:'Clash Display',sans-serif;
+    font-weight:700;
+    font-size:15px;
+    color:#1F2937;
+}
+
+/* Arrow */
+.vx-channel-arrow{
+    margin-left:auto;
+}
+
+.vx-channel-arrow svg{
+    width:16px;
+    height:16px;
+    stroke:#9ca3af;
+    stroke-width:2.5;
+    fill:none;
+}
+
+/* Toggle button */
+.vx-chat-toggle{
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    background:linear-gradient(135deg,
+        #7B4DFF 0%,
+        #A855F7 40%,
+        #D85BFF 70%,
+        #FF6FB5 100%);
+    border:none;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:
+        0 10px 34px rgba(123,77,255,0.42),
+        0 0 0 10px rgba(123,77,255,0.08);
+    transition:all .35s cubic-bezier(0.34,1.56,0.64,1);
+    position:relative;
+    z-index:1;
+    animation:vxChatBounce 3s ease-in-out infinite 4s;
+}
+
+.vx-chat-toggle:hover{
+    transform:scale(1.12);
+    box-shadow:
+        0 14px 42px rgba(123,77,255,0.52),
+        0 0 0 10px rgba(123,77,255,0.12);
+}
+
+.vx-chat-toggle.vx-open{
+    animation:none;
+}
+
+/* Ripple */
+.vx-chat-toggle::before,
+.vx-chat-toggle::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    background:linear-gradient(135deg,
+        #7B4DFF,
+        #D85BFF,
+        #FF6FB5);
+    opacity:0;
+    animation:vxRipple 3s ease-out infinite;
+}
+
+.vx-chat-toggle::after{
+    animation-delay:1.2s;
+}
+
+/* Toggle icons */
+.vx-toggle-chat{
+    display:flex;
+}
+
+.vx-toggle-close{
+    display:none;
+}
+
+.vx-chat-toggle.vx-open .vx-toggle-chat{
+    display:none;
+}
+
+.vx-chat-toggle.vx-open .vx-toggle-close{
+    display:flex;
+}
+
+/* Notification badge */
+.vx-chat-notif{
+    position:absolute;
+    top:-4px;
+    right:-4px;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:linear-gradient(135deg,
+        #FFB36B,
+        #FF6FB5,
+        #D85BFF);
+    color:white;
+    font-size:11px;
+    font-weight:800;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 4px 12px rgba(255,111,181,.45);
+    animation:vxBadgePop 2s ease-in-out infinite;
+    border:2px solid white;
+}
+
+.vx-chat-toggle.vx-open .vx-chat-notif{
+    display:none;
+}
+
+/* Back to top */
+.vx-back-top{
+    position:fixed;
+    bottom:40px;
+    left:40px;
+    width:54px;
+    height:54px;
+    background:linear-gradient(135deg,
+        #7B4DFF 0%,
+        #A855F7 35%,
+        #D85BFF 65%,
+        #FF6FB5 100%);
+    color:white;
+    border:none;
+    border-radius:16px;
+    cursor:pointer;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    box-shadow:
+        0 8px 30px rgba(123,77,255,0.38);
+    z-index:999;
+    transition:all .3s;
+}
+
+.vx-back-top.vx-visible{
+    display:flex;
+}
+
+.vx-back-top:hover{
+    transform:translateY(-5px);
+    box-shadow:
+        0 14px 40px rgba(123,77,255,0.48);
+}
+
+.vx-back-top svg{
+    width:22px;
+    height:22px;
+    stroke:white;
+    stroke-width:2.5;
+    fill:none;
+}
+
+/* Animations */
+@keyframes vxChatBounce{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-7px)}
+}
+
+@keyframes vxRipple{
+    0%{
+        opacity:.38;
+        transform:scale(1);
+    }
+    100%{
+        opacity:0;
+        transform:scale(2.25);
+    }
+}
+
+@keyframes vxBadgePop{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.18);
+    }
+}
+
+/* Responsive */
+@media(max-width:600px){
+
+    .vx-chat-widget{
+        bottom:20px;
+        right:20px;
+    }
+
+    .vx-chat-popup{
+        width:285px;
+    }
+
+    .vx-back-top{
+        bottom:20px;
+        left:20px;
+    }
+}
 </style>
 
 <!-- 1. FLOATING SIDE SOCIAL BAR -->

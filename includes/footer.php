@@ -169,110 +169,591 @@
      FOOTER + NEWSLETTER STYLES
 ══════════════════════════════════════════ -->
 <style>
-    /* ── Newsletter ── */
-    .newsletter-section { padding: 0 0 90px; position:relative; z-index:2; background: white; }
-    .newsletter-inner-wrap { background: var(--grad-main); border-radius:32px; padding:70px 70px; position:relative; overflow:hidden; }
-    .newsletter-inner-wrap::before { content:''; position:absolute; inset:0; border-radius:32px; background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E"); background-size:200px 200px; pointer-events:none; }
-    .newsletter-orb { position:absolute; border-radius:50%; filter:blur(60px); pointer-events:none; }
-    .n-orb-1 { width:300px;height:300px; background:rgba(255,255,255,.1); top:-100px; right:-60px; }
-    .n-orb-2 { width:200px;height:200px; background:rgba(251,191,36,.2); bottom:-80px; left:-40px; }
-    .newsletter-inner { display:flex; align-items:center; justify-content:space-between; gap:50px; position:relative; z-index:1; }
-    .newsletter-text h2 { color:white; margin-bottom:10px; font-size:clamp(24px,3vw,36px); font-family:'Clash Display',sans-serif; }
-    .newsletter-text p { color:rgba(255,255,255,.85); font-size:16px; }
-    .newsletter-form { display:flex; flex-shrink:0; box-shadow:0 8px 40px rgba(0,0,0,0.2); border-radius:14px; overflow:hidden; }
-    .newsletter-input { background:rgba(255,255,255,0.18); border:none; border-right:1px solid rgba(255,255,255,0.15); padding:16px 26px; font-family:'Manrope',sans-serif; font-size:15px; color:white; outline:none; width:300px; transition:all .3s; }
-    .newsletter-input:focus { background:rgba(255,255,255,0.25); }
-    .newsletter-input::placeholder { color:rgba(255,255,255,.65); }
-    .newsletter-btn { background:white; border:none; padding:16px 30px; font-family:'Clash Display',sans-serif; font-weight:700; font-size:15px; color:var(--purple); cursor:pointer; transition:all .3s; white-space:nowrap; display:flex; align-items:center; gap:8px; }
-    .newsletter-btn:hover { background:rgba(255,255,255,.92); }
-    .newsletter-btn svg { width:16px;height:16px; stroke:var(--purple); stroke-width:2.5; fill:none; }
+   /* ── Newsletter ── */
+.newsletter-section{
+    padding:0 0 90px;
+    position:relative;
+    z-index:2;
+    background:#FDF8FF;
+}
 
-    /* ── Footer wrapper ── */
-    .footer { background: #0a061f; position:relative; z-index:2; overflow:hidden; }
-    .footer-orb { position:absolute; border-radius:50%; filter:blur(120px); pointer-events:none; }
-    .f-orb-1 { width:500px;height:500px; background:rgba(124,58,237,0.1);  top:-200px;   right:-100px; }
-    .f-orb-2 { width:400px;height:400px; background:rgba(249,115,22,0.06); bottom:-150px; left:-100px;  }
-    .f-orb-3 { width:300px;height:300px; background:rgba(37,99,235,0.07);  top:50%;       left:40%;     }
+.newsletter-inner-wrap{
+    background:linear-gradient(135deg,
+        #7B4DFF 0%,
+        #A855F7 28%,
+        #D85BFF 58%,
+        #FF6FB5 82%,
+        #FF9A57 100%);
+    border-radius:34px;
+    padding:70px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 30px 80px rgba(123,77,255,0.18);
+}
 
-    /* ── Top bar ── */
-    .footer-top-bar { border-bottom:1px solid rgba(255,255,255,0.05); padding:50px 0; }
-    .footer-top-inner { display:flex; align-items:center; justify-content:space-between; gap:30px; flex-wrap:wrap; }
-    .footer-logo-wrap { display:flex; align-items:center; gap:14px; }
-    .footer-logo-icon { width:50px;height:50px; background:var(--grad-main); border-radius:14px; display:flex; align-items:center; justify-content:center; font-family:'Clash Display',sans-serif; font-weight:900; font-size:22px; color:white; box-shadow:0 6px 30px rgba(124,58,237,0.4); flex-shrink:0; }
-    .footer-logo-text { font-family:'Clash Display',sans-serif; font-weight:700; font-size:28px; }
-    .logo-v-f { background:var(--grad-main); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-    .logo-rest-f { color:rgba(255,255,255,0.9); }
+.newsletter-inner-wrap::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    border-radius:34px;
+    background:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+    background-size:200px 200px;
+    pointer-events:none;
+}
 
-    /* ── FIXED: Footer tagline — was 0.35, now 0.65 ── */
-    .footer-tagline { font-size:14px; color:rgba(255,255,255,0.65); max-width:340px; line-height:1.7; }
+/* Orbs */
+.newsletter-orb{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(70px);
+    pointer-events:none;
+}
 
-    .footer-socials { display:flex; gap:10px; }
-    .footer-social-btn { width:46px;height:46px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); border-radius:13px; display:flex; align-items:center; justify-content:center; transition:all .3s; font-family:'Clash Display',sans-serif; font-weight:700; font-size:13px; color:rgba(255,255,255,.6); text-decoration:none; }
-    .footer-social-btn:hover { background:var(--grad-main); border-color:transparent; color:white; transform:translateY(-3px); box-shadow:0 8px 25px rgba(124,58,237,.35); }
+.n-orb-1{
+    width:300px;
+    height:300px;
+    background:rgba(255,255,255,.12);
+    top:-100px;
+    right:-60px;
+}
 
-    /* ── Main grid ── */
-    .footer-main { padding:60px 0; border-bottom:1px solid rgba(255,255,255,0.05); }
-    .footer-inner { display:grid; grid-template-columns:2fr 1fr 1fr 1.3fr; gap:60px; position:relative; z-index:1; }
-    .footer-heading { font-family:'Clash Display',sans-serif; font-weight:700; font-size:16px; color:rgba(255,255,255,.9); margin-bottom:24px; display:flex; align-items:center; gap:8px; }
-    .footer-heading::before { content:''; width:14px; height:3px; background:var(--grad-main); border-radius:2px; display:block; }
+.n-orb-2{
+    width:220px;
+    height:220px;
+    background:rgba(255,154,87,.22);
+    bottom:-80px;
+    left:-40px;
+}
 
-    /* ── FIXED: About text — was 0.30, now 0.60 ── */
-    .footer-about { font-size:14px; line-height:1.9; color:rgba(255,255,255,.60); margin-bottom:28px; }
+.newsletter-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    position:relative;
+    z-index:1;
+}
 
-    .footer-newsletter-mini { display:flex; overflow:hidden; border-radius:12px; border:1px solid rgba(255,255,255,0.1); }
-    .footer-newsletter-input { flex:1; background:rgba(255,255,255,0.05); border:none; padding:13px 16px; font-family:'Manrope',sans-serif; font-size:13px; color:white; outline:none; }
-    .footer-newsletter-input::placeholder { color:rgba(255,255,255,.4); }
-    .footer-newsletter-btn { background:var(--grad-warm); border:none; padding:13px 18px; font-family:'Clash Display',sans-serif; font-weight:700; font-size:12px; color:white; cursor:pointer; transition:opacity .2s; white-space:nowrap; }
-    .footer-newsletter-btn:hover { opacity:.88; }
+/* Text */
+.newsletter-text h2{
+    color:white;
+    margin-bottom:10px;
+    font-size:clamp(24px,3vw,36px);
+    font-family:'Clash Display',sans-serif;
+    line-height:1.15;
+}
 
-    /* ── FIXED: Footer links — was 0.30, now 0.70 ── */
-    .footer-links { display:flex; flex-direction:column; gap:14px; }
-    .footer-links a { font-size:14px; color:rgba(255,255,255,.70); transition:all .3s; display:flex; align-items:center; gap:9px; text-decoration:none; }
-    .footer-links a .fl-arrow { width:16px;height:16px; background:rgba(124,58,237,0.2); border-radius:4px; display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:all .3s; }
-    .footer-links a .fl-arrow svg { width:8px;height:8px; stroke:rgba(124,58,237,0.6); stroke-width:2.5; }
-    .footer-links a:hover { color:white; padding-left:4px; }
-    .footer-links a:hover .fl-arrow { background:var(--grad-main); }
-    .footer-links a:hover .fl-arrow svg { stroke:white; }
+.newsletter-text p{
+    color:rgba(255,255,255,.88);
+    font-size:16px;
+    line-height:1.8;
+}
 
-    /* ── FIXED: Contact items — was 0.35, now 0.65 ── */
-    .footer-contact-item { display:flex; align-items:flex-start; gap:12px; margin-bottom:18px; }
-    .fci-icon { width:36px;height:36px; background:rgba(124,58,237,0.15); border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-    .fci-icon svg { width:16px;height:16px; stroke:rgba(164,120,255,0.8); }
-    .fci-icon.warm { background:rgba(249,115,22,0.12); }
-    .fci-icon.warm svg { stroke:rgba(249,180,100,0.8); }
-    .fci-text { font-size:13.5px; color:rgba(255,255,255,.65); line-height:1.6; }
+/* Form */
+.newsletter-form{
+    display:flex;
+    flex-shrink:0;
+    box-shadow:0 10px 40px rgba(0,0,0,0.20);
+    border-radius:16px;
+    overflow:hidden;
+    backdrop-filter:blur(14px);
+}
 
-    /* ── FIXED: Contact strong labels — was 0.65, now 0.90 ── */
-    .fci-text strong { display:block; color:rgba(255,255,255,.90); font-family:'Clash Display',sans-serif; font-size:13px; margin-bottom:2px; }
+.newsletter-input{
+    background:rgba(255,255,255,0.18);
+    border:none;
+    border-right:1px solid rgba(255,255,255,0.14);
+    padding:16px 26px;
+    font-family:'Manrope',sans-serif;
+    font-size:15px;
+    color:white;
+    outline:none;
+    width:300px;
+    transition:all .3s;
+}
 
-    /* ── Divider + Bottom ── */
-    .footer-grad-line { height:2px; background:var(--grad-main); opacity:.4; }
-    .footer-bottom { padding:28px 0; position:relative; z-index:1; }
-    .footer-bottom-inner { display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
-    .footer-bottom-left { display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+.newsletter-input:focus{
+    background:rgba(255,255,255,0.25);
+}
 
-    /* ── FIXED: Copyright text — was 0.20, now 0.50 ── */
-    .footer-bottom p { font-size:13.5px; color:rgba(255,255,255,.50); }
+.newsletter-input::placeholder{
+    color:rgba(255,255,255,.68);
+}
 
-    .footer-bottom-badge { display:flex; align-items:center; gap:7px; background:rgba(249,115,22,0.1); border:1px solid rgba(249,115,22,0.2); color:rgba(249,180,100,0.7); font-size:11px; font-weight:700; padding:5px 12px; border-radius:50px; letter-spacing:.5px; }
-    .footer-bottom-badge-dot { width:5px;height:5px;border-radius:50%;background:#f97316;animation:pulse 2s infinite; }
-    .footer-bottom-links { display:flex; gap:24px; flex-wrap:wrap; }
+.newsletter-btn{
+    background:white;
+    border:none;
+    padding:16px 30px;
+    font-family:'Clash Display',sans-serif;
+    font-weight:700;
+    font-size:15px;
+    color:#7B4DFF;
+    cursor:pointer;
+    transition:all .3s;
+    white-space:nowrap;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
 
-    /* ── FIXED: Bottom links — was 0.20, now 0.55 ── */
-    .footer-bottom-links a { font-size:13px; color:rgba(255,255,255,.55); transition:color .3s; text-decoration:none; }
-    .footer-bottom-links a:hover { color:rgba(255,255,255,.90); }
+.newsletter-btn:hover{
+    background:rgba(255,255,255,.94);
+    transform:translateY(-1px);
+}
 
-    /* ── Responsive ── */
-    @media(max-width:1100px) { .footer-inner { grid-template-columns:1fr 1fr; gap:40px; } }
-    @media(max-width:768px)  { .footer-top-inner { flex-direction:column; align-items:flex-start; } .newsletter-inner { flex-direction:column; text-align:center; } }
-    @media(max-width:600px)  {
-        .footer-inner { grid-template-columns:1fr; }
-        .newsletter-inner-wrap { padding:40px 24px; }
-        .newsletter-form { flex-direction:column; width:100%; }
-        .newsletter-input { border-right:none; border-bottom:1px solid rgba(255,255,255,0.15); width:100%; }
-        .newsletter-btn { justify-content:center; }
-        .footer-bottom-inner { flex-direction:column; align-items:flex-start; }
+.newsletter-btn svg{
+    width:16px;
+    height:16px;
+    stroke:#7B4DFF;
+    stroke-width:2.5;
+    fill:none;
+}
+
+/* ── Footer wrapper ── */
+.footer{
+    background:linear-gradient(135deg,
+        #120C2F 0%,
+        #181238 35%,
+        #24144D 70%,
+        #2A1659 100%);
+    position:relative;
+    z-index:2;
+    overflow:hidden;
+}
+
+/* Footer orbs */
+.footer-orb{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    pointer-events:none;
+}
+
+.f-orb-1{
+    width:500px;
+    height:500px;
+    background:rgba(123,77,255,0.12);
+    top:-200px;
+    right:-100px;
+}
+
+.f-orb-2{
+    width:400px;
+    height:400px;
+    background:rgba(255,154,87,0.08);
+    bottom:-150px;
+    left:-100px;
+}
+
+.f-orb-3{
+    width:300px;
+    height:300px;
+    background:rgba(216,91,255,0.08);
+    top:50%;
+    left:40%;
+}
+
+/* ── Top bar ── */
+.footer-top-bar{
+    border-bottom:1px solid rgba(255,255,255,0.05);
+    padding:50px 0;
+}
+
+.footer-top-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.footer-logo-wrap{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.footer-logo-icon{
+    width:52px;
+    height:52px;
+    background:var(--grad-main);
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Clash Display',sans-serif;
+    font-weight:900;
+    font-size:22px;
+    color:white;
+    box-shadow:0 8px 30px rgba(123,77,255,0.38);
+    flex-shrink:0;
+}
+
+.footer-logo-text{
+    font-family:'Clash Display',sans-serif;
+    font-weight:700;
+    font-size:28px;
+}
+
+.logo-v-f{
+    background:var(--grad-main);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+}
+
+.logo-rest-f{
+    color:rgba(255,255,255,0.92);
+}
+
+.footer-tagline{
+    font-size:14px;
+    color:rgba(255,255,255,0.68);
+    max-width:340px;
+    line-height:1.75;
+}
+
+/* Socials */
+.footer-socials{
+    display:flex;
+    gap:10px;
+}
+
+.footer-social-btn{
+    width:46px;
+    height:46px;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:all .3s;
+    font-family:'Clash Display',sans-serif;
+    font-weight:700;
+    font-size:13px;
+    color:rgba(255,255,255,.65);
+    text-decoration:none;
+    backdrop-filter:blur(10px);
+}
+
+.footer-social-btn:hover{
+    background:var(--grad-main);
+    border-color:transparent;
+    color:white;
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(123,77,255,.35);
+}
+
+/* ── Main grid ── */
+.footer-main{
+    padding:60px 0;
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.footer-inner{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1.3fr;
+    gap:60px;
+    position:relative;
+    z-index:1;
+}
+
+/* Headings */
+.footer-heading{
+    font-family:'Clash Display',sans-serif;
+    font-weight:700;
+    font-size:16px;
+    color:rgba(255,255,255,.92);
+    margin-bottom:24px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.footer-heading::before{
+    content:'';
+    width:14px;
+    height:3px;
+    background:var(--grad-main);
+    border-radius:2px;
+    display:block;
+}
+
+/* About */
+.footer-about{
+    font-size:14px;
+    line-height:1.9;
+    color:rgba(255,255,255,.62);
+    margin-bottom:28px;
+}
+
+/* Mini newsletter */
+.footer-newsletter-mini{
+    display:flex;
+    overflow:hidden;
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,0.10);
+    background:rgba(255,255,255,0.04);
+}
+
+.footer-newsletter-input{
+    flex:1;
+    background:transparent;
+    border:none;
+    padding:13px 16px;
+    font-family:'Manrope',sans-serif;
+    font-size:13px;
+    color:white;
+    outline:none;
+}
+
+.footer-newsletter-input::placeholder{
+    color:rgba(255,255,255,.42);
+}
+
+.footer-newsletter-btn{
+    background:linear-gradient(135deg,
+        #FF9A57 0%,
+        #FF6FB5 55%,
+        #D85BFF 100%);
+    border:none;
+    padding:13px 18px;
+    font-family:'Clash Display',sans-serif;
+    font-weight:700;
+    font-size:12px;
+    color:white;
+    cursor:pointer;
+    transition:opacity .2s;
+    white-space:nowrap;
+}
+
+.footer-newsletter-btn:hover{
+    opacity:.90;
+}
+
+/* Links */
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.footer-links a{
+    font-size:14px;
+    color:rgba(255,255,255,.72);
+    transition:all .3s;
+    display:flex;
+    align-items:center;
+    gap:9px;
+    text-decoration:none;
+}
+
+.footer-links a .fl-arrow{
+    width:16px;
+    height:16px;
+    background:rgba(123,77,255,0.18);
+    border-radius:4px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    transition:all .3s;
+}
+
+.footer-links a .fl-arrow svg{
+    width:8px;
+    height:8px;
+    stroke:rgba(216,91,255,0.75);
+    stroke-width:2.5;
+}
+
+.footer-links a:hover{
+    color:white;
+    padding-left:4px;
+}
+
+.footer-links a:hover .fl-arrow{
+    background:var(--grad-main);
+}
+
+.footer-links a:hover .fl-arrow svg{
+    stroke:white;
+}
+
+/* Contact */
+.footer-contact-item{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:18px;
+}
+
+.fci-icon{
+    width:38px;
+    height:38px;
+    background:rgba(123,77,255,0.16);
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+}
+
+.fci-icon svg{
+    width:16px;
+    height:16px;
+    stroke:#D8C7FF;
+}
+
+.fci-icon.warm{
+    background:rgba(255,154,87,0.14);
+}
+
+.fci-icon.warm svg{
+    stroke:#FFD1B2;
+}
+
+.fci-text{
+    font-size:13.5px;
+    color:rgba(255,255,255,.66);
+    line-height:1.65;
+}
+
+.fci-text strong{
+    display:block;
+    color:rgba(255,255,255,.92);
+    font-family:'Clash Display',sans-serif;
+    font-size:13px;
+    margin-bottom:2px;
+}
+
+/* Bottom */
+.footer-grad-line{
+    height:2px;
+    background:var(--grad-main);
+    opacity:.38;
+}
+
+.footer-bottom{
+    padding:28px 0;
+    position:relative;
+    z-index:1;
+}
+
+.footer-bottom-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.footer-bottom-left{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.footer-bottom p{
+    font-size:13.5px;
+    color:rgba(255,255,255,.52);
+}
+
+/* Badge */
+.footer-bottom-badge{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    background:rgba(255,111,181,0.10);
+    border:1px solid rgba(255,111,181,0.18);
+    color:#FFD2E8;
+    font-size:11px;
+    font-weight:700;
+    padding:5px 12px;
+    border-radius:50px;
+    letter-spacing:.5px;
+}
+
+.footer-bottom-badge-dot{
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:#FF6FB5;
+    animation:pulse 2s infinite;
+}
+
+/* Bottom links */
+.footer-bottom-links{
+    display:flex;
+    gap:24px;
+    flex-wrap:wrap;
+}
+
+.footer-bottom-links a{
+    font-size:13px;
+    color:rgba(255,255,255,.56);
+    transition:color .3s;
+    text-decoration:none;
+}
+
+.footer-bottom-links a:hover{
+    color:rgba(255,255,255,.92);
+}
+
+/* ── Responsive ── */
+@media(max-width:1100px){
+
+    .footer-inner{
+        grid-template-columns:1fr 1fr;
+        gap:40px;
     }
+}
+
+@media(max-width:768px){
+
+    .footer-top-inner{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .newsletter-inner{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+@media(max-width:600px){
+
+    .footer-inner{
+        grid-template-columns:1fr;
+    }
+
+    .newsletter-inner-wrap{
+        padding:40px 24px;
+    }
+
+    .newsletter-form{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .newsletter-input{
+        border-right:none;
+        border-bottom:1px solid rgba(255,255,255,0.15);
+        width:100%;
+    }
+
+    .newsletter-btn{
+        justify-content:center;
+    }
+
+    .footer-bottom-inner{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
 </style>
 
 <!-- ══════════════════════════════════════════

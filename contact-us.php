@@ -11,31 +11,7 @@
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        :root {
-            --pink:     #e040fb;
-            --purple:   #7c3aed;
-            --blue:     #2563eb;
-            --teal:     #06b6d4;
-            --orange:   #f97316;
-            --yellow:   #fbbf24;
-            --gold:     #f59e0b;
-
-            --bg:       #fdfcff;
-            --bg2:      #f5f3ff;
-            --surface:  #ffffff;
-            --surface2: #f0ecff;
-            --text:     #4b4570;
-            --text-strong: #1a0f3c;
-            --muted:    #9ca3af;
-            --border:   rgba(124,58,237,0.12);
-
-            --grad-main:     linear-gradient(135deg, #e040fb 0%, #7c3aed 28%, #2563eb 55%, #06b6d4 75%, #f97316 90%, #fbbf24 100%);
-            --grad-warm:     linear-gradient(135deg, #f97316 0%, #fbbf24 50%, #e040fb 100%);
-            --grad-cool:     linear-gradient(135deg, #e040fb 0%, #7c3aed 50%, #2563eb 100%);
-            --grad-btn:      linear-gradient(135deg, #e040fb, #7c3aed, #2563eb);
-            --grad-btn-warm: linear-gradient(135deg, #f97316, #fbbf24, #e040fb);
-            --grad-header:   linear-gradient(135deg, #0d0520 0%, #130a35 40%, #0a1a40 70%, #0d0a2e 100%);
-        }
+    
 
         html { scroll-behavior: smooth; }
         body { font-family: 'Manrope', sans-serif; color: var(--text); background: var(--bg); overflow-x: hidden; }
@@ -99,57 +75,154 @@
         .btn-warm svg { width:18px;height:18px;stroke:white;stroke-width:2.5;flex-shrink:0; }
 
         /* ── HERO ── */
-        .contact-hero {
-            padding: 160px 0 100px;
-            position: relative; overflow: hidden;
-            background: var(--grad-header);
-            text-align: center;
-        }
-        .contact-hero::before {
-            content: '';
-            position: absolute; inset: 0;
-            background:
-                radial-gradient(ellipse 70% 60% at 0% 50%, rgba(0,180,220,0.45) 0%, transparent 60%),
-                radial-gradient(ellipse 55% 80% at 100% 30%, rgba(160,40,200,0.65) 0%, transparent 55%),
-                radial-gradient(ellipse 60% 50% at 50% 100%, rgba(30,30,200,0.4) 0%, transparent 60%);
-            pointer-events: none; z-index: 0;
-        }
-        .contact-hero::after {
-            content: '';
-            position: absolute; top: 0; left: 0; right: 0; height: 2px;
-            background: var(--grad-main); z-index: 20;
-        }
-        .ph-orb { position: absolute; border-radius: 50%; filter: blur(90px); pointer-events: none; z-index: 1; }
-        .ph-orb-1 { width:500px;height:500px; background:rgba(224,64,251,0.12); top:-200px; right:-100px; animation:orbFloat 8s ease-in-out infinite; }
-        .ph-orb-2 { width:380px;height:380px; background:rgba(37,99,235,0.1); bottom:-120px; left:-80px; animation:orbFloat 10s ease-in-out infinite reverse; }
-        .ph-orb-3 { width:280px;height:280px; background:rgba(6,182,212,0.18); top:30%; left:10%; animation:orbFloat 7s ease-in-out infinite 1s; }
-        .ph-orb-4 { width:220px;height:220px; background:rgba(249,115,22,0.1); top:20%; right:25%; animation:orbFloat 9s ease-in-out infinite 2s; }
+      /* ── CONTACT HERO (Copilot Style Unified) ── */
+.contact-hero {
+    padding: 160px 0 0;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
 
-        /* floating particles */
-        .hero-particles { position:absolute; inset:0; z-index:3; pointer-events:none; overflow:hidden; }
-        .particle { position:absolute; border-radius:50%; opacity:.18; animation:float-particle linear infinite; }
-        @keyframes float-particle { 0%{transform:translateY(100vh) scale(0);opacity:0} 10%{opacity:.18} 90%{opacity:.18} 100%{transform:translateY(-20vh) scale(1.2);opacity:0} }
+    /* same Copilot mesh background */
+    background: linear-gradient(155deg,
+        #F0E8FF 0%,
+        #F8F0FF 20%,
+        #FFF0FA 40%,
+        #FFF4F0 65%,
+        #FFF9F0 85%,
+        #FDF8FF 100%
+    );
+}
 
-        .hero-content { position: relative; z-index: 10; }
-        .page-hero-badge {
-            display: inline-flex; align-items: center; gap: 10px;
-            background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.28);
-            color: #fbbf24; font-family:'Manrope',sans-serif; font-weight:700;
-            font-size:11px; letter-spacing:2.5px; text-transform:uppercase;
-            padding: 8px 20px; border-radius:50px; margin-bottom:28px;
-        }
-        .page-hero-badge .badge-dot { width:7px;height:7px;border-radius:50%;background:#f97316;animation:pulse 1.5s infinite; }
-        .contact-hero h1 {
-            font-family: 'Manrope', sans-serif;
-            font-size: clamp(26px, 4vw, 58px);
-            line-height: 1.1; letter-spacing: -1px;
-            color: #fff; margin-bottom: 22px;
-        }
-        .contact-hero p.ph-desc {
-            color: rgba(255,255,255,0.72);
-            font-size: 17px; line-height: 1.85;
-            max-width: 580px; margin: 0 auto 40px;
-        }
+/* soft mesh blobs */
+.contact-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 70% 60% at 10% 40%, rgba(123,77,255,0.14) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 70% at 90% 30%, rgba(216,91,255,0.12) 0%, transparent 55%),
+        radial-gradient(ellipse 55% 60% at 50% 90%, rgba(255,154,87,0.10) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* top gradient line */
+.contact-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--grad-main);
+    z-index: 5;
+}
+
+/* floating orbs (same system as page-hero) */
+.ph-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.ph-orb-1 {
+    width: 420px;
+    height: 420px;
+    background: rgba(123,77,255,0.10);
+    top: -180px;
+    right: -100px;
+    animation: orbFloat 9s ease-in-out infinite;
+}
+
+.ph-orb-2 {
+    width: 340px;
+    height: 340px;
+    background: rgba(216,91,255,0.09);
+    bottom: -120px;
+    left: -80px;
+    animation: orbFloat 11s ease-in-out infinite reverse;
+}
+
+.ph-orb-3 {
+    width: 260px;
+    height: 260px;
+    background: rgba(255,154,87,0.10);
+    top: 30%;
+    left: 10%;
+    animation: orbFloat 8s ease-in-out infinite 1s;
+}
+
+.ph-orb-4 {
+    width: 220px;
+    height: 220px;
+    background: rgba(255,111,181,0.10);
+    top: 20%;
+    right: 25%;
+    animation: orbFloat 10s ease-in-out infinite 2s;
+}
+
+/* content layer */
+.contact-hero .hero-content {
+    position: relative;
+    z-index: 10;
+    padding-bottom: 80px;
+}
+
+/* badge (same glass style) */
+.page-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(123,77,255,0.18);
+    color: var(--text-mid);
+
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+
+    padding: 8px 20px;
+    border-radius: 50px;
+    margin-bottom: 28px;
+
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(123,77,255,0.10);
+}
+
+.page-hero-badge .badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--orange);
+    animation: pulse 1.5s infinite;
+}
+
+/* title */
+.contact-hero h1 {
+    font-family: 'Plus Jakarta Sans', 'Manrope', sans-serif;
+    font-size: clamp(26px, 4vw, 45px);
+    line-height: 1.1;
+    letter-spacing: -1px;
+
+    color: var(--text-strong);
+    margin-bottom: 22px;
+}
+
+/* description */
+.contact-hero p.ph-desc {
+    color: var(--text-mid);
+    font-size: 17px;
+    line-height: 1.85;
+    max-width: 920px;
+    margin: 0 auto 40px;
+}
+
+/* button hover same system already good */
 
         /* hero stats bar */
         .hero-stats-bar {
@@ -426,7 +499,7 @@
             <span class="badge-dot"></span>
             Digital Marketing Agency
         </div>
-        <h1>Let's Build <span class="grad-text">Something</span><br>Great Together</h1>
+        <h1>Let's Build Something Great Together</h1>
         <p class="ph-desc">We'd love to hear from you. Whether you have a question, project idea, or need guidance — contact us and let's create digital success together.</p>
         <a href="#contact-form" class="btn-grad">
             Contact Us Now
@@ -434,189 +507,13 @@
         </a>
     </div>
 
-    <div class="hero-stats-bar">
-        <div class="hsb-item">
-            <div class="hsb-num">1,200<sup>+</sup></div>
-            <div class="hsb-lbl">Happy Clients</div>
-        </div>
-        <div class="hsb-item">
-            <div class="hsb-num">10<sup>+</sup></div>
-            <div class="hsb-lbl">Years Experience</div>
-        </div>
-        <div class="hsb-item">
-            <div class="hsb-num">50<sup>+</sup></div>
-            <div class="hsb-lbl">Expert Team</div>
-        </div>
-        <div class="hsb-item">
-            <div class="hsb-num">24<sup>h</sup></div>
-            <div class="hsb-lbl">Response Time</div>
-        </div>
-    </div>
+   
 </section>
 
-<!-- ══ INTRO ══ -->
-<section class="intro-section">
-    <div class="container">
-        <div class="intro-inner">
-            <div class="section-label" style="justify-content:center;">
-                <span class="sl-dot"><span></span><span></span><span></span></span>
-                Business
-            </div>
-            <h2>Find the Perfect Solution for <span class="grad-text">Your Business</span></h2>
-            <p>At Hashtag Media, we believe every business is unique. That's why this page is the perfect place to start. Whether you're a startup looking to grow or an established brand ready to scale, we're here to listen. Our goal is to understand your needs and craft strategies that deliver real results. When you get in touch with us, you take the first step toward making your business smarter and stronger.</p>
-        </div>
-    </div>
-</section>
 
-<!-- ══ CONTACT SPLIT ══ -->
-<section class="contact-split" id="contact-form">
-    <div class="split-wrap">
+<?php include 'includes/contact-section.php'; ?>
 
-        <!-- LEFT -->
-        <div class="split-left">
-            <div class="sl-inner">
-                <div class="sl-badge"><span class="sl-badge-dot"></span> Get In Touch</div>
-                <h2 class="sl-title">Contact<br><span>Us</span></h2>
-                <p class="sl-desc">We'd love to hear from you! If you have a project in mind, need expert guidance, or just want to learn more about how we can help, contact us today. Our friendly team is ready to connect and provide the right support for your goals.</p>
 
-                <div class="sl-items">
-                    <div class="sl-item">
-                        <div class="sl-icon">
-                            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.42-.42a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
-                        </div>
-                        <div>
-                            <div class="sl-item-title">Phone</div>
-                            <div class="sl-item-val">+971 50 915 9820</div>
-                        </div>
-                    </div>
-                    <div class="sl-item">
-                        <div class="sl-icon">
-                            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        </div>
-                        <div>
-                            <div class="sl-item-title">Send Email</div>
-                            <div class="sl-item-val">contact@hashtagmedia.ae</div>
-                        </div>
-                    </div>
-                    <div class="sl-item">
-                        <div class="sl-icon">
-                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        </div>
-                        <div>
-                            <div class="sl-item-title">Location</div>
-                            <div class="sl-item-val">Dubai, UAE</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sl-divider"></div>
-
-                <div class="sl-socials">
-                    <a href="https://www.linkedin.com/company/hashtagmediadotae/" target="_blank" class="sl-social" aria-label="LinkedIn">
-                        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                    </a>
-                    <a href="https://www.facebook.com/share/1EPSHYUiM5/" target="_blank" class="sl-social" aria-label="Facebook">
-                        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-                    </a>
-                    <a href="https://www.instagram.com/hashtagmediadotae" target="_blank" class="sl-social" aria-label="Instagram">
-                        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- RIGHT FORM -->
-        <div class="split-right">
-            <span class="cr-label">Drop Us a Line</span>
-            <h3 class="cr-title">Send Us a <span class="grad-text">Message</span></h3>
-            <p class="cr-sub">Looking for a digital marketing agency contact us form that's simple? You've found it. Just fill in your name, email, and message, and we'll get back to you as quickly as possible.</p>
-
-            <form method="post" action="#" novalidate>
-                <div class="form-row">
-                    <div class="fg">
-                        <label for="f-name">Name</label>
-                        <input type="text" id="f-name" name="name" placeholder="Your full name" required>
-                    </div>
-                    <div class="fg">
-                        <label for="f-email">Email</label>
-                        <input type="email" id="f-email" name="email" placeholder="your@email.com" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="fg">
-                        <label for="f-phone">Phone</label>
-                        <input type="tel" id="f-phone" name="phone" placeholder="+971 00 000 0000" required>
-                    </div>
-                    <div class="fg">
-                        <label for="f-service">Select a Service</label>
-                        <select id="f-service" name="service" required>
-                            <option value="">Choose a service...</option>
-                            <option value="Web development">Web Development</option>
-                            <option value="Search Engine Optimization">Search Engine Optimization</option>
-                            <option value="Mobile App Development">Mobile App Development</option>
-                            <option value="Website Maintenance">Website Maintenance</option>
-                            <option value="Website Speed Optimization">Website Speed Optimization</option>
-                            <option value="Pay Per Click">Pay Per Click</option>
-                            <option value="Social Media Marketing">Social Media Marketing</option>
-                            <option value="Social Media Management">Social Media Management</option>
-                            <option value="Script Writing">Script Writing</option>
-                            <option value="Online Reputation Management">Online Reputation Management</option>
-                            <option value="Content Writing">Content Writing</option>
-                            <option value="Email Marketing">Email Marketing</option>
-                            <option value="Graphic Designing">Graphic Designing</option>
-                            <option value="UI/UX">UI/UX</option>
-                            <option value="Video Editing">Video Editing</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-row single">
-                    <div class="fg">
-                        <label for="f-msg">Message</label>
-                        <textarea id="f-msg" name="message" placeholder="Tell us about your project..." required></textarea>
-                    </div>
-                </div>
-                <div class="form-submit-row">
-                    <button class="btn-send" type="submit">
-                        Send Message
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
-                    </button>
-                    <p class="form-note"><strong>No spam, ever.</strong><br>We reply within 24 hours.</p>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
-
-<!-- ══ MAP ══ -->
-<section class="map-section">
-    <iframe
-        src="https://maps.google.com/maps?q=Dubai&t=m&z=15&output=embed&iwloc=near"
-        title="Hashtag Media – Dubai"
-        aria-label="Dubai office location"
-        loading="lazy"
-    ></iframe>
-</section>
-
-<!-- ══ NEWSLETTER ══ -->
-<section class="newsletter-section">
-    <div class="container">
-        <div class="nl-inner">
-            <div class="nl-text">
-                <div class="nl-icon-wrap">
-                    <div class="nl-icon">
-                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    </div>
-                    <div class="nl-title">Sign up for Newsletter</div>
-                </div>
-                <div class="nl-sub">and receive <span class="nl-discount">20% discount</span> on first project</div>
-            </div>
-            <form class="nl-form" method="post" action="#" novalidate>
-                <input type="email" name="nl_email" placeholder="Enter your email address" required>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </div>
-</section>
 
 <?php include 'includes/virex-floating-social.php'; ?>
 <?php include 'includes/footer.php'; ?>
