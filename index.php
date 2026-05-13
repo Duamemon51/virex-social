@@ -132,45 +132,52 @@
         <h2 class="section-title">Everything You Need to <span class="grad-text">Dominate Online</span></h2>
         <p class="section-desc">From SEO to social media, we provide end-to-end digital marketing solutions that drive real, measurable results.</p>
         <div class="services-grid">
-            <div class="service-card">
+
+            <a href="<?php echo $base_url; ?>single-service.php?service=meta-content-creation" class="service-card">
                 <div class="service-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
                 <h3 class="service-title">Meta Ads</h3>
                 <p class="service-desc">Boost your online presence with our Meta Ads services. We drive targeted traffic, maximize your ROI, and optimize your online reputation.</p>
                 <div class="service-arrow">Learn more <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-            </div>
-            <div class="service-card">
+            </a>
+
+            <a href="<?php echo $base_url; ?>single-service.php?service=web-development" class="service-card">
                 <div class="service-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><polyline points="7 8 10 11 7 14"/><line x1="13" y1="14" x2="17" y2="14"/></svg></div>
                 <h3 class="service-title">Website Development</h3>
                 <p class="service-desc">Custom, responsive websites that look great and work seamlessly. We handle development, maintenance, and speed optimization.</p>
                 <div class="service-arrow">Learn more <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-            </div>
-            <div class="service-card">
+            </a>
+
+            <a href="<?php echo $base_url; ?>single-service.php?service=seo" class="service-card">
                 <div class="service-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div>
                 <h3 class="service-title">SEO Services</h3>
                 <p class="service-desc">Boost your Google ranking with keyword-optimized, engaging content that drives sustained organic traffic and enhances site performance.</p>
                 <div class="service-arrow">Learn more <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-            </div>
-            <div class="service-card">
+            </a>
+
+            <a href="<?php echo $base_url; ?>single-service.php?service=snapchat-management" class="service-card">
                 <div class="service-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
                 <h3 class="service-title">Snapchat Management</h3>
                 <p class="service-desc">We transform your Snapchat Stories into a high-earning asset with custom content creation and strategic audience growth management.</p>
                 <div class="service-arrow">Learn more <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-            </div>
-            <div class="service-card">
+            </a>
+
+            <a href="<?php echo $base_url; ?>single-service.php?service=video-editing-agency" class="service-card">
                 <div class="service-icon"><svg viewBox="0 0 24 24" fill="none"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
                 <h3 class="service-title">Video Editing</h3>
                 <p class="service-desc">From reels to brand promos, our editing team tells your story with style — making sure your videos stand out and drive engagement.</p>
                 <div class="service-arrow">Learn more <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-            </div>
-            <div class="service-card">
+            </a>
+
+            <a href="<?php echo $base_url; ?>single-service.php?service=meta-content-creation" class="service-card">
                 <div class="service-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
                 <h3 class="service-title">Meta Content Creation</h3>
                 <p class="service-desc">We craft engaging and creative meta content that strengthens your brand presence, boosts audience engagement, and drives better digital visibility.</p>
                 <div class="service-arrow">Learn more <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-            </div>
+            </a>
+
         </div>
         <div class="services-cta">
-            <a href="services.php" class="btn-outline">View More Services</a>
+            <a href="<?php echo $base_url; ?>services.php" class="btn-outline">View More Services</a>
         </div>
     </div>
 </section>

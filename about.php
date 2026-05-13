@@ -20,7 +20,6 @@
             <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
     </div>
-  
 </section>
 
 <!-- ══ ABOUT INTRO ══ -->
@@ -32,11 +31,9 @@
                     <span class="sl-dot"><span></span><span></span><span></span></span>
                     About Us
                 </div>
-                <h2 class="section-title">Learn All About <span class="grad-text">
-Virex Social</span></h2>
+                <h2 class="section-title">Learn All About <span class="grad-text">Virex Social</span></h2>
                 <p>We're more than a digital agency — we're a team that believes in purpose, partnership, and performance. Our clients love us for 3 key reasons: we listen, we innovate, and we deliver.</p>
-                <p>At 
-Virex Social, we create digital experiences that excite and inspire. Every project is unique — our team uses fresh ideas and the latest tools to make your brand stand out. From sleek designs to full marketing strategies, we help businesses of all sizes bring their vision to life.</p>
+                <p>At Virex Social, we create digital experiences that excite and inspire. Every project is unique — our team uses fresh ideas and the latest tools to make your brand stand out. From sleek designs to full marketing strategies, we help businesses of all sizes bring their vision to life.</p>
                 <a href="contact-us.php" class="btn-grad">
                     Contact Us
                     <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -44,20 +41,17 @@ Virex Social, we create digital experiences that excite and inspire. Every proje
             </div>
             <div class="about-intro-right">
                 <div class="about-intro-img">
-                    <img src="assets/img/about1.png" alt="
-Virex Social Office">
+                    <img src="assets/img/about1.png" alt="Virex Social Office" loading="lazy">
                     <div class="about-intro-img-badge">
                         <div class="aib-icon">
                             <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         </div>
-                       
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 
 <!-- ══ VALUES / MISSION TABS ══ -->
 <section class="about-tabs-section">
@@ -81,12 +75,10 @@ Virex Social Office">
             <p style="font-size:16px;line-height:1.8;color:#6b7280;max-width:560px;margin:0 auto;">When you learn about our company, you'll see we blend creativity, strategy, and technology to help brands connect with people, build trust, and get real results.</p>
         </div>
 
-        <!-- Tab buttons — exactly like screenshot -->
         <div class="tab-switcher-wrap">
             <div class="tab-switcher-row">
-                <button class="tab-btn-v2 active" onclick="switchTabV2('values', this)">
+                <button class="tab-btn-v2 active" onclick="switchTabV2('values', this)" aria-label="Our Values">
                     <div class="tbc-box">
-                        <!-- Chess/Strategy icon -->
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M9 6h6M9 18h6M10 4h4M10 20h4M12 4v2M12 18v2M8 10h8M8 14h8M7 10v4M17 10v4"/>
                         </svg>
@@ -97,9 +89,8 @@ Virex Social Office">
 
                 <div class="tab-switcher-gap"></div>
 
-                <button class="tab-btn-v2 tab-orange" onclick="switchTabV2('mission', this)">
+                <button class="tab-btn-v2 tab-orange" onclick="switchTabV2('mission', this)" aria-label="Our Mission">
                     <div class="tbc-box">
-                        <!-- Analytics/Chart icon -->
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="2" y="3" width="20" height="14" rx="2"/>
                             <path d="M8 21h8M12 17v4"/>
@@ -118,8 +109,7 @@ Virex Social Office">
             <div class="tab-content-grid-v2">
                 <div class="tab-text-v2">
                     <h3>Building Digital Experiences That Drive Results</h3>
-                    <p>At 
-Virex Social, our core values guide everything we do. From how we treat our clients to how we approach every campaign — integrity, innovation, and impact are at the heart of it all.</p>
+                    <p>At Virex Social, our core values guide everything we do. From how we treat our clients to how we approach every campaign — integrity, innovation, and impact are at the heart of it all.</p>
                     <div class="tab-point-v2">
                         <div class="tpv-icon tpv-purple">
                             <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
@@ -153,7 +143,7 @@ Virex Social, our core values guide everything we do. From how we treat our clie
                     </a>
                 </div>
                 <div class="tab-real-img">
-                    <img src="assets/img/about2.png" alt="Our Values — team at work">
+                    <img src="assets/img/about2.png" alt="Our Values — team at work" loading="lazy">
                     <div class="tab-real-img-badge">
                         <div class="trib-dot"></div>
                         <div class="trib-text">
@@ -169,7 +159,7 @@ Virex Social, our core values guide everything we do. From how we treat our clie
         <div class="tab-panel-v2" id="tabv2-mission">
             <div class="tab-content-grid-v2">
                 <div class="tab-real-img">
-                    <img src="assets/img/about-us.png" alt="Our Mission — digital team">
+                    <img src="assets/img/about-us.png" alt="Our Mission — digital team" loading="lazy">
                     <div class="tab-real-img-badge">
                         <div class="trib-dot" style="background:#f97316;"></div>
                         <div class="trib-text">
@@ -180,8 +170,7 @@ Virex Social, our core values guide everything we do. From how we treat our clie
                 </div>
                 <div class="tab-text-v2">
                     <h3>Do You Know About Our Company?</h3>
-                    <p>We are 
-Virex Social. We help brands grow, connect, and inspire. Our mission is simple — help businesses achieve digital success through creative thinking and smart execution.</p>
+                    <p>We are Virex Social. We help brands grow, connect, and inspire. Our mission is simple — help businesses achieve digital success through creative thinking and smart execution.</p>
                     <div class="tab-point-v2">
                         <div class="tpv-icon tpv-purple">
                             <svg viewBox="0 0 24 24"><path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"/></svg>
@@ -219,9 +208,7 @@ Virex Social. We help brands grow, connect, and inspire. Our mission is simple �
     </div>
 </section>
 
-
-
-<!-- ══ WHY CHOOSE US (NEW SECTION) ══ -->
+<!-- ══ WHY CHOOSE US ══ -->
 <section class="why-section">
     <div class="container">
         <div class="why-grid">
@@ -231,8 +218,7 @@ Virex Social. We help brands grow, connect, and inspire. Our mission is simple �
                     Why Choose Us
                 </div>
                 <h2 class="section-title">What Makes <span class="grad-text">Us Different</span></h2>
-                <p style="font-size:16px;line-height:1.85;color:#6b7280;margin-bottom:10px;">In a crowded market, 
-Virex Social stands out because we combine creative passion with data-driven precision. We don't just run campaigns — we build relationships and long-term growth engines for your brand.</p>
+                <p style="font-size:16px;line-height:1.85;color:#6b7280;margin-bottom:10px;">In a crowded market, Virex Social stands out because we combine creative passion with data-driven precision. We don't just run campaigns — we build relationships and long-term growth engines for your brand.</p>
                 <div class="why-list">
                     <div class="why-item">
                         <div class="wi-icon wii-p">
@@ -273,19 +259,18 @@ Virex Social stands out because we combine creative passion with data-driven pre
                 </div>
             </div>
             <div class="why-img">
-                <img src="assets/img/about2.png" alt="Why choose 
-Virex Social">
+                <img src="assets/img/about2.png" alt="Why choose Virex Social" loading="lazy">
             </div>
         </div>
     </div>
 </section>
 
-<!-- ══ SKILLS (EXISTING SECTION WITH REAL IMAGE) ══ -->
+<!-- ══ SKILLS ══ -->
 <section class="skills-section">
     <div class="container">
         <div class="skills-layout">
             <div class="skills-img">
-                <img src="assets/img/about3.png" alt="Our digital skills">
+                <img src="assets/img/about3.png" alt="Our digital skills" loading="lazy">
             </div>
             <div>
                 <div class="section-label" style="color:#7c3aed">
@@ -299,7 +284,7 @@ Virex Social">
                     <div class="skill-bar-top">
                         <div class="skill-name">
                             <svg viewBox="0 0 24 24" fill="none" stroke="#6254e7" stroke-width="2"><circle cx="13.5" cy="6.5" r=".5" fill="#6254e7"/><circle cx="17.5" cy="10.5" r=".5" fill="#6254e7"/><circle cx="8.5" cy="7.5" r=".5" fill="#6254e7"/><circle cx="6.5" cy="12.5" r=".5" fill="#6254e7"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
-                            Creative & Design Tools
+                            Creative &amp; Design Tools
                         </div>
                         <div class="skill-pct">99%</div>
                     </div>
@@ -319,7 +304,7 @@ Virex Social">
                     <div class="skill-bar-top">
                         <div class="skill-name">
                             <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                            SEO & Web Performance
+                            SEO &amp; Web Performance
                         </div>
                         <div class="skill-pct">92%</div>
                     </div>
@@ -339,7 +324,7 @@ Virex Social">
                     <div class="skill-bar-top">
                         <div class="skill-name">
                             <svg viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-                            Video & Content Creation
+                            Video &amp; Content Creation
                         </div>
                         <div class="skill-pct">88%</div>
                     </div>
@@ -350,8 +335,6 @@ Virex Social">
     </div>
 </section>
 
-
-
 <!-- ══ TESTIMONIAL ══ -->
 <section class="testimonial-section">
     <div class="container">
@@ -361,11 +344,9 @@ Virex Social">
         </div>
         <h2 class="section-title1">What Our <span class="grad-text">Clients Say</span></h2>
         <div class="testimonial-grid">
-           
             <div class="testimonial-card">
                 <span class="testimonial-quote">"</span>
-                <p class="testimonial-text">The team at 
-Virex Social turned our vision into a brand that truly connects with our audience. From logo design to content strategy, everything was done with care and delivered on time. Our online sales jumped 3x within 6 months!</p>
+                <p class="testimonial-text">The team at Virex Social turned our vision into a brand that truly connects with our audience. From logo design to content strategy, everything was done with care and delivered on time. Our online sales jumped 3x within 6 months!</p>
                 <div class="testimonial-author">
                     <div class="ta-avatar">T</div>
                     <div class="ta-info">
@@ -378,7 +359,6 @@ Virex Social turned our vision into a brand that truly connects with our audienc
     </div>
 </section>
 
-
 <!-- ══ FAQ ══ -->
 <section class="faq-section-v2">
     <div class="container">
@@ -388,23 +368,20 @@ Virex Social turned our vision into a brand that truly connects with our audienc
                 FAQ
             </div>
             <h2 class="section-title">Most Popular <span class="grad-text">Questions</span></h2>
-            <p class="faq2-subtitle">Have questions about 
-Virex Social? We've got answers.</p>
+            <p class="faq2-subtitle">Have questions about Virex Social? We've got answers.</p>
         </div>
         <div class="faq2-body">
             <div class="faq2-list">
                 <div class="faq2-item open">
                     <div class="faq2-question" onclick="toggleFaq2(this)">
-                        <div class="faq2-q-inner"><span class="faq2-num">01</span><span>What services does 
-Virex Social offer?</span></div>
+                        <div class="faq2-q-inner"><span class="faq2-num">01</span><span>What services does Virex Social offer?</span></div>
                         <div class="faq2-toggle"><svg viewBox="0 0 24 24" fill="none"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
                     </div>
                     <div class="faq2-answer">We provide many digital services — branding, social media marketing, website design, SEO, content writing, paid ads, and event coverage. We help your business grow online.</div>
                 </div>
                 <div class="faq2-item">
                     <div class="faq2-question" onclick="toggleFaq2(this)">
-                        <div class="faq2-q-inner"><span class="faq2-num">02</span><span>How do I get started with 
-Virex Social?</span></div>
+                        <div class="faq2-q-inner"><span class="faq2-num">02</span><span>How do I get started with Virex Social?</span></div>
                         <div class="faq2-toggle"><svg viewBox="0 0 24 24" fill="none"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
                     </div>
                     <div class="faq2-answer">Contact us by form, email, or WhatsApp. We will talk with you, understand your goals, and suggest the best plan for your business.</div>
@@ -438,11 +415,11 @@ Virex Social?</span></div>
                     </div>
                     <h3 class="faq2-cta-title">Still have questions?</h3>
                     <p class="faq2-cta-desc">Can't find the answer you're looking for? Our team is ready to help within 2 hours.</p>
-                    <a href="https://wa.me/971000000000" target="_blank" class="faq2-cta-btn">
+                    <a href="https://wa.me/971000000000" target="_blank" rel="noopener" class="faq2-cta-btn">
                         <svg viewBox="0 0 24 24" fill="white" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                         Chat on WhatsApp
                     </a>
-                    <a href="mailto:contact@hashtagmedia.ae" class="faq2-cta-btn-outline">
+                    <a href="mailto:contact@virexsocial.ae" class="faq2-cta-btn-outline">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                         Send an Email
                     </a>
@@ -469,80 +446,67 @@ Virex Social?</span></div>
 </section>
 
 <!-- ══ BACK TO TOP ══ -->
-<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 
 <script>
-/* ── Tab Switcher Fix ── */
+/* ── Tab Switcher ── */
 function switchTabV2(tabName, clickedBtn) {
-  /* 1. Saare panels hide karo */
-  document.querySelectorAll('.tab-panel-v2').forEach(function(p) {
-    p.classList.remove('active');
-  });
-
-  /* 2. Saare buttons se active class hatao */
-  document.querySelectorAll('.tab-btn-v2').forEach(function(b) {
-    b.classList.remove('active');
-  });
-
-  /* 3. Selected panel show karo */
-  var panel = document.getElementById('tabv2-' + tabName);
-  if (panel) panel.classList.add('active');
-
-  /* 4. Clicked button ko active karo */
-  if (clickedBtn) clickedBtn.classList.add('active');
+    document.querySelectorAll('.tab-panel-v2').forEach(function(p) { p.classList.remove('active'); });
+    document.querySelectorAll('.tab-btn-v2').forEach(function(b) { b.classList.remove('active'); });
+    var panel = document.getElementById('tabv2-' + tabName);
+    if (panel) panel.classList.add('active');
+    if (clickedBtn) clickedBtn.classList.add('active');
 }
 
 /* ── FAQ Toggle ── */
 function toggleFaq2(q) {
-  var item = q.parentElement;
-  var isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq2-item.open').forEach(function(i) {
-    i.classList.remove('open');
-  });
-  if (!isOpen) item.classList.add('open');
+    var item = q.parentElement;
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq2-item.open').forEach(function(i) { i.classList.remove('open'); });
+    if (!isOpen) item.classList.add('open');
 }
 
 /* ── Scrolling Marquee Builder ── */
 (function() {
-  var t1 = [
-    {text:'Passion & Purpose', style:'b', icon:'<svg viewBox="0 0 24 24" fill="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-width="2"/></svg>'},
-    {text:'Creative Strategies', style:'d', icon:'<svg viewBox="0 0 24 24" fill="none"><path d="M12 20h9" stroke="currentColor" stroke-width="2"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" stroke="currentColor" stroke-width="2"/></svg>'},
-    {text:'Client-First Approach', style:'e', icon:'<svg viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2"/></svg>'},
-    {text:'Data-Driven Results', style:'c', icon:'<svg viewBox="0 0 24 24" fill="none"><line x1="18" y1="20" x2="18" y2="10" stroke="currentColor" stroke-width="2"/><line x1="12" y1="20" x2="12" y2="4" stroke="currentColor" stroke-width="2"/><line x1="6" y1="20" x2="6" y2="14" stroke="currentColor" stroke-width="2"/></svg>'},
-    {text:'10+ Years Experience', style:'a', icon:'<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="12 6 12 12 16 14" stroke="currentColor" stroke-width="2"/></svg>'},
-    {text:'1,200+ Happy Clients', style:'b', icon:'<svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/></svg>'},
-    {text:"UAE's Leading Agency", style:'d', icon:'<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="2"/></svg>'},
-    {text:'Full-Service Digital', style:'e', icon:'<svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/><line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="2"/></svg>'}
-  ];
-  var t2 = [
-    {text:'Brand Identity', style:'c', icon:'<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/></svg>'},
-    {text:'Social Media', style:'b', icon:'<svg viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="2"/></svg>'},
-    {text:'SEO & Growth', style:'a', icon:'<svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2"/></svg>'},
-    {text:'Web Development', style:'d', icon:'<svg viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="currentColor" stroke-width="2"/><polyline points="8 6 2 12 8 18" stroke="currentColor" stroke-width="2"/></svg>'},
-    {text:'Video Editing', style:'e', icon:'<svg viewBox="0 0 24 24" fill="none"><polygon points="23 7 16 12 23 17 23 7" stroke="currentColor" stroke-width="2"/><rect x="1" y="5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="2"/></svg>'},
-    {text:'App Development', style:'b', icon:'<svg viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" stroke-width="2"/></svg>'},
-    {text:'Paid Advertising', style:'c', icon:'<svg viewBox="0 0 24 24" fill="none"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" stroke="currentColor" stroke-width="2"/></svg>'},
-    {text:'Content Creation', style:'a', icon:'<svg viewBox="0 0 24 24" fill="none"><path d="M12 20h9" stroke="currentColor" stroke-width="2"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4z" stroke="currentColor" stroke-width="2"/></svg>'}
-  ];
-  function buildTrack(items, id) {
-    var el = document.getElementById(id);
-    if (!el) return;
-    var doubled = items.concat(items);
-    var html = doubled.map(function(item) {
-      return '<div class="scroll-item"><div class="scroll-pill style-' + item.style + '"><div class="scroll-pill-icon">' + item.icon + '</div>' + item.text + '</div></div><span class="scroll-sep-star">✦</span>';
-    }).join('');
-    el.innerHTML = html;
-  }
-  buildTrack(t1, 'scrollTrack1');
-  buildTrack(t2, 'scrollTrack2');
+    var t1 = [
+        {text:'Passion & Purpose', style:'b', icon:'<svg viewBox="0 0 24 24" fill="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-width="2"/></svg>'},
+        {text:'Creative Strategies', style:'d', icon:'<svg viewBox="0 0 24 24" fill="none"><path d="M12 20h9" stroke="currentColor" stroke-width="2"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" stroke="currentColor" stroke-width="2"/></svg>'},
+        {text:'Client-First Approach', style:'e', icon:'<svg viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2"/></svg>'},
+        {text:'Data-Driven Results', style:'c', icon:'<svg viewBox="0 0 24 24" fill="none"><line x1="18" y1="20" x2="18" y2="10" stroke="currentColor" stroke-width="2"/><line x1="12" y1="20" x2="12" y2="4" stroke="currentColor" stroke-width="2"/><line x1="6" y1="20" x2="6" y2="14" stroke="currentColor" stroke-width="2"/></svg>'},
+        {text:'10+ Years Experience', style:'a', icon:'<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="12 6 12 12 16 14" stroke="currentColor" stroke-width="2"/></svg>'},
+        {text:'1,200+ Happy Clients', style:'b', icon:'<svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/></svg>'},
+        {text:"UAE's Leading Agency", style:'d', icon:'<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="2"/></svg>'},
+        {text:'Full-Service Digital', style:'e', icon:'<svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/><line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="2"/></svg>'}
+    ];
+    var t2 = [
+        {text:'Brand Identity', style:'c', icon:'<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/></svg>'},
+        {text:'Social Media', style:'b', icon:'<svg viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="2"/></svg>'},
+        {text:'SEO & Growth', style:'a', icon:'<svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2"/></svg>'},
+        {text:'Web Development', style:'d', icon:'<svg viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="currentColor" stroke-width="2"/><polyline points="8 6 2 12 8 18" stroke="currentColor" stroke-width="2"/></svg>'},
+        {text:'Video Editing', style:'e', icon:'<svg viewBox="0 0 24 24" fill="none"><polygon points="23 7 16 12 23 17 23 7" stroke="currentColor" stroke-width="2"/><rect x="1" y="5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="2"/></svg>'},
+        {text:'App Development', style:'b', icon:'<svg viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" stroke-width="2"/></svg>'},
+        {text:'Paid Advertising', style:'c', icon:'<svg viewBox="0 0 24 24" fill="none"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" stroke="currentColor" stroke-width="2"/></svg>'},
+        {text:'Content Creation', style:'a', icon:'<svg viewBox="0 0 24 24" fill="none"><path d="M12 20h9" stroke="currentColor" stroke-width="2"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4z" stroke="currentColor" stroke-width="2"/></svg>'}
+    ];
+    function buildTrack(items, id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        var doubled = items.concat(items);
+        var html = doubled.map(function(item) {
+            return '<div class="scroll-item"><div class="scroll-pill style-' + item.style + '"><div class="scroll-pill-icon">' + item.icon + '</div>' + item.text + '</div></div><span class="scroll-sep-star">✦</span>';
+        }).join('');
+        el.innerHTML = html;
+    }
+    buildTrack(t1, 'scrollTrack1');
+    buildTrack(t2, 'scrollTrack2');
 })();
 
 /* ── Back to Top ── */
 window.addEventListener('scroll', function() {
-  var btn = document.getElementById('back-to-top');
-  if (!btn) return;
-  if (window.scrollY > 400) btn.classList.add('visible');
-  else btn.classList.remove('visible');
+    var btn = document.getElementById('back-to-top');
+    if (!btn) return;
+    if (window.scrollY > 400) btn.classList.add('visible');
+    else btn.classList.remove('visible');
 });
 </script>
 <?php include 'includes/virex-floating-social.php'; ?>

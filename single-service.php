@@ -8,6 +8,7 @@
  *   $service  — the service slug  e.g. 'web-development' | 'seo' | 'social-media'
  *   $svc      — the full content array (see content-service.php)
  */
+
 echo "<pre>";
 var_dump($_GET['service']);
 echo "</pre>";
@@ -116,6 +117,7 @@ $c = $svc[$service]; // shorthand
         --svc-toggle-border:     <?php echo $c['theme']['toggle_border']; ?>;
         --svc-cta-icon-shadow:   <?php echo $c['theme']['cta_icon_shadow']; ?>;
     }
+    
 </style>
 
 <!-- ══════════════════════════════════════════

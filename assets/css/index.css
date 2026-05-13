@@ -15,7 +15,9 @@
     /* Soft supporting shades */
     --c-lavender: #B79CFF;
     --c-peach: #FFC29B;
-
+.service-card {
+    cursor: pointer !important;
+}
     /* Backgrounds */
     --bg: #FDF8FF;
     --bg2: #FFF4EF;
