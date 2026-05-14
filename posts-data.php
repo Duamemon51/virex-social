@@ -1,9 +1,5 @@
 <?php
-/**
- * posts-data.php
- * Shared post data — included by both blog.php and single-post.php
- * Maps slug => full post data with content
- */
+
 
 $all_posts = [
 

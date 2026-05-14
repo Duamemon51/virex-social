@@ -20,11 +20,11 @@
                 </h1>
                 <p class="hero-desc">Our results-driven digital marketing services connect you with the right audience and fuel sustainable business growth.</p>
                 <div class="hero-actions">
-                    <a href="contact-us.php" class="btn-grad">
+                    <a href="contact-us" class="btn-grad">
                         Contact Today
                         <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
-                    <a href="services.php" class="btn-ghost">Our Services</a>
+                    <a href="services" class="btn-ghost">Our Services</a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat-item">
@@ -177,7 +177,7 @@
 
         </div>
         <div class="services-cta">
-            <a href="<?php echo $base_url; ?>services.php" class="btn-outline">View More Services</a>
+            <a href="<?php echo $base_url; ?>services" class="btn-outline">View More Services</a>
         </div>
     </div>
 </section>
@@ -270,7 +270,7 @@
                         <div class="feature-text"><strong>Dedicated Support</strong><span>Your success is our priority</span></div>
                     </div>
                 </div>
-                <a href="about.php" class="btn-warm">Discover More<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                <a href="about" class="btn-warm">Discover More<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
         </div>
     </div>

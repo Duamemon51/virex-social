@@ -75,12 +75,12 @@
                 <div>
                     <h4 class="footer-heading">Quick Links</h4>
                     <div class="footer-links">
-                        <a href="/"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>Home</a>
-                        <a href="/about.php"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>About Us</a>
-                        <a href="/careers.php"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>Careers</a>
-                        <a href="/blog.php"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>Blog</a>
-                        <a href="/faqs.php"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>FAQs</a>
-                        <a href="/contact.php"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>Contact Us</a>
+                        <a href=""><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>Home</a>
+                        <a href="about"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>About Us</a>
+                       
+                        <a href="blog"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>Blog</a>
+                        <a href="faqs"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>FAQs</a>
+                        <a href="contact-us"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>Contact Us</a>
                     </div>
                 </div>
 
@@ -88,12 +88,12 @@
                 <div>
                     <h4 class="footer-heading">Services</h4>
                     <div class="footer-links">
-                        <a href="/services/web-design.php"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>Web Design</a>
-                        <a href="/services/seo.php"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>SEO</a>
-                        <a href="/services/ppc.php"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>Pay Per Click</a>
-                        <a href="/services/social-media.php"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>Social Media</a>
-                        <a href="/services/video-editing.php"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>Video Editing</a>
-                        <a href="/services/app-development.php"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>App Development</a>
+                        <a href="single-service.?service=web-development"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>Web Design</a>
+                        <a href="single-service?service=seo"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>SEO</a>
+                        <a href="single-service?service=ppc-services"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>Pay Per Click</a>
+                        <a href="single-service?service=social-media-marketing"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>Social Media</a>
+                        <a href="single-service?service=video-editing-agency"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>Video Editing</a>
+                        <a href="single-service?service=app-development-service"><span class="fl-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>App Development</a>
                     </div>
                 </div>
 
@@ -136,9 +136,9 @@
                   
                 </div>
                 <div class="footer-bottom-links">
-                    <a href="/privacy.php">Privacy Policy</a>
-                    <a href="/terms.php">Terms of Service</a>
-                    <a href="/contact.php">Contact Us</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="contact-us">Contact Us</a>
                 </div>
             </div>
         </div>

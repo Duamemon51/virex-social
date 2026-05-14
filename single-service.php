@@ -9,9 +9,7 @@
  *   $svc      — the full content array (see content-service.php)
  */
 
-echo "<pre>";
-var_dump($_GET['service']);
-echo "</pre>";
+
 include 'includes/header.php';
 
 // Pull in the content array
@@ -141,7 +139,7 @@ $c = $svc[$service]; // shorthand
 
         <p class="ph-desc"><?php echo htmlspecialchars($c['hero']['desc']); ?></p>
 
-        <a href="contact.php" class="btn-grad">
+        <a href="contact-us" class="btn-grad">
             <?php echo htmlspecialchars($c['hero']['cta_label']); ?>
             <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -312,11 +310,11 @@ $c = $svc[$service]; // shorthand
         <h2><?php echo $c['cta']['heading']; ?></h2>
         <p><?php echo htmlspecialchars($c['cta']['desc']); ?></p>
         <div class="cta-btns">
-            <a href="contact.php" class="btn-grad">
+            <a href="contact-us" class="btn-grad">
                 <?php echo htmlspecialchars($c['cta']['primary_btn']); ?>
                 <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="services.php" class="btn-warm">
+            <a href="services" class="btn-warm">
                 View All Services
                 <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>

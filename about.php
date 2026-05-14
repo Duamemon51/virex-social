@@ -15,7 +15,7 @@
         </div>
         <h1>About Our Company—Driven by Passion, Built on Trust</h1>
         <p class="ph-desc">We're more than a digital agency — we're a team that believes in purpose, partnership, and performance. Learn the 3 things clients love about our company.</p>
-        <a href="contact-us.php" class="btn-grad">
+        <a href="contact-us" class="btn-grad">
             Contact Us
             <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -34,7 +34,7 @@
                 <h2 class="section-title">Learn All About <span class="grad-text">Virex Social</span></h2>
                 <p>We're more than a digital agency — we're a team that believes in purpose, partnership, and performance. Our clients love us for 3 key reasons: we listen, we innovate, and we deliver.</p>
                 <p>At Virex Social, we create digital experiences that excite and inspire. Every project is unique — our team uses fresh ideas and the latest tools to make your brand stand out. From sleek designs to full marketing strategies, we help businesses of all sizes bring their vision to life.</p>
-                <a href="contact-us.php" class="btn-grad">
+                <a href="contact-us" class="btn-grad">
                     Contact Us
                     <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
@@ -137,7 +137,7 @@
                             <p>We stay current with the latest tools and trends so your brand always stays a step ahead.</p>
                         </div>
                     </div>
-                    <a href="services.php" class="btn-outline-purple">
+                    <a href="services" class="btn-outline-purple">
                         View Our Services
                         <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
@@ -198,7 +198,7 @@
                             <p>We aim to be the region's leading digital agency and grow our influence worldwide.</p>
                         </div>
                     </div>
-                    <a href="services.php" class="btn-outline-purple" style="border-color:#f97316;color:#f97316;">
+                    <a href="services" class="btn-outline-purple" style="border-color:#f97316;color:#f97316;">
                         View Our Services
                         <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
