@@ -127,12 +127,12 @@ function nav_active($page, $current) {
             <div class="nav-links" id="desktopNav" role="menubar">
 
                 <a href="<?php echo $base_url; ?>" data-page="home" role="menuitem">Home</a>
-                <a href="<?php echo $base_url; ?>about.php" data-page="about" role="menuitem">About</a>
+                <a href="<?php echo $base_url; ?>about" data-page="about" role="menuitem">About</a>
 
                 <!-- Services Mega Dropdown -->
                 <div class="nav-dropdown" id="servicesDropdown">
                     <a
-                        href="<?php echo $base_url; ?>services.php"
+                        href="<?php echo $base_url; ?>services"
                         class="nav-drop-toggle"
                         data-page="services"
                         aria-haspopup="true"
@@ -147,7 +147,7 @@ function nav_active($page, $current) {
                     </a>
 
                     <div class="mega-menu" role="menu" aria-label="Services submenu">
-
+  <span class="mega-caret" aria-hidden="true"></span> 
                         <!-- Header bar -->
                         <div class="mega-header">
                             <span class="mega-header-title">All Services</span>
@@ -164,19 +164,19 @@ function nav_active($page, $current) {
                             <div class="mega-col">
                                 <div class="mega-col-label">Web &amp; SEO</div>
 
-                                <a href="<?php echo $base_url; ?>single-service.php?service=web-development" class="mega-item" role="menuitem">
+                                <a href="<?php echo $base_url; ?>single-service?service=web-development" class="mega-item" role="menuitem">
                                     <span class="mega-dot" aria-hidden="true"></span>Web Development
                                 </a>
-                                <a href="<?php echo $base_url; ?>single-service.php?service=seo" class="mega-item" role="menuitem">
+                                <a href="<?php echo $base_url; ?>single-service?service=seo" class="mega-item" role="menuitem">
                                     <span class="mega-dot" aria-hidden="true"></span>Search Engine Optimization
                                 </a>
-                                <a href="<?php echo $base_url; ?>single-service.php?service=website-maintenance" class="mega-item" role="menuitem">
+                                <a href="<?php echo $base_url; ?>single-service?service=website-maintenance" class="mega-item" role="menuitem">
                                     <span class="mega-dot" aria-hidden="true"></span>Website Maintenance
                                 </a>
-                                <a href="<?php echo $base_url; ?>single-service.php?service=website-speed-optimization-service" class="mega-item" role="menuitem">
+                                <a href="<?php echo $base_url; ?>single-service?service=website-speed-optimization-service" class="mega-item" role="menuitem">
                                     <span class="mega-dot" aria-hidden="true"></span>Website Speed Optimization
                                 </a>
-                                <a href="<?php echo $base_url; ?>single-service.php?service=ui-ux-design" class="mega-item" role="menuitem">
+                                <a href="<?php echo $base_url; ?>single-service?service=ui-ux-design" class="mega-item" role="menuitem">
                                     <span class="mega-dot" aria-hidden="true"></span>UI / UX Design
                                 </a>
                             </div>
@@ -185,19 +185,19 @@ function nav_active($page, $current) {
                             <div class="mega-col">
                                 <div class="mega-col-label">Marketing &amp; Ads</div>
 
-                                <a href="<?php echo $base_url; ?>single-service.php?service=ppc-services" class="mega-item" role="menuitem">
+                                <a href="<?php echo $base_url; ?>single-service?service=ppc-services" class="mega-item" role="menuitem">
                                     <span class="mega-dot" aria-hidden="true"></span>Pay Per Click
                                 </a>
-                                <a href="<?php echo $base_url; ?>single-service.php?service=social-media-marketing" class="mega-item" role="menuitem">
+                                <a href="<?php echo $base_url; ?>single-service?service=social-media-marketing" class="mega-item" role="menuitem">
                                     <span class="mega-dot" aria-hidden="true"></span>Social Media Marketing
                                 </a>
-                                <a href="<?php echo $base_url; ?>single-service.php?service=smm-services" class="mega-item" role="menuitem">
+                                <a href="<?php echo $base_url; ?>single-service?service=smm-services" class="mega-item" role="menuitem">
                                     <span class="mega-dot" aria-hidden="true"></span>Social Media Management
                                 </a>
-                                <a href="<?php echo $base_url; ?>single-service.php?service=snapchat-management" class="mega-item" role="menuitem">
+                                <a href="<?php echo $base_url; ?>single-service?service=snapchat-management" class="mega-item" role="menuitem">
                                     <span class="mega-dot" aria-hidden="true"></span>Snapchat Management
                                 </a>
-                                <a href="<?php echo $base_url; ?>single-service.php?service=email-marketing" class="mega-item" role="menuitem">
+                                <a href="<?php echo $base_url; ?>single-service?service=email-marketing" class="mega-item" role="menuitem">
                                     <span class="mega-dot" aria-hidden="true"></span>Email Marketing
                                 </a>
                             </div>
@@ -206,22 +206,22 @@ function nav_active($page, $current) {
                             <div class="mega-col">
                                 <div class="mega-col-label">Creative &amp; Apps</div>
 
-                                <a href="<?php echo $base_url; ?>single-service.php?service=seo-content-writing" class="mega-item" role="menuitem">
+                                <a href="<?php echo $base_url; ?>single-service?service=seo-content-writing" class="mega-item" role="menuitem">
                                     <span class="mega-dot" aria-hidden="true"></span>Content Writing
                                 </a>
-                                <a href="<?php echo $base_url; ?>single-service.php?service=script-writing-service" class="mega-item" role="menuitem">
+                                <a href="<?php echo $base_url; ?>single-service?service=script-writing-service" class="mega-item" role="menuitem">
                                     <span class="mega-dot" aria-hidden="true"></span>Script Writing
                                 </a>
-                                <a href="<?php echo $base_url; ?>single-service.php?service=graphic-designing-services" class="mega-item" role="menuitem">
+                                <a href="<?php echo $base_url; ?>single-service?service=graphic-designing-services" class="mega-item" role="menuitem">
                                     <span class="mega-dot" aria-hidden="true"></span>Graphic Designing
                                 </a>
-                                <a href="<?php echo $base_url; ?>single-service.php?service=video-editing-agency" class="mega-item" role="menuitem">
+                                <a href="<?php echo $base_url; ?>single-service?service=video-editing-agency" class="mega-item" role="menuitem">
                                     <span class="mega-dot" aria-hidden="true"></span>Video Editing
                                 </a>
-                                <a href="<?php echo $base_url; ?>single-service.php?service=app-development-service" class="mega-item" role="menuitem">
+                                <a href="<?php echo $base_url; ?>single-service?service=app-development-service" class="mega-item" role="menuitem">
                                     <span class="mega-dot" aria-hidden="true"></span>Mobile App Development
                                 </a>
-                                <a href="<?php echo $base_url; ?>single-service.php?service=online-reputation-management-service" class="mega-item" role="menuitem">
+                                <a href="<?php echo $base_url; ?>single-service?service=online-reputation-management-service" class="mega-item" role="menuitem">
                                     <span class="mega-dot" aria-hidden="true"></span>Online Reputation Management
                                 </a>
                             </div>
@@ -230,14 +230,14 @@ function nav_active($page, $current) {
                     </div><!-- /.mega-menu -->
                 </div><!-- /.nav-dropdown -->
 
-                <a href="<?php echo $base_url; ?>blog.php"  data-page="blog"  role="menuitem">Blog</a>
-                <a href="<?php echo $base_url; ?>faqs.php"  data-page="faqs"  role="menuitem">FAQs</a>
+                <a href="<?php echo $base_url; ?>blog"  data-page="blog"  role="menuitem">Blog</a>
+                <a href="<?php echo $base_url; ?>faqs"  data-page="faqs"  role="menuitem">FAQs</a>
 
             </div><!-- /#desktopNav -->
 
             <!-- ── Right side ── -->
             <div class="nav-right">
-                <a href="<?php echo $base_url; ?>contact-us.php" class="nav-cta">Contact Today</a>
+                <a href="<?php echo $base_url; ?>contact-us" class="nav-cta">Contact Today</a>
                 <button
                     class="hamburger"
                     id="hamburger"
@@ -261,11 +261,11 @@ function nav_active($page, $current) {
         aria-hidden="true"
     >
         <a href="<?php echo $base_url; ?>"           data-mob-page="home">Home</a>
-        <a href="<?php echo $base_url; ?>about.php"  data-mob-page="about">About</a>
+        <a href="<?php echo $base_url; ?>about"  data-mob-page="about">About</a>
 
         <!-- Services accordion row -->
         <div class="mob-services-row">
-            <a href="<?php echo $base_url; ?>services.php" class="mob-services-link" data-mob-page="services">
+            <a href="<?php echo $base_url; ?>services" class="mob-services-link" data-mob-page="services">
                 Services
             </a>
             <button
@@ -285,64 +285,64 @@ function nav_active($page, $current) {
         <div class="mobile-services-panel" id="mobServicesPanel" aria-hidden="true">
 
             <div class="mob-svc-group-label">Web &amp; SEO</div>
-            <a href="<?php echo $base_url; ?>single-service.php?service=web-development">
+            <a href="<?php echo $base_url; ?>single-service.?service=web-development">
                 <span class="mob-dot-sm" aria-hidden="true"></span>Web Development
             </a>
-            <a href="<?php echo $base_url; ?>single-service.php?service=seo">
+            <a href="<?php echo $base_url; ?>single-service?service=seo">
                 <span class="mob-dot-sm" aria-hidden="true"></span>Search Engine Optimization
             </a>
-            <a href="<?php echo $base_url; ?>single-service.php?service=website-maintenance">
+            <a href="<?php echo $base_url; ?>single-service?service=website-maintenance">
                 <span class="mob-dot-sm" aria-hidden="true"></span>Website Maintenance
             </a>
-            <a href="<?php echo $base_url; ?>single-service.php?service=website-speed-optimization-service">
+            <a href="<?php echo $base_url; ?>single-service?service=website-speed-optimization-service">
                 <span class="mob-dot-sm" aria-hidden="true"></span>Website Speed Optimization
             </a>
-            <a href="<?php echo $base_url; ?>single-service.php?service=ui-ux-design">
+            <a href="<?php echo $base_url; ?>single-servic?service=ui-ux-design">
                 <span class="mob-dot-sm" aria-hidden="true"></span>UI / UX Design
             </a>
 
             <div class="mob-svc-group-label">Marketing &amp; Ads</div>
-            <a href="<?php echo $base_url; ?>single-service.php?service=ppc-services">
+            <a href="<?php echo $base_url; ?>single-service?service=ppc-services">
                 <span class="mob-dot-sm" aria-hidden="true"></span>Pay Per Click
             </a>
-            <a href="<?php echo $base_url; ?>single-service.php?service=social-media-marketing">
+            <a href="<?php echo $base_url; ?>single-service?service=social-media-marketing">
                 <span class="mob-dot-sm" aria-hidden="true"></span>Social Media Marketing
             </a>
-            <a href="<?php echo $base_url; ?>single-service.php?service=smm-services">
+            <a href="<?php echo $base_url; ?>single-service?service=smm-services">
                 <span class="mob-dot-sm" aria-hidden="true"></span>Social Media Management
             </a>
-            <a href="<?php echo $base_url; ?>single-service.php?service=snapchat-management">
+            <a href="<?php echo $base_url; ?>single-service?service=snapchat-management">
                 <span class="mob-dot-sm" aria-hidden="true"></span>Snapchat Management
             </a>
-            <a href="<?php echo $base_url; ?>single-service.php?service=email-marketing">
+            <a href="<?php echo $base_url; ?>single-service?service=email-marketing">
                 <span class="mob-dot-sm" aria-hidden="true"></span>Email Marketing
             </a>
 
             <div class="mob-svc-group-label">Creative &amp; Apps</div>
-            <a href="<?php echo $base_url; ?>single-service.php?service=seo-content-writing">
+            <a href="<?php echo $base_url; ?>single-service?service=seo-content-writing">
                 <span class="mob-dot-sm" aria-hidden="true"></span>Content Writing
             </a>
-            <a href="<?php echo $base_url; ?>single-service.php?service=script-writing-service">
+            <a href="<?php echo $base_url; ?>single-service?service=script-writing-service">
                 <span class="mob-dot-sm" aria-hidden="true"></span>Script Writing
             </a>
-            <a href="<?php echo $base_url; ?>single-service.php?service=graphic-designing-services">
+            <a href="<?php echo $base_url; ?>single-service?service=graphic-designing-services">
                 <span class="mob-dot-sm" aria-hidden="true"></span>Graphic Designing
             </a>
-            <a href="<?php echo $base_url; ?>single-service.php?service=video-editing-agency">
+            <a href="<?php echo $base_url; ?>single-service?service=video-editing-agency">
                 <span class="mob-dot-sm" aria-hidden="true"></span>Video Editing
             </a>
-            <a href="<?php echo $base_url; ?>single-service.php?service=app-development-service">
+            <a href="<?php echo $base_url; ?>single-service?service=app-development-service">
                 <span class="mob-dot-sm" aria-hidden="true"></span>Mobile App Development
             </a>
-            <a href="<?php echo $base_url; ?>single-service.php?service=online-reputation-management-service">
+            <a href="<?php echo $base_url; ?>single-service?service=online-reputation-management-service">
                 <span class="mob-dot-sm" aria-hidden="true"></span>Online Reputation Management
             </a>
 
         </div><!-- /#mobServicesPanel -->
 
-        <a href="<?php echo $base_url; ?>blog.php" data-mob-page="blog">Blog</a>
-        <a href="<?php echo $base_url; ?>faqs.php" data-mob-page="faqs">FAQs</a>
-        <a href="<?php echo $base_url; ?>contact-us.php" class="mob-cta">Contact Today</a>
+        <a href="<?php echo $base_url; ?>blog" data-mob-page="blog">Blog</a>
+        <a href="<?php echo $base_url; ?>faqs" data-mob-page="faqs">FAQs</a>
+        <a href="<?php echo $base_url; ?>contact-us" class="mob-cta">Contact Today</a>
 
     </div><!-- /#mobileMenu -->
 </nav>

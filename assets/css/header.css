@@ -207,10 +207,19 @@ a { text-decoration: none; color: inherit; }
 
 /* ══════════════════════════════════════
    MEGA MENU  —  dark, polished
+
+   FIX: Gap ki wajah se hover break hota tha.
+   Solution:
+     1. top: 100%  — gap bilkul khatam (pehle 20px tha)
+     2. padding-top: 12px — menu andar se neeche shift hota hai,
+        caret aur visual spacing preserve rehti hai
+     3. ::before bridge — invisible 12px tall transparent block
+        button aur menu ke beech mouse ko "pakad" leta hai
+        taake hover kabhi break na ho
 ══════════════════════════════════════ */
 .mega-menu {
     position: absolute;
-    top: calc(100% + 20px);
+    top: 100%;                          /* ← FIX: was calc(100% + 20px) */
     left: 50%;
     transform: translateX(-50%) translateY(-8px);
     width: 800px;
@@ -224,8 +233,9 @@ a { text-decoration: none; color: inherit; }
         0 0 0 1px rgba(123,77,255,0.12),
         inset 0 1px 0 rgba(255,255,255,0.06);
 
-    padding: 0;
-    overflow: hidden;
+    /* padding-top pushes content down so caret has room */
+    padding: 12px 0 0;                  /* ← FIX: top padding replaces the lost gap */
+    overflow: visible;                  /* ← FIX: was hidden — ::before bridge needs to stick out */
 
     opacity: 0;
     visibility: hidden;
@@ -234,30 +244,57 @@ a { text-decoration: none; color: inherit; }
     z-index: 999;
 }
 
-/* Top gradient accent bar */
+/* ── Invisible hover bridge ──────────────────────────────
+   Sits above the mega-menu, fills the gap between the
+   toggle button and the menu top edge. Mouse passing
+   through this area keeps :hover alive on .nav-dropdown.
+   Height = padding-top value (12px) + a little extra.
+──────────────────────────────────────────────────────── */
 .mega-menu::before {
     content: '';
-    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    position: absolute;
+    top: -14px;                         /* ← bridges upward into the gap */
+    left: 0;
+    right: 0;
+    height: 14px;                       /* ← covers the gap */
+    background: transparent;           /* ← invisible */
+    pointer-events: auto;              /* ← catches mouse movement */
+}
+
+/* Top gradient accent bar — now a separate ::after */
+.mega-menu::after {
+    content: '';
+    position: absolute;
+    top: 12px;                          /* ← sits at the top of the dark card */
+    left: 0; right: 0;
+    height: 2px;
     background: linear-gradient(90deg,
         #e040fb 0%, #7c3aed 35%, #2563eb 70%, #f97316 100%);
     border-radius: 20px 20px 0 0;
+    pointer-events: none;
 }
 
-/* Caret arrow */
-.mega-menu::after {
-    content: '';
-    position: absolute; top: -7px; left: 50%;
+.nav-dropdown:hover .mega-menu {
+    opacity: 1; visibility: visible; pointer-events: all;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Caret arrow — now a child element in HTML (see note below)
+   We lost the CSS ::after caret because we're using it for
+   the gradient bar. Add this inside .mega-menu in HTML:
+   <span class="mega-caret" aria-hidden="true"></span>       */
+.mega-caret {
+    position: absolute;
+    top: 5px;                           /* just below the bridge, above the bar */
+    left: 50%;
     width: 14px; height: 14px;
     background: #13111e;
     border-left: 1px solid rgba(255,255,255,0.09);
     border-top: 1px solid rgba(255,255,255,0.09);
     transform: translateX(-50%) rotate(45deg);
     border-radius: 2px 0 0 0;
-}
-
-.nav-dropdown:hover .mega-menu {
-    opacity: 1; visibility: visible; pointer-events: all;
-    transform: translateX(-50%) translateY(0);
+    pointer-events: none;
+    z-index: 1;
 }
 
 /* ── Inner layout ── */
@@ -321,8 +358,7 @@ a { text-decoration: none; color: inherit; }
     border-radius: 2px; flex-shrink: 0;
 }
 
-/* Mega items — all properties use !important to prevent
-   services.css / index.css / theme.css from overriding */
+/* Mega items */
 .mega-menu .mega-item {
     display: flex !important; align-items: center !important; gap: 10px !important;
     padding: 8px 10px !important; border-radius: 10px !important;
@@ -363,7 +399,7 @@ a { text-decoration: none; color: inherit; }
     box-shadow: 0 0 8px rgba(167,139,250,0.7) !important;
 }
 
-/* Mega menu global link reset — prevents any page stylesheet bleeding in */
+/* Mega menu global link reset */
 .mega-menu a,
 .mega-menu a:link,
 .mega-menu a:visited {
@@ -556,7 +592,6 @@ a { text-decoration: none; color: inherit; }
     .nav-cta   { padding: 10px 18px; font-size: 12.5px; }
 }
 
-
 @media (max-width: 400px) {
     .nav-logo span { display: none; }
 }
@@ -567,6 +602,7 @@ a { text-decoration: none; color: inherit; }
 ══════════════════════════════════════ */
 #mainNav .mega-menu {
     background: #13111e !important;
+    overflow: visible !important;        /* ← keeps bridge ::before visible */
 }
 
 #mainNav .mega-col-label {

@@ -27,7 +27,7 @@
         <p class="ph-desc">
             We've compiled the most common digital marketing FAQs and answered them in plain language—so you feel confident and informed before we even speak.
         </p>
-        <a href="contact-us.php" class="btn-grad">
+        <a href="contact-us" class="btn-grad">
             Contact Us
             <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>

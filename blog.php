@@ -17,7 +17,7 @@
             Welcome to our digital marketing blog—your go-to source for actionable tips,
             expert advice, and fresh ideas to grow your brand in the digital world.
         </p>
-        <a href="contact-us.php" class="btn-grad">
+        <a href="contact-us" class="btn-grad">
             Contact Us
             <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -490,7 +490,7 @@
             <?php foreach ($posts as $post): ?>
             <article class="blog-card">
 
-                <a href="single-post.php?slug=<?php echo urlencode(rtrim($post['url'], '/')); ?>" class="blog-thumb">
+                <a href="single-post?slug=<?php echo urlencode(rtrim($post['url'], '/')); ?>" class="blog-thumb">
                     <img
                         src="<?php echo htmlspecialchars($post['img']); ?>"
                         alt="<?php echo htmlspecialchars($post['alt']); ?>"
@@ -516,14 +516,14 @@
                         <?php echo $post['date']; ?>
                     </div>
 
-                    <a href="single-post.php?slug=<?php echo urlencode(rtrim($post['url'], '/')); ?>" class="blog-title">
+                    <a href="single-post?slug=<?php echo urlencode(rtrim($post['url'], '/')); ?>" class="blog-title">
                         <?php echo htmlspecialchars($post['title']); ?>
                     </a>
 
                     <p class="blog-excerpt"><?php echo htmlspecialchars($post['excerpt']); ?></p>
 
                     <div class="card-footer">
-                        <a href="single-post.php?slug=<?php echo urlencode(rtrim($post['url'], '/')); ?>" class="read-more">
+                        <a href="single-post?slug=<?php echo urlencode(rtrim($post['url'], '/')); ?>" class="read-more">
                             Read More
                             <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </a>

@@ -1,8 +1,5 @@
 <?php
-/**
- * Single Blog Post Template — Virex Social
- * Usage: single-post.php?slug=shopify-seo-checklist
- */
+
 
 require_once 'posts-data.php';
 
@@ -10,8 +7,8 @@ $slug        = isset($_GET['slug']) ? htmlspecialchars($_GET['slug']) : '';
 $post        = isset($all_posts[$slug]) ? $all_posts[$slug] : null;
 $recent      = array_filter($all_posts, fn($k) => $k !== $slug, ARRAY_FILTER_USE_KEY);
 $recent      = array_slice($recent, 0, 5, true);
-$base        = './blog.php';
-$single_base = './single-post.php';
+$base        = './blog';
+$single_base = './single-post';
 $share_url   = 'https://virexsocial.com/' . $slug . '/';
 $share_title = $post ? $post['title'] : '';
 ?>

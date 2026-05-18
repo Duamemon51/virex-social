@@ -37,7 +37,7 @@
         </div>
         <h1>Let's Build Something Great Together</h1>
         <p class="ph-desc">We'd love to hear from you. Whether you have a question, project idea, or need guidance — contact us and let's create digital success together.</p>
-        <a href="contact-us.php" class="btn-grad">
+        <a href="contact-us" class="btn-grad">
             Contact Us
             <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
