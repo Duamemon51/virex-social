@@ -12,13 +12,12 @@
             Digital Marketing Agency
         </div>
         <h1>Our Digital Marketing Services Built for Impact</h1>
-<<<<<<< HEAD
+
         <p class="ph-desc">We don't just offer services—we deliver digital growth. From SEO to web development, PPC to video editing, our expert team has your brand fully covered.</p>
         <a href="contact-us.php" class="btn-grad">
-=======
-        <p class="ph-desc">We don’t just offer services—we deliver digital growth. From SEO to web development, PPC to video editing, our expert team has your brand fully covered.</p>
-        <a href="contact-us" class="btn-grad">
->>>>>>> 264b972805c816814ae08242a8ddc9facf063b74
+
+      
+
             Contact Us
             <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
