@@ -1,29 +1,6 @@
 <link rel="stylesheet" href="assets/css/footer.css">
 
-<!-- ══════════════════════════════════════════
-     NEWSLETTER SECTION
-══════════════════════════════════════════ -->
-<section class="newsletter-section">
-    <div class="container">
-        <div class="newsletter-inner-wrap">
-            <div class="newsletter-orb n-orb-1"></div>
-            <div class="newsletter-orb n-orb-2"></div>
-            <div class="newsletter-inner">
-                <div class="newsletter-text">
-                    <h2>Newsletter Signup</h2>
-                    <p>Stay updated with the latest trends, offers, and digital marketing insights.</p>
-                </div>
-                <form class="newsletter-form" onsubmit="return false;">
-                    <input type="email" class="newsletter-input" placeholder="Enter your email address">
-                    <button type="submit" class="newsletter-btn">
-                        Subscribe
-                        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 <!-- ══════════════════════════════════════════
      FOOTER

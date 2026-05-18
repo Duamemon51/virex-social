@@ -36,7 +36,7 @@
                         <div class="stat-label">Professionals</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number grad-text-warm" data-count="1200">0<sup>+</sup></div>
+                        <div class="stat-number grad-text-warm" data-count="200">0<sup>+</sup></div>
                         <div class="stat-label">Happy Clients</div>
                     </div>
                 </div>
@@ -79,44 +79,10 @@
                         <svg viewBox="0 0 24 24" fill="none"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
                     </div>
                     <div class="float-card-text">
-                        <strong>1,200+</strong>
+                        <strong>200+</strong>
                         <span>Happy Clients</span>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ══ BRANDS ══ -->
-<section class="brands-section">
-    <div class="container">
-        <div class="brands-label">Trusted by Leading Brands</div>
-        <div class="brands-grid">
-            <div class="brand-card">
-                <div class="brand-icon">E</div>
-                <div class="brand-name">Endurance Blends</div>
-                <div class="brand-tag">Supplements</div>
-            </div>
-            <div class="brand-card">
-                <div class="brand-icon">✦</div>
-                <div class="brand-name">XLNC</div>
-                <div class="brand-tag">Excellence Brand</div>
-            </div>
-            <div class="brand-card">
-                <div class="brand-icon">💍</div>
-                <div class="brand-name">Personal Weddings</div>
-                <div class="brand-tag">Events & Weddings</div>
-            </div>
-            <div class="brand-card">
-                <div class="brand-icon">🎨</div>
-                <div class="brand-name">King Murals</div>
-                <div class="brand-tag">Art & Design</div>
-            </div>
-            <div class="brand-card">
-                <div class="brand-icon">C</div>
-                <div class="brand-name">Curby's</div>
-                <div class="brand-tag">Lifestyle Brand</div>
             </div>
         </div>
     </div>
@@ -133,43 +99,101 @@
         <p class="section-desc">From SEO to social media, we provide end-to-end digital marketing solutions that drive real, measurable results.</p>
         <div class="services-grid">
 
+            <!-- 1. Meta Ads -->
             <a href="<?php echo $base_url; ?>single-service.php?service=meta-content-creation" class="service-card">
-                <div class="service-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
+                <div class="service-icon">
+                    <!-- Official Meta Infinity Logo -->
+                    <svg viewBox="0 0 60 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="metaGrad" x1="0" y1="0" x2="60" y2="36" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#0082FB"/>
+                                <stop offset="100%" stop-color="#A033FF"/>
+                            </linearGradient>
+                        </defs>
+                        <!-- Meta ∞ shape: two overlapping loops -->
+                        <path d="M15 18C15 14 17.5 10 21 10C24 10 26.5 13 30 18C33.5 23 36 26 39 26C42.5 26 45 22 45 18C45 14 42.5 10 39 10C36 10 33.5 13 30 18C26.5 23 24 26 21 26C17.5 26 15 22 15 18Z" stroke="url(#metaGrad)" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </div>
                 <h3 class="service-title">Meta Ads</h3>
                 <p class="service-desc">Boost your online presence with our Meta Ads services. We drive targeted traffic, maximize your ROI, and optimize your online reputation.</p>
                 <div class="service-arrow">Learn more <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
             </a>
 
-            <a href="<?php echo $base_url; ?>single-service.php?service=web-development" class="service-card">
-                <div class="service-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><polyline points="7 8 10 11 7 14"/><line x1="13" y1="14" x2="17" y2="14"/></svg></div>
-                <h3 class="service-title">Website Development</h3>
-                <p class="service-desc">Custom, responsive websites that look great and work seamlessly. We handle development, maintenance, and speed optimization.</p>
-                <div class="service-arrow">Learn more <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-            </a>
-
-            <a href="<?php echo $base_url; ?>single-service.php?service=seo" class="service-card">
-                <div class="service-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div>
-                <h3 class="service-title">SEO Services</h3>
-                <p class="service-desc">Boost your Google ranking with keyword-optimized, engaging content that drives sustained organic traffic and enhances site performance.</p>
-                <div class="service-arrow">Learn more <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-            </a>
-
+            <!-- 2. Snapchat Management -->
             <a href="<?php echo $base_url; ?>single-service.php?service=snapchat-management" class="service-card">
-                <div class="service-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+                <div class="service-icon" style="background:#FFFC00; border-color:rgba(0,0,0,0.1); padding:8px; overflow:hidden;">
+                    <img src="assets/img/snapchat.png" alt="Snapchat" style="width:42px;height:42px;object-fit:contain;display:block;">
+                </div>
                 <h3 class="service-title">Snapchat Management</h3>
                 <p class="service-desc">We transform your Snapchat Stories into a high-earning asset with custom content creation and strategic audience growth management.</p>
                 <div class="service-arrow">Learn more <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
             </a>
 
+            <!-- 3. SEO Services -->
+            <a href="<?php echo $base_url; ?>single-service.php?service=seo" class="service-card">
+                <div class="service-icon">
+                    <!-- Official Google "G" Logo -->
+                    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M34.5 18.4c0-1.1-.1-2.2-.3-3.3H18v6.3h9.3c-.4 2.1-1.6 3.9-3.4 5.1v4.2h5.5c3.2-3 5.1-7.4 5.1-12.3z" fill="#4285F4"/>
+                        <path d="M18 35c4.7 0 8.6-1.5 11.4-4.2l-5.5-4.2c-1.6 1.1-3.6 1.7-5.9 1.7-4.5 0-8.4-3-9.8-7.1H2.5v4.4C5.3 31.1 11.3 35 18 35z" fill="#34A853"/>
+                        <path d="M8.2 21.2c-.4-1.1-.6-2.2-.6-3.4 0-1.2.2-2.3.6-3.4V10h-5.7C1.2 12.1.5 15 .5 18c0 3 .7 5.9 2 8.4l5.7-5.2z" fill="#FBBC05"/>
+                        <path d="M18 7.8c2.5 0 4.8.9 6.5 2.5l4.9-4.9C26.6 2.7 22.6 1 18 1 11.3 1 5.3 4.9 2.5 10.6l5.7 4.4C9.6 10.9 13.5 7.8 18 7.8z" fill="#EA4335"/>
+                    </svg>
+                </div>
+                <h3 class="service-title">SEO Services</h3>
+                <p class="service-desc">Boost your Google ranking with keyword-optimized, engaging content that drives sustained organic traffic and enhances site performance.</p>
+                <div class="service-arrow">Learn more <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+            </a>
+
+            <!-- 4. Brand Development -->
+            <a href="<?php echo $base_url; ?>single-service.php?service=web-development" class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="3" width="20" height="14" rx="2" stroke="#22C55E" stroke-width="1.7"/>
+                        <line x1="8" y1="21" x2="16" y2="21" stroke="#22C55E" stroke-width="1.7"/>
+                        <line x1="12" y1="17" x2="12" y2="21" stroke="#22C55E" stroke-width="1.7"/>
+                        <polyline points="7 8 10 11 7 14" stroke="#22C55E" stroke-width="1.7"/>
+                        <line x1="13" y1="14" x2="17" y2="14" stroke="#22C55E" stroke-width="1.7"/>
+                    </svg>
+                </div>
+                <h3 class="service-title">Brand Development</h3>
+                <p class="service-desc">Custom, responsive websites that look great and work seamlessly. We handle development, maintenance, and speed optimization.</p>
+                <div class="service-arrow">Learn more <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+            </a>
+
+            <!-- 5. Video Editing -->
             <a href="<?php echo $base_url; ?>single-service.php?service=video-editing-agency" class="service-card">
-                <div class="service-icon"><svg viewBox="0 0 24 24" fill="none"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="23 7 16 12 23 17 23 7" stroke="#F59E0B" stroke-width="1.7" fill="none"/>
+                        <rect x="1" y="5" width="15" height="14" rx="2" stroke="#F59E0B" stroke-width="1.7" fill="none"/>
+                    </svg>
+                </div>
                 <h3 class="service-title">Video Editing</h3>
                 <p class="service-desc">From reels to brand promos, our editing team tells your story with style — making sure your videos stand out and drive engagement.</p>
                 <div class="service-arrow">Learn more <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
             </a>
 
+            <!-- 6. Meta Content Creation -->
             <a href="<?php echo $base_url; ?>single-service.php?service=meta-content-creation" class="service-card">
-                <div class="service-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+                <div class="service-icon">
+                    <!-- Official Instagram Gradient Logo -->
+                    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="igGrad1" cx="30%" cy="107%" r="120%">
+                                <stop offset="0%" stop-color="#fdf497"/>
+                                <stop offset="5%" stop-color="#fdf497"/>
+                                <stop offset="45%" stop-color="#fd5949"/>
+                                <stop offset="60%" stop-color="#d6249f"/>
+                                <stop offset="90%" stop-color="#285AEB"/>
+                            </radialGradient>
+                        </defs>
+                        <rect width="36" height="36" rx="8" fill="url(#igGrad1)"/>
+                        <rect x="9" y="9" width="18" height="18" rx="5" stroke="white" stroke-width="2" fill="none"/>
+                        <circle cx="18" cy="18" r="4.5" stroke="white" stroke-width="2" fill="none"/>
+                        <circle cx="24" cy="12" r="1.3" fill="white"/>
+                    </svg>
+                </div>
                 <h3 class="service-title">Meta Content Creation</h3>
                 <p class="service-desc">We craft engaging and creative meta content that strengthens your brand presence, boosts audience engagement, and drives better digital visibility.</p>
                 <div class="service-arrow">Learn more <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>

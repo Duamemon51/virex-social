@@ -12,12 +12,11 @@
             Digital Marketing Agency
         </div>
         <h1>Our Digital Marketing Services Built for Impact</h1>
-        <p class="ph-desc">We don’t just offer services—we deliver digital growth. From SEO to web development, PPC to video editing, our expert team has your brand fully covered.</p>
+        <p class="ph-desc">We don't just offer services—we deliver digital growth. From SEO to web development, PPC to video editing, our expert team has your brand fully covered.</p>
         <a href="contact-us.php" class="btn-grad">
             Contact Us
             <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-      
     </div>
 </section>
 
@@ -70,8 +69,17 @@
                 <a href="single-service.php?service=ppc-services" class="svc-item-link">
                 <span class="svc-col-label">Marketing &amp; Ads</span>
                 <div class="svc-item">
-                    <div class="svc-icon-wrap ic-purple">
-                        <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    <!-- Paid Marketing: Meta official ∞ logo -->
+                    <div class="svc-icon-wrap no-hover-effect" style="background:rgba(0,130,251,0.08); border:1.5px solid rgba(0,130,251,0.2); width:54px; height:54px; border-radius:16px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                        <svg viewBox="0 0 60 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:38px;height:24px;">
+                            <defs>
+                                <linearGradient id="metaG1" x1="0" y1="0" x2="60" y2="36" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#0082FB"/>
+                                    <stop offset="100%" stop-color="#A033FF"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M15 18C15 14 17.5 10 21 10C24 10 26.5 13 30 18C33.5 23 36 26 39 26C42.5 26 45 22 45 18C45 14 42.5 10 39 10C36 10 33.5 13 30 18C26.5 23 24 26 21 26C17.5 26 15 22 15 18Z" stroke="url(#metaG1)" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+                        </svg>
                     </div>
                     <div>
                         <h4>Paid Marketing</h4>
@@ -79,98 +87,109 @@
                     </div>
                 </div>
                 </a>
-              <a href="single-service.php?service=video-editing-agency" class="svc-item">
-    <div class="svc-icon-wrap ic-gold">
-        <svg viewBox="0 0 24 24">
-            <polygon points="23 7 16 12 23 17 23 7"/>
-            <rect x="1" y="5" width="15" height="14" rx="2"/>
-        </svg>
-    </div>
 
-    <div>
-        <h4>Video Editing</h4>
-        <p>Stand out online with scroll-stopping videos. Our video editing services turn your raw footage into polished content. We can help you with social media, ads, YouTube, and beyond.</p>
-    </div>
-</a>
-               
+                <!-- Video Editing: gold film/camera icon (same as original) -->
+                <a href="single-service.php?service=video-editing-agency" class="svc-item">
+                    <div class="svc-icon-wrap ic-gold no-hover-effect">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <polygon points="23 7 16 12 23 17 23 7" stroke="#d97706" stroke-width="1.7"/>
+                            <rect x="1" y="5" width="15" height="14" rx="2" stroke="#d97706" stroke-width="1.7"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>Video Editing</h4>
+                        <p>Stand out online with scroll-stopping videos. Our video editing services turn your raw footage into polished content. We can help you with social media, ads, YouTube, and beyond.</p>
+                    </div>
+                </a>
             </div>
 
             <!-- Column 2 — Web & SEO -->
             <div>
                 <span class="svc-col-label">Web &amp; SEO</span>
+
+                <!-- Brand Development: green monitor/code icon (same as original) -->
                 <a href="single-service.php?service=web-development" class="svc-item-link">
-    <div class="svc-item">
-        <div class="svc-icon-wrap ic-green">
-            <svg viewBox="0 0 24 24">
-                <rect x="2" y="3" width="20" height="14" rx="2"/>
-                <line x1="8" y1="21" x2="16" y2="21"/>
-                <line x1="12" y1="17" x2="12" y2="21"/>
-                <polyline points="7 8 10 11 7 14"/>
-                <line x1="13" y1="14" x2="17" y2="14"/>
-            </svg>
-        </div>
+                    <div class="svc-item">
+                        <div class="svc-icon-wrap ic-green no-hover-effect">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="3" width="20" height="14" rx="2" stroke="#10b981" stroke-width="1.7"/>
+                                <line x1="8" y1="21" x2="16" y2="21" stroke="#10b981" stroke-width="1.7"/>
+                                <line x1="12" y1="17" x2="12" y2="21" stroke="#10b981" stroke-width="1.7"/>
+                                <polyline points="7 8 10 11 7 14" stroke="#10b981" stroke-width="1.7"/>
+                                <line x1="13" y1="14" x2="17" y2="14" stroke="#10b981" stroke-width="1.7"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Brand Development</h4>
+                            <p>Want a website that looks great and works seamlessly? We handle custom development, maintenance, and speed optimization to keep your site secure, fast, and ranking higher on Google.</p>
+                        </div>
+                    </div>
+                </a>
 
-        <div>
-            <h4>Website Development</h4>
-            <p>Want a website that looks great and works seamlessly? We handle custom development, maintenance, and speed optimization to keep your site secure, fast, and ranking higher on Google.</p>
-        </div>
-    </div>
-</a>
-             <a href="single-service.php?service=seo" class="svc-item">
-    <div class="svc-icon-wrap ic-purple">
-        <svg viewBox="0 0 24 24">
-            <circle cx="11" cy="11" r="8"/>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-            <line x1="8" y1="11" x2="14" y2="11"/>
-            <line x1="11" y1="8" x2="11" y2="14"/>
-        </svg>
-    </div>
-
-    <div>
-        <h4>Search Engine Optimization</h4>
-        <p>Boost your Google ranking with our SEO services. We create keyword-optimized, engaging content that drives sustained organic traffic and enhances site performance.</p>
-    </div>
-</a>
-               
+                <!-- SEO: official Google G logo -->
+                <a href="single-service.php?service=seo" class="svc-item">
+                    <div class="svc-icon-wrap no-hover-effect" style="background:rgba(255,255,255,0.95); border:1.5px solid rgba(66,133,244,0.2); width:54px; height:54px; border-radius:16px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:30px;height:30px;">
+                            <path d="M34.5 18.4c0-1.1-.1-2.2-.3-3.3H18v6.3h9.3c-.4 2.1-1.6 3.9-3.4 5.1v4.2h5.5c3.2-3 5.1-7.4 5.1-12.3z" fill="#4285F4"/>
+                            <path d="M18 35c4.7 0 8.6-1.5 11.4-4.2l-5.5-4.2c-1.6 1.1-3.6 1.7-5.9 1.7-4.5 0-8.4-3-9.8-7.1H2.5v4.4C5.3 31.1 11.3 35 18 35z" fill="#34A853"/>
+                            <path d="M8.2 21.2c-.4-1.1-.6-2.2-.6-3.4 0-1.2.2-2.3.6-3.4V10h-5.7C1.2 12.1.5 15 .5 18c0 3 .7 5.9 2 8.4l5.7-5.2z" fill="#FBBC05"/>
+                            <path d="M18 7.8c2.5 0 4.8.9 6.5 2.5l4.9-4.9C26.6 2.7 22.6 1 18 1 11.3 1 5.3 4.9 2.5 10.6l5.7 4.4C9.6 10.9 13.5 7.8 18 7.8z" fill="#EA4335"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>Search Engine Optimization</h4>
+                        <p>Boost your Google ranking with our SEO services. We create keyword-optimized, engaging content that drives sustained organic traffic and enhances site performance.</p>
+                    </div>
+                </a>
             </div>
 
             <!-- Column 3 — Design & Apps -->
             <div>
                 <span class="svc-col-label">Design &amp; Apps</span>
-             <a href="single-service.php?service=app-development-service" class="svc-item">
-    <div class="svc-icon-wrap ic-orange">
-        <svg viewBox="0 0 24 24">
-            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
-            <line x1="12" y1="18" x2="12.01" y2="18"/>
-        </svg>
-    </div>
 
-    <div>
-        <h4>Mobile App Development</h4>
-        <p>
-            Have an app idea? We design and build high-performance mobile apps for iOS and Android. 
-            Our app development service covers everything from planning to launch, and beyond.
-        </p>
-    </div>
-</a>
-                 <a href="single-service.php?service=meta-content-creation" class="svc-item">
-    
-        <div class="svc-icon-wrap ic-pink">
-                        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                <!-- App Development: orange mobile icon (same as original) -->
+                <a href="single-service.php?service=app-development-service" class="svc-item">
+                    <div class="svc-icon-wrap ic-orange no-hover-effect">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2" stroke="#f97316" stroke-width="1.7"/>
+                            <line x1="12" y1="18" x2="12.01" y2="18" stroke="#f97316" stroke-width="1.7"/>
+                        </svg>
                     </div>
+                    <div>
+                        <h4>Mobile App Development</h4>
+                        <p>Have an app idea? We design and build high-performance mobile apps for iOS and Android. Our app development service covers everything from planning to launch, and beyond.</p>
+                    </div>
+                </a>
 
-
-    <div>
-        <h4>Meta Content Creation</h4>
+                <!-- Meta Content Creation: official Instagram logo -->
+                <a href="single-service.php?service=meta-content-creation" class="svc-item">
+                    <div class="svc-icon-wrap no-hover-effect" style="background:rgba(255,255,255,0.95); border:1.5px solid rgba(214,36,159,0.2); width:54px; height:54px; border-radius:16px; display:flex; align-items:center; justify-content:center; flex-shrink:0; overflow:hidden;">
+                        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px;">
+                            <defs>
+                                <radialGradient id="igG2" cx="30%" cy="107%" r="120%">
+                                    <stop offset="0%" stop-color="#fdf497"/>
+                                    <stop offset="5%" stop-color="#fdf497"/>
+                                    <stop offset="45%" stop-color="#fd5949"/>
+                                    <stop offset="60%" stop-color="#d6249f"/>
+                                    <stop offset="90%" stop-color="#285AEB"/>
+                                </radialGradient>
+                            </defs>
+                            <rect width="36" height="36" rx="8" fill="url(#igG2)"/>
+                            <rect x="9" y="9" width="18" height="18" rx="5" stroke="white" stroke-width="2" fill="none"/>
+                            <circle cx="18" cy="18" r="4.5" stroke="white" stroke-width="2" fill="none"/>
+                            <circle cx="24" cy="12" r="1.3" fill="white"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>Meta Content Creation</h4>
                         <p>We craft engaging creative content that strengthens your brand presence, boosts audience engagement, and drives better digital visibility across all Meta platforms.</p>
-    </div>
-</a>
+                    </div>
+                </a>
             </div>
 
         </div>
     </div>
 </section>
-
 
 <!-- ══ CTA BANNER ══ -->
 <section class="cta-section">
@@ -210,7 +229,6 @@
         </div>
         <div class="faq2-body">
 
-            <!-- Left: Accordion -->
             <div class="faq2-list">
 
                 <div class="faq2-item open">
@@ -305,7 +323,6 @@
 
             </div>
 
-            <!-- Right: Side panel -->
             <div class="faq2-side">
                 <div class="faq2-cta-card">
                     <div class="faq2-cta-icon">
@@ -347,7 +364,7 @@
 <!-- ══ BACK TO TOP ══ -->
 <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
-<!-- ══ MARQUEE JS (same as index.php) ══ -->
+<!-- ══ MARQUEE JS ══ -->
 <script>
 (function(){
     var t1 = [
@@ -391,7 +408,6 @@ function toggleFaq2(q) {
     if(!isOpen) item.classList.add('open');
 }
 
-// Back to top
 window.addEventListener('scroll', function(){
     var btn = document.getElementById('back-to-top');
     if(window.scrollY > 400) btn.classList.add('visible');
@@ -401,3 +417,54 @@ window.addEventListener('scroll', function(){
 
 <?php include 'includes/virex-floating-social.php'; ?>
 <?php include 'includes/footer.php'; ?>
+
+<style>
+/* ══ Official logos — hover pe purple/gradient na aye ══ */
+.svc-item:hover .svc-icon-wrap.no-hover-effect {
+    background: inherit !important;
+    border-color: inherit !important;
+    transform: rotate(-6deg) scale(1.08);
+}
+.svc-item:hover .svc-icon-wrap.no-hover-effect svg {
+    stroke: unset !important;
+}
+/* Meta ∞ logo hover fix */
+.svc-item:hover .svc-icon-wrap.no-hover-effect[style*="0,130,251"] {
+    background: rgba(0,130,251,0.12) !important;
+    border-color: rgba(0,130,251,0.35) !important;
+}
+/* Google logo hover fix */
+.svc-item:hover .svc-icon-wrap.no-hover-effect[style*="66,133,244"] {
+    background: rgba(255,255,255,1) !important;
+    border-color: rgba(66,133,244,0.4) !important;
+}
+/* Instagram logo hover fix */
+.svc-item:hover .svc-icon-wrap.no-hover-effect[style*="214,36,159"] {
+    background: rgba(255,255,255,1) !important;
+    border-color: rgba(214,36,159,0.4) !important;
+}
+/* Gold (Video Editing) hover fix */
+.svc-item:hover .svc-icon-wrap.ic-gold.no-hover-effect {
+    background: rgba(245,158,11,0.12) !important;
+    border-color: rgba(245,158,11,0.35) !important;
+}
+.svc-item:hover .svc-icon-wrap.ic-gold.no-hover-effect svg {
+    stroke: #d97706 !important;
+}
+/* Green (Brand Development) hover fix */
+.svc-item:hover .svc-icon-wrap.ic-green.no-hover-effect {
+    background: rgba(16,185,129,0.12) !important;
+    border-color: rgba(16,185,129,0.35) !important;
+}
+.svc-item:hover .svc-icon-wrap.ic-green.no-hover-effect svg {
+    stroke: #10b981 !important;
+}
+/* Orange (App Development) hover fix */
+.svc-item:hover .svc-icon-wrap.ic-orange.no-hover-effect {
+    background: rgba(249,115,22,0.12) !important;
+    border-color: rgba(249,115,22,0.35) !important;
+}
+.svc-item:hover .svc-icon-wrap.ic-orange.no-hover-effect svg {
+    stroke: #f97316 !important;
+}
+</style>
